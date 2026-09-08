@@ -1,36 +1,28 @@
-```sh
-Utilize o site <https://www.toptal.com/developers/gitignore> para gerar seu arquivo gitignore e apague este campo.
-
-Vide tutoriais do PI.
-```
-
 # FECAP - Fundação de Comércio Álvares Penteado
 
 <p align="center">
 <a href= "https://www.fecap.br/"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhZPrRa89Kma0ZZogxm0pi-tCn_TLKeHGVxywp-LXAFGR3B1DPouAJYHgKZGV0XTEf4AE&usqp=CAU" alt="FECAP - Fundação de Comércio Álvares Penteado" border="0"></a>
 </p>
 
-# Nome do Projeto
+# Projeto Interdisciplinar: Website Responsivo
 
-## Nome do Grupo
+## Nome do Grupo: Collision
 
-## Integrantes: <a href="https://www.linkedin.com/in/victorbarq/">Goku Sayajin</a>, <a href="https://www.linkedin.com/in/victorbarq/">Saitama One</a>, <a href="https://www.linkedin.com/in/victorbarq/">Ikki de Fenix</a>, <a href="https://www.linkedin.com/in/victorbarq/">Yusuke Urameshi</a>, <a href="https://www.linkedin.com/in/victorbarq/">Roronoa Zoro</a>
+## Integrantes: <a href="https://github.com/DMayumi">Débora Mayumi</a>, <a href="https://github.com/felipenono">Felipe Rodrigues</a>, <a href="www.linkedin.com/in/guiryuki">Guilherme Ryuki</a>, <a href="https://github.com/HenriqueNunes-2008">Henrique Nunes</a>, <a href="https://github.com/LucasKazuo-lol">Lucas Kazuo</a>
 
-## Professores Orientadores: <a href="https://www.linkedin.com/in/victorbarq/">Dr. Victor Von Doom</a>, <a href="https://www.linkedin.com/in/victorbarq/">Me. Saitama</a>, <a href="https://www.linkedin.com/in/victorbarq/">Dr. Strange</a>, <a href="https://www.linkedin.com/in/victorbarq/">Me. Yoda</a>, <a href="https://www.linkedin.com/in/victorbarq/">Dr. Gero</a>
+## Professores Orientadores: <a href="https://www.linkedin.com/in/adriano-valente/">Adriano Valente</a>, <a href="https://www.linkedin.com/in/eduardo-savino/">Eduardo Savino</a>, <a href="https://www.linkedin.com/in/francisco-escobar/">Francisco (Chico) Escobar</a>, <a href="https://www.linkedin.com/in/jbuesso/">José Buesso</a>, <a href="https://www.linkedin.com/in/ronaldo-araujo-pinto-3542811a/">Ronaldo Araújo</a>
 
 ## Descrição
 
 <p align="center">
-<img src="https://pix4free.org/assets/library/2021-01-20/originals/game.jpg" alt="NOME DO JOGO" border="0">
-  Game by <a href="http://www.nyphotographic.com/">Nick Youngson</a> <a rel="license" href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a> <a href="http://pix4free.org/">Pix4free</a>
+<img width="1672" height="941" alt="image" src="https://github.com/user-attachments/assets/c0af9d95-95ed-4b8c-a826-4f4188409c4a" />
+  Image by <a href="https://chatgpt.com/">ChatGPT</a> <a rel="license" href="https://www.opservices.com.br/como-integrar-o-setor-de-ti-ao-negocio-da-empresa/">ref. de Imagem</a>
 </p>
 
 
-De um a dois parágrafos sobre o que é seu projeto e o que ele faz.
+Desenvolvimento de uma plataforma web responsiva de acompanhamento escolar, voltada para escolas de Ensino Fundamental. O objetivo é facilitar a comunicação entre professores, administração escolar e pais ou responsáveis, reunindo em um único sistema as informações sobre o desempenho acadêmico dos alunos ao longo dos bimestres.
 <br><br>
-Meu projeto ajuda estudantes FECAP a configurarem seus githubs.
-<br><br>
-May the force be with you!
+Na plataforma, os professores poderão registrar descrições de acompanhamento, médias e tags de cada aluno. Esses registros serão enviados para revisão da administração da escola antes de serem publicados. Depois da aprovação, os responsáveis poderão consultar os relatórios dos alunos vinculados a eles e também gerar o acompanhamento em PDF, tornando o processo mais organizado, seguro e acessível.
 <br><br>
 
 ## 🛠 Estrutura de pastas
