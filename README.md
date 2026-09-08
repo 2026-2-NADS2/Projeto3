@@ -14,10 +14,9 @@
 
 ## Descrição
 
-<p align="center">
-<img width="1672" height="941" alt="image" src="https://github.com/user-attachments/assets/c0af9d95-95ed-4b8c-a826-4f4188409c4a" />
-  Image by <a href="https://chatgpt.com/">ChatGPT</a> <a rel="license" href="https://www.opservices.com.br/como-integrar-o-setor-de-ti-ao-negocio-da-empresa/">ref. de Imagem</a>
-</p>
+
+<img width="1024" height="572" alt="image" src="https://github.com/user-attachments/assets/b3d0c30c-9f01-45b9-910c-dd1722797fc3" />
+
 
 
 Desenvolvimento de uma plataforma web responsiva de acompanhamento escolar, voltada para escolas de Ensino Fundamental. O objetivo é facilitar a comunicação entre professores, administração escolar e pais ou responsáveis, reunindo em um único sistema as informações sobre o desempenho acadêmico dos alunos ao longo dos bimestres.
