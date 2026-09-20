@@ -5,7 +5,7 @@
 
 ### Banco de dados
 
-<b>índices - [Documento/Indices](https://github.com/2026-2-NADS2/Projeto3/tree/f4f57140b7bbd3f8026de46fcbb2e7c8133cf38a/documentos/Entrega%201/Banco%20de%20Dados)</b>
+<b>índices - [Documento/Indices](https://github.com/2026-2-NADS2/Projeto3/blob/844e4386f997203df15879a398ccaefdef466f80/documentos/Entrega%201/Banco%20de%20Dados/ENTREGA01-BANCO_DE_DADOS.pdf)</b>
 <br><br>
 
 
