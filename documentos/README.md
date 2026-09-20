@@ -5,13 +5,13 @@
 
 ### Banco de dados
 
-<b>Banco de dados - [Documento/Indices](https://github.com/2026-2-NADS2/Projeto3/tree/f4f57140b7bbd3f8026de46fcbb2e7c8133cf38a/documentos/Entrega%201/Banco%20de%20Dados)</b>
+<b>índices - [Documento/Indices](https://github.com/2026-2-NADS2/Projeto3/tree/f4f57140b7bbd3f8026de46fcbb2e7c8133cf38a/documentos/Entrega%201/Banco%20de%20Dados)</b>
 <br><br>
 
 
 ### Estrutura de Dados
 
-<b>ALUNO 1- [Trabalho/Documento](https://github.com/fecaphub/Template_PI/blob/main/documentos/Entrega%201/Disciplina%201/Venha%20para%20a%20FECAP!.txt)</b>
+<b>Listagem de Alunos- [Trabalho/Documento](https://github.com/2026-2-NADS2/Projeto3/tree/9f4a96777c98d4bf1414d68b56d140477ed79010/documentos/Entrega%201/Estrutura%20de%20Dados)</b>
 <br><br>
 
 
