@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/home.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -27,7 +28,7 @@
                 <li><a href="#contato">Fale conosco</a></li>
             </ul>
 
-            <button class="botao-login">Login</button>
+            <a href="login.html" class="botao-login">Login</a>
         </nav>
 
     </header>
@@ -37,6 +38,9 @@
 
         <!-- HERO -->
         <section class="hero" id="inicio">
+             <!-- Elementos decorativos -->
+                <div class="circulo-hero circulo-hero-esquerda"></div>
+                <div class="circulo-hero circulo-hero-direita"></div>
 
             <div class="conteudo-hero">
 
@@ -51,9 +55,17 @@
                 </p>
 
                 <div class="publicos">
-                    <span>Para escolas</span>
-                    <span>Para professores</span>
-                    <span>Para famílias</span>
+                    <span>
+                        <img src="img/pessoas.png" alt="">
+                        Para escolas</span>
+
+                    <span>
+                        <img src="img/pessoas.png" alt="">
+                        Para professores</span>
+
+                    <span>
+                        <img src="img/familias.png" alt="">
+                        Para famílias</span>
                 </div>
 
             </div>
@@ -65,6 +77,12 @@
                     alt="Painel de acompanhamento escolar"
                 >
             </div>
+
+             <img
+                src="img/texto-hero.png"
+                alt="Juntos por um futuro melhor"
+                class="juntos-futuro"
+            >
 
         </section>
 
@@ -82,37 +100,58 @@
             <div class="grade-recursos">
 
                 <article class="cartao-recurso">
+                    <img
+                        src="img/desempenho.png"
+                        alt=""
+                        class="icone-recurso"
+                    >
 
+                    <div>
                     <h3>Desempenho</h3>
 
                     <p>
                         Acompanhe notas e a evolução do seu aluno
                         de forma simples e visual.
                     </p>
+                    </div>
 
                 </article>
 
 
                 <article class="cartao-recurso">
+                     <img
+                        src="img/frequencia.png"
+                        alt=""
+                        class="icone-recurso"
+                    >
 
+                    <div>
                     <h3>Frequência</h3>
 
                     <p>
                         Veja a presença e as faltas em tempo real,
                         mantendo o acompanhamento em dia.
                     </p>
+                    </div>
 
                 </article>
 
 
                 <article class="cartao-recurso">
+                    <img
+                        src="img/familias.png"
+                        alt=""
+                        class="icone-recurso"
+                    >
 
+                    <div>
                     <h3>Comunicação</h3>
 
                     <p>
                         Escolas e responsáveis sempre conectados,
                         com comunicados e avisos.
                     </p>
+                    </div>
 
                 </article>
 
@@ -256,7 +295,16 @@
 
         <!-- CONTATO -->
         <section class="contato" id="contato">
+            <div class="circulo-contato circulo-contato-esquerda"></div>
+            <div class="circulo-contato circulo-contato-direita"></div>
+            
+             <img
+                src="img/aviao.png"
+                alt=""
+                class="imagem-aviao"
+            >
 
+            <div class="conteudo-contato">
             <h2>Quer conhecer melhor a Collision?</h2>
 
             <p>
@@ -265,6 +313,13 @@
             </p>
 
             <button>Fale conosco →</button>
+            </div>
+
+             <img
+                src="img/texto-educacao.png"
+                alt="Educação conecta pessoas"
+                class="imagem-educacao"
+            >
 
         </section>
 

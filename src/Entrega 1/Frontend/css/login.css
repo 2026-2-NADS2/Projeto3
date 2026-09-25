@@ -1,0 +1,249 @@
+/* CABEÇALHO */
+
+.cabecalho-login {
+    height: 76px;
+    padding: 0 10%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background-color: var(--branco);
+}
+
+.cabecalho-login img {
+    width: 110px;
+}
+
+.navegacao-login {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.navegacao-login ul {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+}
+
+.navegacao-login a {
+    font-size: 14px;
+    color: var(--texto-principal);
+}
+
+.navegacao-login a:hover {
+    color: var(--laranja);
+}
+
+
+/* BOTÃO FALE CONOSCO */
+
+.navegacao-login .botao-contato {
+    padding: 12px 30px;
+
+    background-color: var(--laranja);
+    color: var(--branco);
+
+    border-radius: 8px;
+
+    font-weight: 600;
+}
+
+.navegacao-login .botao-contato:hover {
+    color: var(--branco);
+    opacity: 0.9;
+}
+
+
+/* PÁGINA DE LOGIN */
+
+.pagina-login {
+    min-height: calc(100vh - 76px);
+    padding: 60px 20px;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
+    position: relative;
+    overflow: hidden;
+
+    background-color: var(--fundo-claro);
+}
+
+
+/* CÍRCULOS DECORATIVOS */
+
+.circulo {
+    position: absolute;
+
+    width: 260px;
+    height: 260px;
+
+    background-color: var(--lilas-claro);
+
+    border-radius: 50%;
+}
+
+.circulo-superior {
+    top: -130px;
+    left: -100px;
+}
+
+.circulo-inferior {
+    right: -100px;
+    bottom: -100px;
+}
+
+
+/* CARD DE LOGIN */
+
+.cartao-login {
+    width: 500px;
+    padding: 45px;
+
+    position: relative;
+
+    background-color: var(--branco);
+
+    border-radius: 18px;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+
+    text-align: center;
+}
+
+
+/* LOGO */
+
+.logo-login {
+    width: 80px;
+    margin-bottom: 20px;
+}
+
+
+/* TÍTULO */
+
+.cartao-login h1 {
+    font-size: 30px;
+    color: var(--azul-escuro);
+
+    margin-bottom: 12px;
+}
+
+
+/* DESCRIÇÃO */
+
+.descricao-login {
+    font-size: 13px;
+    color: var(--texto-secundario);
+
+    margin-bottom: 35px;
+}
+
+
+/* FORMULÁRIO */
+
+.formulario-login {
+    text-align: left;
+}
+
+
+/* CAMPOS */
+
+.campo-formulario {
+    margin-bottom: 20px;
+}
+
+.campo-formulario label {
+    display: block;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    color: var(--azul-escuro);
+
+    margin-bottom: 8px;
+}
+
+.campo-formulario input {
+    width: 100%;
+    height: 50px;
+
+    padding: 0 15px;
+
+    border: 1px solid #D6DEEA;
+    border-radius: 8px;
+
+    font-family: inherit;
+    font-size: 13px;
+
+    background-color: #FAFBFD;
+}
+
+
+/* QUANDO O CAMPO ESTIVER SELECIONADO */
+
+.campo-formulario input:focus {
+    outline: none;
+    border-color: var(--azul-claro);
+}
+
+
+/* ESQUECI MINHA SENHA */
+
+.area-esqueci-senha {
+    text-align: right;
+    margin-top: -8px;
+    margin-bottom: 30px;
+}
+
+.area-esqueci-senha a {
+    font-size: 12px;
+    color: var(--laranja);
+}
+
+.area-esqueci-senha a:hover {
+    text-decoration: underline;
+}
+
+
+/* BOTÃO ENTRAR */
+
+.botao-entrar {
+    width: 100%;
+
+    padding: 15px;
+
+    background-color: var(--laranja);
+    color: var(--branco);
+
+    border: none;
+    border-radius: 8px;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+.botao-entrar:hover {
+    opacity: 0.9;
+}
+
+
+/* VOLTAR AO INÍCIO */
+
+.voltar-inicio {
+    display: inline-block;
+
+    margin-top: 25px;
+
+    font-size: 12px;
+    color: var(--texto-secundario);
+}
+
+.voltar-inicio:hover {
+    color: var(--laranja);
+}
