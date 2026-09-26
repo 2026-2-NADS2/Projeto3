@@ -1,128 +1,18 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
-
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/login.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
 
     <title>COLLISION - Login</title>
-</head>
+  </head>
 
-<body>
-
-    <!-- CABEÇALHO -->
-    <header class="cabecalho-login">
-
-        <a href="index.html">
-            <img src="img/collision.png" alt="Logo Collision">
-        </a>
-
-        <nav class="navegacao-login">
-
-            <ul>
-                <li><a href="index.html#inicio">Início</a></li>
-                <li><a href="index.html#recursos">Recursos</a></li>
-                <li><a href="index.html#noticias">Notícias</a></li>
-            </ul>
-
-            <a href="index.html#contato" class="botao-contato">
-                Fale conosco
-            </a>
-
-        </nav>
-
-    </header>
-
-
-    <!-- CONTEÚDO PRINCIPAL -->
-    <main class="pagina-login">
-
-        <!-- Elementos decorativos -->
-        <div class="circulo circulo-superior"></div>
-        <div class="circulo circulo-inferior"></div>
-
-
-        <!-- CARD DE LOGIN -->
-        <section class="cartao-login">
-
-            <img
-                src="img/collision.png"
-                alt="Logo Collision"
-                class="logo-login"
-            >
-
-            <h1>Entre na sua conta</h1>
-
-            <p class="descricao-login">
-                Acesse as informações da sua escola em um só lugar.
-            </p>
-
-
-            <!-- FORMULÁRIO -->
-            <form class="formulario-login">
-
-                <div class="campo-formulario">
-
-                    <label for="login">
-                        Login
-                    </label>
-
-                    <input
-                        type="text"
-                        id="login"
-                        name="login"
-                        placeholder="Digite seu login"
-                        required
-                    >
-
-                </div>
-
-
-                <div class="campo-formulario">
-
-                    <label for="senha">
-                        Senha
-                    </label>
-
-                    <input
-                        type="password"
-                        id="senha"
-                        name="senha"
-                        placeholder="Digite sua senha"
-                        required
-                    >
-
-                </div>
-
-
-                <div class="area-esqueci-senha">
-                    <a href="#">
-                        Esqueci minha senha
-                    </a>
-                </div>
-
-
-                <button type="submit" class="botao-entrar">
-                    Entrar
-                </button>
-
-            </form>
-
-
-            <a href="index.html" class="voltar-inicio">
-                ← Voltar ao início
-            </a>
-
-        </section>
-
-    </main>
-
-</body>
-
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
 </html>
