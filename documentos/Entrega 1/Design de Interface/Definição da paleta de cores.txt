@@ -1,0 +1,9 @@
+Definição da paleta de cores;
+A paleta foi definida para atender responsáveis, professores e administradores com uma interface clara e acolhedora. O azul-escuro dá destaque aos textos e transmite confiança; o branco e os tons claros de azul mantêm os fundos leves e facilitam a leitura. O laranja identifica as ações principais, como botões, enquanto o verde sinaliza informações positivas, como atividades concluídas.
+Para favorecer a acessibilidade, usamos cores mais fortes nos textos e elementos importantes, reservando os tons suaves para fundos e áreas de apoio. Também evitamos depender apenas da cor para comunicar estados: rótulos e ícones ajudam a identificar cada informação. Na implementação, as combinações de texto, fundo e botões devem ser verificadas quanto ao contraste.
+
+Link Figma:
+https://www.figma.com/design/be7PhL9cu154q9pPeQAFQp/Collision-PI?node-id=171-105&t=oYfzUtowkiR1dDMt-1
+
+Link Mapa de Navegação:
+https://www.figma.com/board/ZP42NOEb60n2puqeXESeVB/Mapa-de-Navega%C3%A7%C3%A3o---Plataforma-de-Acompanhamento-Escolar?node-id=0-1&t=5Ido8vF0rnWEsLCC-1
