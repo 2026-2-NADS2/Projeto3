@@ -1,10 +1,27 @@
 import { usuariosMock } from "../data/usuariosMock.js";
+import { dadosDashboard } from "../data/dadosDashboard.js";
 
-// Dados para demonstração. Ainda não existe autenticação por API.
-export function obterUsuarioDemo(perfil) {
-  const usuario = usuariosMock[perfil];
-  if (!usuario) {
-    throw new Error(`Perfil de demonstração inválido: ${perfil}`);
+function esperar(ms) {
+  return new Promise((resolver) => setTimeout(resolver, ms));
+}
+
+export async function carregarDashboardDemo(perfil) {
+  // Simula o tempo de resposta de uma API.
+  await esperar(700);
+
+  // Use ?simularErro=1 no endereço para demonstrar o estado de erro.
+  const simularErro = new URLSearchParams(window.location.search).get("simularErro");
+
+  if (simularErro === "1") {
+    throw new Error("Falha simulada ao buscar os dados. Tente novamente.");
   }
-  return usuario;
+
+  const usuario = usuariosMock[perfil];
+  const dados = dadosDashboard[perfil];
+
+  if (!usuario || !dados) {
+    throw new Error(`Não encontramos dados para o perfil "${perfil}".`);
+  }
+
+  return { usuario, dados };
 }
