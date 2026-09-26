@@ -1,112 +1,80 @@
 # KFKA — Frontend
 
-Interface em React/JSX e Vite para acompanhamento escolar. A organização segue
-a referência da Aula08: `componentes`, `paginas`, `servicos`, `utilitarios` e `data`.
-A pasta `css` foi mantida conforme a organização adotada neste projeto.
+Plataforma de acompanhamento escolar desenvolvida com React/JSX e Vite.
+A organização usa a aula do professor como referência, com separação entre
+páginas, componentes, hooks, serviços, dados, utilitários e CSS.
 
-## Executar e verificar
+## Como executar
 
-- `npm install`: instala as dependências.
-- `npm run dev`: inicia o servidor local.
-- `npm run build`: gera o site na pasta `dist`.
-- `npm run lint`: procura problemas no código, com o Oxlint usado na Aula08.
-- `npm run format`: formata o projeto com dois espaços e aspas duplas.
-- `npm run format:check`: verifica a formatação sem alterar arquivos.
+```sh
+npm install
+npm run dev
+```
 
-Acesse `/`, `/login.html` ou `/dashboard.html`. Os três HTMLs são entradas
-pequenas do Vite e apontam para `src/main.jsx`.
+Outros comandos: `npm run build`, `npm run preview`, `npm run lint`,
+`npm run format:check` e `npm run format`.
+O build gera a pasta `dist`. Dependências e arquivos gerados não são versionados.
 
-## Responsabilidades
+## Telas e navegação
 
-- `main.jsx`: conecta o React ao elemento `root` e importa o CSS global.
-- `App.jsx`: disponibiliza o BrowserRouter para a aplicação.
-- `Rotas.jsx`: associa os endereços às páginas e trata endereços inexistentes.
-- `paginas`: reúne os componentes que formam cada tela.
-- `componentes`: contém partes visuais reutilizáveis; `dashboard` e `home`
-  agrupam componentes específicos dessas áreas.
-- `hooks`: guarda lógica de estado e efeitos reutilizáveis. `useDashboard`
-  controla a seção, o menu móvel e a troca de perfil; `useTituloPagina`
-  atualiza o título da aba.
-- `servicos`: concentra acesso a dados. `servicoUsuario` ainda lê os usuários
-  locais de demonstração. As chamadas HTTP futuras devem ficar nesta camada.
-- `data`: configurações e dados de exemplo, sem JSX.
-- `utilitarios`: funções sem estado ou efeitos, como obter iniciais de nomes.
-- `css`: `style.css` contém estilos globais/Home/Login, `dashboard.css`
-  estiliza a dashboard e `erro404.css` estiliza a tela de página não encontrada.
-- `assets/img`: imagens importadas pelos componentes e processadas pelo Vite.
-- `public/img/dashboard`: imagens acessadas por URLs como
-  `/img/dashboard/professor/imgSidebarInicio.png`.
+| Endereço | Tela |
+| --- | --- |
+| `/` ou `/index.html` | Home |
+| `/login.html` | Login |
+| `/dashboard.html` | Dashboard |
+| `/fale-conosco` | Fale conosco |
+| Endereço inexistente | Página 404 |
 
-## Convenções
+Os arquivos HTML da raiz são entradas pequenas que carregam `src/main.jsx`.
+O React monta as telas; `App.jsx` disponibiliza o BrowserRouter e `Rotas.jsx`
+define qual página aparece em cada endereço.
 
-Componentes e páginas usam PascalCase e `.jsx` (`MenuPerfil.jsx`, `Home.jsx`).
-Funções, hooks e arquivos sem JSX usam camelCase e `.js` (`useDashboard.js`,
-`servicoUsuario.js`). Use imports com a extensão do arquivo. Classes CSS
-continuam em kebab-case e as da dashboard mantêm o prefixo `dash-`.
-Comentários devem explicar decisões que o código não deixa claras.
+## O que foi adicionado e atualizado
 
-A dashboard é única. O hook seleciona o usuário; a página escolhe os dados
-e o conteúdo do perfil e reaproveita cabeçalho, menu e indicadores.
+- Home componentizada, com apresentação, recursos, notícias e navegação.
+- Dashboard única para Administrador, Professor e Responsável, reaproveitando
+  cabeçalho, menu, indicadores e painéis, com conteúdo conforme o perfil.
+- Menu para celular, troca de perfil de demonstração e notificações de exemplo.
+- Consulta assíncrona mockada, com estados de carregamento, sucesso e erro,
+  além de botão para tentar novamente.
+- Validação do login, com mensagens para campos vazios e senha curta.
+- Ajustes de responsividade na Home, no Login e na dashboard.
+- Página Fale conosco com formulário e confirmação local de validação.
+- Links do cabeçalho retornam às seções da Home, inclusive na tela de contato.
+- Página 404 reutilizada em rotas inexistentes e áreas ainda não implementadas.
+- CSS organizado na pasta `src/css`, imagens separadas e scripts de lint,
+  build e formatação.
 
-## O que já está implementado
+## Testar a consulta assíncrona
 
-- Home em React com cabeçalho, apresentação do sistema, recursos, notícias,
-  acompanhamento escolar e contato.
-- Login com campos obrigatórios e navegação para a dashboard; ainda é uma
-  demonstração, sem autenticação real.
-- Rotas para Home, Login e Dashboard, além de uma rota curinga para endereços
-  inexistentes.
-- Dashboard única com seleção local dos perfis Administrador, Professor e
-  Responsável, dados de demonstração e conteúdo específico de cada perfil.
-- Navegação de seções, menu responsivo, notificações de exemplo e atualização
-  do título da aba.
-- Tela 404 em JSX, reutilizada também nas seções da dashboard que ainda não
-  foram construídas.
-- Estilos separados em CSS global, dashboard e erro 404; imagens mantidas em
-  `src/assets/img` e `public/img/dashboard`.
-- Scripts de desenvolvimento, build, lint e formatação configurados no
-  `package.json`.
+Abra `/dashboard.html`: o carregamento aparece antes dos dados de demonstração.
+Para simular uma falha, abra `/dashboard.html?simularErro=1`.
+Enquanto esse parâmetro estiver no endereço, a tentativa continuará falhando.
+Remova o parâmetro para voltar ao cenário de sucesso.
+A consulta usa Promise e dados locais, sem conexão com uma API HTTP.
 
-## Limitações atuais
-
-O login e a troca de perfil são demonstrações locais: não validam credenciais
-nem concedem permissões reais. Ao atualizar a página, o perfil volta para
-professor. As áreas do menu ainda não implementadas mostram a tela 404
-provisória. A autorização real deverá ser validada pelo backend.
-
-Versione o código, as configurações, as imagens e `package-lock.json`.
-`node_modules` e `dist` são gerados e estão no `.gitignore`.
-
-## Árvore de pastas
+## Organização das pastas
 
 ```text
 frontend/
 ├── .gitignore
-├── index.html
-├── login.html
-├── dashboard.html
+├── README.md
 ├── package.json
 ├── package-lock.json
 ├── vite.config.js
-├── README.md
-├── erro404.html                 (arquivo anterior preservado)
-├── teste-react.html             (arquivo anterior preservado)
-├── css/                         (CSS anterior preservado)
-├── img/                         (13 imagens anteriores preservadas)
+├── index.html
+├── login.html
+├── dashboard.html
 ├── public/
-│   └── img/
-│       └── dashboard/
-│           ├── admin/             (21 imagens)
-│           ├── professor/         (17 imagens)
-│           └── responsavel/       (20 imagens)
+│   └── img/dashboard/
+│       ├── admin/
+│       ├── professor/
+│       └── responsavel/
 └── src/
     ├── main.jsx
     ├── App.jsx
     ├── Rotas.jsx
-    ├── assets/
-    │   └── img/                  (12 PNGs e erro404.svg)
-    ├── components/
-    │   └── Saudacao.jsx          (componente anterior preservado)
+    ├── assets/img/
     ├── componentes/
     │   ├── Cabecalho.jsx
     │   ├── Rodape.jsx
@@ -125,16 +93,16 @@ frontend/
     │       ├── PainelDashboard.jsx
     │       └── Saudacao.jsx
     ├── css/
+    │   ├── style.css
     │   ├── dashboard.css
     │   ├── erro404.css
-    │   └── style.css
+    │   └── faleconosco.css
     ├── data/
     │   ├── dadosAdmin.js
     │   ├── dadosDashboard.js
     │   ├── dadosProfessor.js
     │   ├── dadosResponsavel.js
-    │   ├── usuariosMock.js
-    │   └── usuarioMock.js        (dados anteriores preservados)
+    │   └── usuariosMock.js
     ├── hooks/
     │   ├── useDashboard.js
     │   └── useTituloPagina.js
@@ -142,6 +110,7 @@ frontend/
     │   ├── Dashboard.jsx
     │   ├── Home.jsx
     │   ├── login.jsx
+    │   ├── FaleConosco.jsx
     │   └── NaoEncontrada.jsx
     ├── servicos/
     │   └── servicoUsuario.js
@@ -149,11 +118,23 @@ frontend/
         └── nomes.js
 ```
 
-`node_modules/` é gerada pelo `npm install`. `dist/` é gerada pelo `npm run build`
-e não está presente agora; as duas ficam fora da árvore principal.
+`paginas` reúne as telas; `componentes` guarda partes visuais reutilizáveis.
+`hooks` concentra estados e efeitos; `servicos` concentra o acesso aos dados.
+`data` contém os exemplos e `utilitarios` contém funções compartilhadas.
+`style.css` atende aos estilos globais, Home e Login; os outros CSS atendem
+às respectivas telas. Imagens importadas ficam em `src/assets/img` e imagens
+acessadas por URL ficam em `public/img/dashboard`.
 
-O arquivo `src/paginas/login.jsx` é importado com a mesma grafia em `Rotas.jsx`.
+## Limitações atuais
 
+O login não autentica credenciais reais. A troca de perfil é local e retorna
+para professor ao recarregar a página. Algumas ações e seções ainda estão
+pendentes. O formulário de contato apenas valida e mostra uma mensagem;
+não envia nem salva os dados. A integração com backend será feita depois.
 
+## Versionamento
 
+Versionar código, imagens, configurações, README e `package-lock.json`.
+`node_modules/`, `dist/`, arquivos de ambiente e logs ficam fora do Git,
+conforme o `.gitignore`. O arquivo `login.jsx` mantém a grafia usada no import.
 

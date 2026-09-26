@@ -6,7 +6,7 @@ function esperar(ms) {
 }
 
 export async function carregarDashboardDemo(perfil) {
-  // Simula o tempo de resposta de uma API.
+  // Simula um  tempo de resposta
   await esperar(700);
 
   // Use ?simularErro=1 no endereço para demonstrar o estado de erro.

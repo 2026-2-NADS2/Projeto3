@@ -486,16 +486,99 @@ img {
 }
 
 @media (max-width: 900px) {
+  .cabecalho {
+    height: auto;
+    padding: 16px 5%;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  .navegacao {
+    width: 100%;
+    justify-content: space-between;
+    gap: 16px;
+  }
+
+  .navegacao ul {
+    flex-wrap: wrap;
+    gap: 12px 18px;
+  }
+
+  .hero,
+  .acompanhamento {
+    flex-direction: column;
+    gap: 32px;
+    padding: 48px 5%;
+  }
+
+  .conteudo-hero,
+  .imagem-hero,
+  .conteudo-acompanhamento,
+  .imagem-acompanhamento {
+    width: 100%;
+  }
+
   .grade-recursos,
   .grade-noticias {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .contato {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .contato p {
+    width: auto;
+    max-width: 550px;
+  }
+
+  .rodape {
+    flex-wrap: wrap;
+    gap: 32px;
   }
 }
 
 @media (max-width: 600px) {
+  .navegacao {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .navegacao .botao-login {
+    width: 100%;
+  }
+
+  .conteudo-hero h1 {
+    font-size: clamp(30px, 8vw, 40px);
+  }
+
+  .publicos {
+    flex-wrap: wrap;
+    gap: 10px 16px;
+  }
+
+  .recursos,
+  .noticias,
+  .contato,
+  .rodape {
+    padding: 40px 5%;
+  }
+
   .grade-recursos,
   .grade-noticias {
     grid-template-columns: 1fr;
+  }
+
+  .rodape {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+  }
+
+  .rodape > img {
+    grid-column: 1 / -1;
   }
 }
 
@@ -737,8 +820,66 @@ img {
 .voltar-inicio:hover {
   color: var(--laranja);
 }
+
+@media (max-width: 900px) {
+  .cabecalho-login {
+    height: auto;
+    padding: 16px 5%;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  .navegacao-login {
+    width: 100%;
+    justify-content: space-between;
+    gap: 16px;
+  }
+
+  .navegacao-login ul {
+    flex-wrap: wrap;
+    gap: 12px 18px;
+  }
+}
+
+@media (max-width: 600px) {
+  .navegacao-login {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .navegacao-login .botao-contato {
+    display: block;
+    text-align: center;
+  }
+
+  .pagina-login {
+    min-height: auto;
+    padding: 24px 16px;
+  }
+
+  .cartao-login {
+    width: 100%;
+    padding: 28px 20px;
+  }
+
+  .cartao-login h1 {
+    font-size: clamp(24px, 7vw, 30px);
+  }
+}
+
 .pagina-nao-encontrada {
   max-width: 680px;
   margin: 80px auto;
   padding: 24px;
+}
+
+.campo-formulario input[aria-invalid="true"] {
+  border-color: #b42318;
+}
+
+.erro-campo {
+  display: block;
+  margin-top: 6px;
+  color: #b42318;
+  font-size: 12px;
 }
