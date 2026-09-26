@@ -1,15 +1,51 @@
 import { useTituloPagina } from "../hooks/useTituloPagina.js";
 import logo from "../assets/img/collision.png";
 import { Link, useNavigate } from "react-router-dom";
+import { useState } from "react";
 
 function Login() {
   useTituloPagina("Login");
   const navegar = useNavigate();
+  const [campos, setCampos] = useState({ login: "", senha: "" });
+  const [erros, setErros] = useState({});
 
-  function enviarFormulario(event) {
-    event.preventDefault();
-    navegar("/dashboard.html");
+  function atualizarCampo(event) {
+  const { name, value } = event.target;
+
+  setCampos((valoresAtuais) => ({
+    ...valoresAtuais,
+    [name]: value,
+  }));
+
+  setErros((errosAtuais) => ({
+    ...errosAtuais,
+    [name]: "",
+  }));
+}
+
+function enviarFormulario(event) {
+  event.preventDefault();
+
+  const novosErros = {};
+
+  if (!campos.login.trim()) {
+    novosErros.login = "Digite seu login.";
   }
+
+  if (!campos.senha.trim()) {
+    novosErros.senha = "Digite sua senha.";
+  } else if (campos.senha.trim().length < 6) {
+    novosErros.senha = "A senha deve ter pelo menos 6 caracteres.";
+  }
+
+  setErros(novosErros);
+
+  if (Object.keys(novosErros).length > 0) {
+    return;
+  }
+
+  navegar("/dashboard.html");
+}
 
   return (
     <>
@@ -44,11 +80,25 @@ function Login() {
 
           <p className="descricao-login">Acesse as informações da sua escola em um só lugar.</p>
 
-          <form className="formulario-login" onSubmit={enviarFormulario}>
+          <form className="formulario-login" onSubmit={enviarFormulario} noValidate>
             <div className="campo-formulario">
               <label htmlFor="login">Login</label>
 
-              <input type="text" id="login" name="login" placeholder="Digite seu login" required />
+              <input
+                  type="text"
+                  id="login"
+                  name="login"
+                  placeholder="Digite seu login"
+                  value={campos.login}
+                  onChange={atualizarCampo}
+                  aria-invalid={Boolean(erros.login)}
+                  aria-describedby={erros.login ? "erro-login" : undefined}
+                />
+                {erros.login && (
+                  <small id="erro-login" className="erro-campo">
+                    {erros.login}
+                  </small>
+                )}
             </div>
 
             <div className="campo-formulario">
@@ -59,8 +109,16 @@ function Login() {
                 id="senha"
                 name="senha"
                 placeholder="Digite sua senha"
-                required
+                value={campos.senha}
+                onChange={atualizarCampo}
+                aria-invalid={Boolean(erros.senha)}
+                aria-describedby={erros.senha ? "erro-senha" : undefined}
               />
+              {erros.senha && (
+                <small id="erro-senha" className="erro-campo">
+                  {erros.senha}
+                </small>
+              )}
             </div>
 
             <div className="area-esqueci-senha">

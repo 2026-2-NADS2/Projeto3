@@ -1,0 +1,139 @@
+.cabecalho--contato .navegacao .botao-login {
+  background-color: #ff790d;
+}
+
+.pagina-contato {
+  min-height: calc(100vh - 76px);
+  padding: 80px 16px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  position: relative;
+  overflow: hidden;
+  background: #f2faff;
+}
+
+.pagina-contato::before,
+.pagina-contato::after {
+  content: "";
+  position: absolute;
+  width: 410px;
+  height: 410px;
+  border-radius: 50%;
+  background: #e0f0ff;
+}
+
+.pagina-contato::before {
+  top: -180px;
+  left: -175px;
+}
+
+.pagina-contato::after {
+  width: 460px;
+  height: 460px;
+  right: -230px;
+  bottom: -230px;
+}
+
+.cartao-contato {
+  position: relative;
+  z-index: 1;
+  width: min(100%, 518px);
+  padding: 18px 35px 22px;
+  border-radius: 18px;
+  background: white;
+  box-shadow: 0 12px 34px rgba(78, 107, 134, 0.1);
+  text-align: center;
+}
+
+.logo-contato {
+  display: block;
+  width: 125px;
+  height: 72px;
+  object-fit: contain;
+  margin: 0 auto;
+}
+
+.cartao-contato h1 {
+  color: #112b60;
+  font-size: 31px;
+}
+
+.descricao-contato {
+  margin: 6px 0 20px;
+  color: #5e779e;
+  font-size: 15px;
+  line-height: 1.4;
+}
+
+.formulario-contato {
+  display: grid;
+  gap: 16px;
+  text-align: left;
+}
+
+.campo-contato {
+  display: grid;
+  gap: 5px;
+}
+
+.campo-contato label {
+  color: #102b58;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.campo-contato input,
+.campo-contato textarea {
+  width: 100%;
+  padding: 10px 13px;
+  border: 1px solid #8fb4ee;
+  border-radius: 6px;
+  font: inherit;
+  font-size: 14px;
+}
+
+.campo-contato input {
+  height: 42px;
+}
+
+.campo-contato textarea {
+  min-height: 94px;
+  resize: vertical;
+}
+
+.botao-enviar-contato {
+  width: 100%;
+  min-height: 43px;
+  border: 0;
+  border-radius: 6px;
+  background: #ff790d;
+  color: white;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.botao-enviar-contato:hover {
+  background: #dd6200;
+}
+
+.aviso-contato {
+  color: #102b58;
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+@media (max-width: 600px) {
+  .pagina-contato {
+    padding: 24px 16px;
+  }
+
+  .cartao-contato {
+    padding: 22px 20px;
+  }
+
+  .descricao-contato br {
+    display: none;
+  }
+}

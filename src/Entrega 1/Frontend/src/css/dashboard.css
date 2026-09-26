@@ -214,7 +214,6 @@
 .dash-conteudo {
   margin-left: 244px;
   padding: 29px 24px 22px 29px;
-  max-width: 1800px;
 }
 
 .dash-introducao {
@@ -283,7 +282,7 @@
   margin-bottom: 16px;
 }
 .dashboard--admin .dash-indicadores {
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 .dash-indicador,
 .dash-painel {
@@ -646,6 +645,11 @@
 }
 
 @media (max-width: 1100px) {
+
+  .dash-introducao {
+  flex-direction: column;
+  align-items: flex-start;
+  }
   .dash-conteudo {
     padding: 25px 18px;
   }
@@ -751,3 +755,51 @@
     grid-template-columns: repeat(4, minmax(85px, 1fr));
   }
 }
+.dash-estado {
+  min-height: 100vh;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  text-align: center;
+}
+
+.dash-carregando-indicador {
+  width: 38px;
+  height: 38px;
+  border: 4px solid var(--cor-suave);
+  border-top-color: var(--cor-principal);
+  border-radius: 50%;
+  animation: dash-girar 0.8s linear infinite;
+}
+
+@keyframes dash-girar {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.dash-estado--erro h1 {
+  font-size: 22px;
+}
+
+.dash-estado--erro p {
+  max-width: 460px;
+}
+
+.dash-estado--erro button {
+  padding: 11px 18px;
+  border: 0;
+  border-radius: 8px;
+  background: var(--cor-principal);
+  color: #fff;
+  font: inherit;
+  cursor: pointer;
+}
+
+.dash-estado--erro button:hover {
+  opacity: 0.85;
+}
+
