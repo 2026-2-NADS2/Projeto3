@@ -1,0 +1,228 @@
+/* Esse arquivo contém as cores e definições 
+principais do CSS para o projeto */
+
+:root {
+  /* Cores principais */
+  --azul-escuro: #1b2a4a;
+  --laranja: #f4951f;
+  --lilas-claro: #e8f0fe;
+  --azul-claro: #4a90e2;
+  --fundo-claro: #f2faff;
+
+  /* Cores da logo */
+  --azul-logo: #356da5;
+  --laranja-logo: #f4951f;
+  --azul-logo-escuro: #1b2a4a;
+  --verde-logo: #3d9a71;
+
+  /* Tipografia */
+  --texto-principal: #1b2a4a;
+  --texto-escuro: #333333;
+  --texto-secundario: #666666;
+  --texto-link: #4a90e2;
+  --branco: #ffffff;
+
+  /* Espaçamentos — escala de referência */
+  --espaco-1: 4px;
+  --espaco-2: 8px;
+  --espaco-3: 12px;
+  --espaco-4: 16px;
+  --espaco-5: 24px;
+  --espaco-6: 32px;
+  --espaco-7: 48px;
+  --espaco-8: 64px;
+
+  /* Arredondamentos */
+  --raio-pequeno: 4px;
+  --raio-medio: 8px;
+  --raio-grande: 12px;
+  --raio-extra-grande: 16px;
+
+  /* Sombras — valores atuais e propostas para uso futuro */
+  --sombra-suave: 0 2px 8px rgba(27, 42, 74, 0.08);
+  --sombra-media: 0 4px 12px rgba(27, 42, 74, 0.12);
+
+  /* Layout */
+  --altura-cabecalho: 76px;
+  --margem-horizontal: 10%;
+  --margem-horizontal-mobile: 5%;
+}
+/* Geral */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  color: var(--texto-escuro);
+  background-color: var(--branco);
+  padding-top: var(--altura-cabecalho);
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* Regras da Home */
+/* Cabeçalho */
+.cabecalho {
+  height: var(--altura-cabecalho);
+  padding: 0 var(--margem-horizontal);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--branco);
+
+   /* Cabeçalho fixo */
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   /* Mantém o cabeçalho acima do conteúdo principal. */
+   z-index: 1000;
+ 
+   box-sizing: border-box;
+   box-shadow: var(--sombra-suave);
+}
+.cabecalho img {
+  width: 110px;
+}
+.navegacao {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+.navegacao ul {
+  display: flex;
+  align-items: center;
+  gap: 35px;
+}
+.navegacao a {
+  font-size: 14px;
+  color: var(--texto-principal);
+}
+.navegacao a:hover {
+  color: var(--laranja);
+}
+.navegacao a.ativo {
+  color: var(--laranja);
+  font-weight: 600;
+}
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px;
+}
+.navegacao .botao-login {
+  width: 140px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--azul-logo);
+  color: var(--branco);
+  border-radius: var(--raio-medio);
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.navegacao .botao-login:hover {
+  background-color: var(--laranja);
+  color: var(--branco);
+}
+
+/* RODAPÉ */
+.rodape {
+  padding: 50px var(--margem-horizontal);
+
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr;
+  gap: var(--espaco-7);
+  align-items: start;
+
+  background-color: var(--branco);
+}
+.rodape > img {
+  width: 120px;
+}
+.rodape h3 {
+  font-size: 14px;
+  color: var(--azul-escuro);
+
+  margin-bottom: 15px;
+}
+.rodape ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.rodape a {
+  font-size: 12px;
+  color: var(--texto-secundario);
+}
+.rodape a:hover {
+  color: var(--laranja);
+}
+
+.pagina-nao-encontrada {
+  max-width: 680px;
+  margin: 80px auto;
+  padding: 24px;
+}
+
+.campo-formulario input[aria-invalid="true"] {
+  border-color: #b42318;
+}
+
+.erro-campo {
+  display: block;
+  margin-top: 6px;
+  color: #b42318;
+  font-size: 12px;
+}
+
+/* Navegação principal — adaptação para tablet */
+@media (max-width: 900px) {
+  .cabecalho {
+    height: auto;
+    padding: var(--espaco-4) var(--margem-horizontal-mobile);
+    flex-wrap: wrap;
+    gap: var(--espaco-4);
+  }
+  .navegacao {
+    width: 100%;
+    justify-content: space-between;
+    gap: var(--espaco-4);
+  }
+  .navegacao ul {
+    flex-wrap: wrap;
+    gap: 12px 18px;
+  }
+  .rodape { gap: var(--espaco-6); }
+}
+
+/* Navegação e rodapé — adaptação para celular */
+@media (max-width: 600px) {
+  .navegacao {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .navegacao .botao-login { width: 100%; }
+  .rodape {
+    padding: 40px var(--margem-horizontal-mobile);
+    grid-template-columns: 1fr;
+    gap: var(--espaco-6);
+  }
+  .rodape > img { grid-column: auto; }
+}

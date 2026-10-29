@@ -1,0 +1,286 @@
+/* Regras do Login */
+/* CABEÇALHO */
+
+.cabecalho-login {
+    height: var(--altura-cabecalho);
+    padding: 0 var(--margem-horizontal);
+  
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  
+    background-color: var(--branco);
+  }
+  
+  .cabecalho-login img {
+    width: 110px;
+  }
+  
+  .navegacao-login {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+  }
+  
+  .navegacao-login ul {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+  }
+  
+  .navegacao-login a {
+    font-size: 14px;
+    color: var(--texto-principal);
+  }
+  
+  .navegacao-login a:hover {
+    color: var(--laranja);
+  }
+  
+  /* BOTÃO FALE CONOSCO */
+  
+  .navegacao-login .botao-contato {
+    padding: 12px 30px;
+  
+    background-color: var(--azul-logo);
+    color: var(--branco);
+  
+    border-radius: var(--raio-medio);
+  
+    font-weight: 600;
+  }
+  
+  .navegacao-login .botao-contato:hover {
+    color: var(--branco);
+    background-color: var(--laranja);
+  }
+  
+  /* PÁGINA DE LOGIN */
+  
+  .pagina-login {
+    min-height: calc(100vh - var(--altura-cabecalho));
+    padding: 60px 20px;
+  
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  
+    position: relative;
+    overflow: hidden;
+  
+    background-color: var(--fundo-claro);
+  }
+  
+  /* CÍRCULOS DECORATIVOS */
+  
+  .circulo {
+    position: absolute;
+  
+    width: 260px;
+    height: 260px;
+  
+    background-color: var(--lilas-claro);
+  
+    border-radius: 50%;
+  }
+  
+  .circulo-superior {
+    top: -130px;
+    left: -100px;
+  }
+  
+  .circulo-inferior {
+    right: -100px;
+    bottom: -100px;
+  }
+  
+  /* CARD DE LOGIN */
+  
+  .cartao-login {
+    width: 500px;
+    padding: 45px;
+  
+    position: relative;
+  
+    background-color: var(--branco);
+  
+    border-radius: 18px;
+  
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  
+    text-align: center;
+  }
+  
+  /* LOGO */
+  
+  .logo-login {
+    width: 80px;
+    margin-bottom: 20px;
+  }
+  
+  /* TÍTULO */
+  
+  .cartao-login h1 {
+    font-size: 30px;
+    color: var(--azul-escuro);
+  
+    margin-bottom: 12px;
+  }
+  
+  /* DESCRIÇÃO */
+  
+  .descricao-login {
+    font-size: 13px;
+    color: var(--texto-secundario);
+  
+    margin-bottom: 35px;
+  }
+  
+  /* FORMULÁRIO */
+  
+  .formulario-login {
+    text-align: left;
+  }
+  
+  /* CAMPOS */
+  
+  .campo-formulario {
+    margin-bottom: 20px;
+  }
+  
+  .campo-formulario label {
+    display: block;
+  
+    font-size: 13px;
+    font-weight: 600;
+  
+    color: var(--azul-escuro);
+  
+    margin-bottom: 8px;
+  }
+  
+  .campo-formulario input {
+    width: 100%;
+    height: 50px;
+  
+    padding: 0 15px;
+  
+    border: 1px solid #d6deea;
+    border-radius: var(--raio-medio);
+  
+    font-family: inherit;
+    font-size: 13px;
+  
+    background-color: #fafbfd;
+  }
+  
+  /* QUANDO O CAMPO ESTIVER SELECIONADO */
+  
+  .campo-formulario input:focus {
+    outline: none;
+    border-color: var(--azul-claro);
+  }
+  
+  /* ESQUECI MINHA SENHA */
+  
+  .area-esqueci-senha {
+    text-align: right;
+    margin-top: -8px;
+    margin-bottom: 30px;
+  }
+  
+  .area-esqueci-senha a {
+    font-size: 12px;
+    color: var(--azul-logo);
+  }
+  
+  .area-esqueci-senha a:hover {
+    color: var(--laranja);
+    text-decoration: underline;
+  }
+  
+  /* BOTÃO ENTRAR */
+  
+  .botao-entrar {
+    width: 100%;
+  
+    padding: 15px;
+  
+    background-color: var(--azul-logo);
+    color: var(--branco);
+  
+    border: none;
+    border-radius: var(--raio-medio);
+  
+    font-size: 14px;
+    font-weight: 600;
+  
+    cursor: pointer;
+  }
+  
+  .botao-entrar:hover {
+    background-color: var(--laranja);
+  }
+  
+  /* VOLTAR AO INÍCIO */
+  
+  .voltar-inicio {
+    display: inline-block;
+  
+    margin-top: 25px;
+  
+    font-size: 12px;
+    color: var(--texto-secundario);
+  }
+  
+  .voltar-inicio:hover {
+    color: var(--laranja);
+  }
+  
+  @media (max-width: 900px) {
+    .cabecalho-login {
+      height: auto;
+      padding: var(--espaco-4) var(--margem-horizontal-mobile);
+      flex-wrap: wrap;
+      gap: var(--espaco-4);
+    }
+  
+    .navegacao-login {
+      width: 100%;
+      justify-content: space-between;
+      gap: var(--espaco-4);
+    }
+  
+    .navegacao-login ul {
+      flex-wrap: wrap;
+      gap: 12px 18px;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .navegacao-login {
+      flex-direction: column;
+      align-items: stretch;
+    }
+  
+    .navegacao-login .botao-contato {
+      display: block;
+      text-align: center;
+    }
+  
+    .pagina-login {
+      min-height: auto;
+      padding: var(--espaco-5) var(--espaco-4);
+    }
+  
+    .cartao-login {
+      width: 100%;
+      padding: 28px 20px;
+    }
+  
+    .cartao-login h1 {
+      font-size: clamp(24px, 7vw, 30px);
+    }
+  
+  }
+    

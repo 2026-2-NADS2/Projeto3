@@ -1,0 +1,61 @@
+export const dadosDashboard = {
+  professor: {
+    descricao: "Acompanhe turmas e o desenvolvimento de alunos.",
+    botao: "Novo acompanhamento",
+    destinoBotao: "acompanhamento",
+    menu: [
+      ["Início", "imgSidebarInicio"],
+      ["Minhas Turmas", "imgSidebarMinhasTurmas"],
+      ["Alunos", "imgSidebarAlunos"],
+      ["Acompanhamentos", "imgSidebarAcompanhamentos"],
+      ["Atividades", "imgSidebarAtividades"],
+      ["Retornos", "imgSidebarRetornos"],
+    ],
+    indicadores: [
+      ["Minhas turmas", "4", "Turmas ativas neste ano", "imgIconeTeamBlue"],
+      ["Alunos", "126", "alunos sob sua responsabilidade", "imgIconeUserBlue"],
+      ["Acompanhamentos pendnetes", "3", "aguardandno envio", "imgIconeDocumentOrange"],
+    ],
+  },
+  responsavel: {
+    descricao: "Acompnhe a torina escolar e desenvolvimento dos seus filhos.",
+    botao: "Ver comunicados",
+    destinoBotao: "Comunicado",
+    menu: [
+      ["Início", "imgSidebarInicio"],
+      ["Meus Filhos", "imgSidebarMeusFilhos"],
+      ["Notas", "imgSidebarNotas"],
+      ["Frequência", "imgSidebarFrequencia"],
+      ["Acompanhamentos", "imgIconeDocumentGreen"],
+      ["Comunicados", "imgSidebarComunicados"],
+      ["Atividades", "imgIconeCalendarPlainGreen"],
+    ],
+    indicadores: [
+      ["Nota Media", "8,7", "Desempenho de Luffy", "imgIconePerformanceGreen"],
+      ["Frequência", "98", "presenca neste bimestre", "imgIconeTeamGreen"],
+      ["Acompanhamentos", "2", "novidades para você", "imgIconeDocumentOrange"],
+    ],
+  },
+  admin: {
+    descricao: "Acompanhe a operação escolar e as publicações do bimestre",
+    botao: "Novo Cadastro",
+    destinoBotao: "Usuarios",
+    menu: [
+      ["Início", "imgSidebarInicio"],
+      ["Usuarios", "imgSidebarUsuarios"],
+      ["Alunos", "imgSidebarAlunos"],
+      ["Turmas e vinculos", "imgIconeTurmasAtivas"],
+      ["Disciplinas", "imgSidebarDisciplinas"],
+      ["Bimestres", "imgSidebarBimestres"],
+      ["Revisão", "imgIconeAguardandoRevisao"],
+      ["Tags", "imgSidebarTags"],
+      ["Relatorios", "imgSidebarRelatorios"],
+      ["Auditoria", "imgSidebarAuditoria"],
+    ],
+    indicadores: [
+      ["Alunos ativos", "428", "Matriculados neste ano", "imgIconeAlunosAtivos"],
+      ["Turmas Ativas", "18", "funcionando", "imgIconeTurmasAtivas"],
+      ["Professores ativos", "32", "Como tumas neste ano", "imgIconeProfessoresAtivos"],
+    ],
+  },
+};
