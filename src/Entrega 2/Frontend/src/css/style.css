@@ -98,6 +98,63 @@ img {
 .cabecalho img {
   width: 110px;
 }
+
+.logo-cabecalho {
+  display: inline-flex;
+  align-items: center;
+}
+
+/* Oculto no desktop */
+.botao-menu {
+  display: none;
+
+  width: 40px;
+  height: 40px;
+
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  gap: 5px;
+
+  background: transparent;
+  border: none;
+  border-radius: var(--raio-medio);
+
+  cursor: pointer;
+}
+
+/* Linhas do ícone */
+.botao-menu span {
+  display: block;
+
+  width: 22px;
+  height: 2px;
+
+  background-color: var(--azul-escuro);
+  border-radius: 2px;
+
+  transition: transform 0.2s, opacity 0.2s;
+}
+
+/* Transforma o hambúrguer em X */
+.botao-menu.aberto span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.botao-menu.aberto span:nth-child(2) {
+  opacity: 0;
+}
+
+.botao-menu.aberto span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* Acessibilidade */
+.botao-menu:focus-visible {
+  outline: 2px solid var(--azul-claro);
+  outline-offset: 3px;
+}
 .navegacao {
   display: flex;
   align-items: center;
@@ -192,37 +249,106 @@ html {
   font-size: 12px;
 }
 
-/* Navegação principal — adaptação para tablet */
-@media (max-width: 900px) {
-  .cabecalho {
-    height: auto;
-    padding: var(--espaco-4) var(--margem-horizontal-mobile);
-    flex-wrap: wrap;
-    gap: var(--espaco-4);
-  }
-  .navegacao {
-    width: 100%;
-    justify-content: space-between;
-    gap: var(--espaco-4);
-  }
-  .navegacao ul {
-    flex-wrap: wrap;
-    gap: 12px 18px;
-  }
-  .rodape { gap: var(--espaco-6); }
-}
+/* RESPONSIVIDADE — TABLET E MOBILE
+   Cabeçalho com menu hambúrguer.*/
 
-/* Navegação e rodapé — adaptação para celular */
-@media (max-width: 600px) {
-  .navegacao {
-    flex-direction: column;
-    align-items: stretch;
+   @media (max-width: 900px) {
+
+    /* Compensa a altura do cabeçalho fixo */
+    body {
+      padding-top: 64px;
+    }
+  
+    /* Evita que o cabeçalho cubra as seções */
+    html {
+      scroll-padding-top: 76px;
+    }
+  
+    /* Cabeçalho compacto */
+    .cabecalho {
+      height: 64px;
+      padding: 0 var(--margem-horizontal-mobile);
+  
+      display: flex;
+      flex-wrap: nowrap;
+      align-items: center;
+      justify-content: space-between;
+    }
+  
+    /* Logo */
+    .cabecalho img {
+      width: 100px;
+    }
+  
+    /* Exibe o botão hambúrguer */
+    .botao-menu {
+      display: flex;
+    }
+  
+    /* Menu fechado por padrão */
+    .navegacao {
+      display: none;
+  
+      position: absolute;
+      top: 100%;
+      left: 0;
+  
+      width: 100%;
+      padding: var(--espaco-5);
+  
+      background-color: var(--branco);
+      box-shadow: var(--sombra-suave);
+  
+      flex-direction: column;
+      align-items: stretch;
+      gap: var(--espaco-5);
+    }
+  
+    /* Menu aberto */
+    .navegacao.menu-aberto {
+      display: flex;
+    }
+  
+    /* Links organizados verticalmente */
+    .navegacao ul {
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      gap: var(--espaco-4);
+    }
+  
+    /* Área clicável dos links */
+    .navegacao ul a {
+      display: block;
+      padding: var(--espaco-2) 0;
+    }
+  
+    /* Botão Login ocupa toda a largura */
+    .navegacao .botao-login {
+      width: 100%;
+      height: 40px;
+    }
+  
+    /* Espaçamento do rodapé */
+    .rodape {
+      gap: var(--espaco-6);
+    }
   }
-  .navegacao .botao-login { width: 100%; }
-  .rodape {
-    padding: 40px var(--margem-horizontal-mobile);
-    grid-template-columns: 1fr;
-    gap: var(--espaco-6);
+  
+  
+  /* RESPONSIVIDADE — CELULAR*/
+  
+  @media (max-width: 600px) {
+  
+    /* Rodapé em uma coluna */
+    .rodape {
+      padding: 40px var(--margem-horizontal-mobile);
+      grid-template-columns: 1fr;
+      gap: var(--espaco-6);
+    }
+  
+    /* Logo ocupa sua própria linha */
+    .rodape > img {
+      grid-column: auto;
+    }
   }
-  .rodape > img { grid-column: auto; }
-}
