@@ -1,8 +1,5 @@
 using System.Net;
-using System.Net.Http.Headers;
 using System.Net.Http.Json;
-using System.Text.Json;
-using System.Text.Json.Serialization;
 using KFKA.Api.Domain;
 using KFKA.Api.Dtos;
 
@@ -12,13 +9,8 @@ namespace KFKA.Tests.Api;
 /// Cenário de aceite do enunciado: o Administrador cadastra a estrutura e abre o bimestre; o Professor
 /// registra e envia; o Administrador revisa e publica; o Responsável consulta e registra ciência.
 /// </summary>
-public class FluxoCompletoTests(ApiFactory fabrica) : IClassFixture<ApiFactory>
+public class FluxoCompletoTests(ApiFactory fabrica) : TesteApiBase(fabrica), IClassFixture<ApiFactory>
 {
-    private static readonly JsonSerializerOptions Json = new(JsonSerializerDefaults.Web)
-    {
-        Converters = { new JsonStringEnumConverter() }
-    };
-
     [Fact]
     public async Task Cenario_de_ponta_a_ponta()
     {
@@ -115,7 +107,7 @@ public class FluxoCompletoTests(ApiFactory fabrica) : IClassFixture<ApiFactory>
     [Fact]
     public async Task Rotas_protegidas_exigem_token_e_perfil()
     {
-        HttpClient anonimo = fabrica.CreateClient();
+        HttpClient anonimo = Fabrica.CreateClient();
         Assert.Equal(HttpStatusCode.Unauthorized, (await anonimo.GetAsync("/api/admin/acompanhamentos")).StatusCode);
 
         HttpClient responsavel = await LogarAsync("marcelo@kfka.com", ApiFactory.SenhaSeed);
@@ -126,7 +118,7 @@ public class FluxoCompletoTests(ApiFactory fabrica) : IClassFixture<ApiFactory>
     [Fact]
     public async Task Login_com_senha_errada_retorna_401()
     {
-        HttpResponseMessage resposta = await fabrica.CreateClient().PostAsJsonAsync("/api/auth/login",
+        HttpResponseMessage resposta = await Fabrica.CreateClient().PostAsJsonAsync("/api/auth/login",
             new { email = "admin@kfka.com", senha = "errada" });
 
         Assert.Equal(HttpStatusCode.Unauthorized, resposta.StatusCode);
@@ -157,36 +149,5 @@ public class FluxoCompletoTests(ApiFactory fabrica) : IClassFixture<ApiFactory>
 
         Assert.Equal(HttpStatusCode.UnprocessableEntity, resposta.StatusCode);
         Assert.Equal("application/problem+json", resposta.Content.Headers.ContentType?.MediaType);
-    }
-
-    private async Task<HttpClient> LogarAsync(string email, string senha)
-    {
-        HttpClient cliente = fabrica.CreateClient();
-        LoginResponse login = await PostAsync<LoginResponse>(cliente, "/api/auth/login", new { email, senha });
-        cliente.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", login.Token);
-        return cliente;
-    }
-
-    private static async Task<T> PostAsync<T>(HttpClient cliente, string url, object corpo)
-    {
-        HttpResponseMessage resposta = await cliente.PostAsJsonAsync(url, corpo);
-        await GarantirSucessoAsync(resposta);
-        return (await resposta.Content.ReadFromJsonAsync<T>(Json))!;
-    }
-
-    private static async Task<T> GetAsync<T>(HttpClient cliente, string url)
-    {
-        HttpResponseMessage resposta = await cliente.GetAsync(url);
-        await GarantirSucessoAsync(resposta);
-        return (await resposta.Content.ReadFromJsonAsync<T>(Json))!;
-    }
-
-    private static async Task GarantirSucessoAsync(HttpResponseMessage resposta)
-    {
-        if (!resposta.IsSuccessStatusCode)
-        {
-            string corpo = await resposta.Content.ReadAsStringAsync();
-            Assert.Fail($"{(int)resposta.StatusCode} em {resposta.RequestMessage?.RequestUri}: {corpo}");
-        }
     }
 }

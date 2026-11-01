@@ -98,9 +98,11 @@ namespace KFKA.Api.Services
             List<Tag> tags = await BuscarTagsAsync(dados.TagIds);
 
             // Só pode existir um acompanhamento (não cancelado) por aluno + disciplina + bimestre.
+            // Compara a DISCIPLINA, e não o vínculo: se o professor da disciplina for trocado,
+            // o novo vínculo não pode gerar um segundo registro para o mesmo aluno e bimestre.
             bool duplicado = await _db.Acompanhamentos.AnyAsync(a =>
                 a.AlunoId == dados.AlunoId
-                && a.VinculoProfessorId == dados.VinculoProfessorId
+                && a.VinculoProfessor.DisciplinaId == vinculo.DisciplinaId
                 && a.BimestreId == dados.BimestreId
                 && a.Status != StatusAcompanhamento.Cancelado);
             if (duplicado)

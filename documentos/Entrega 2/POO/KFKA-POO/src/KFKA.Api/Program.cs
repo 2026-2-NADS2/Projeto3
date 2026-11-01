@@ -39,6 +39,24 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJw
         NameClaimType = ClaimsKfka.Nome,
         RoleClaimType = ClaimsKfka.Perfil
     };
+
+    // A cada requisição, confere no banco se o usuário do token ainda está ativo.
+    // Assim, desativar alguém corta o acesso na hora (401), sem esperar o token expirar.
+    opcoes.Events = new JwtBearerEvents
+    {
+        OnTokenValidated = async contexto =>
+        {
+            KfkaDbContext db = contexto.HttpContext.RequestServices.GetRequiredService<KfkaDbContext>();
+            string? id = contexto.Principal?.FindFirst(ClaimsKfka.Id)?.Value;
+
+            bool ativo = int.TryParse(id, out int usuarioId)
+                && await db.Usuarios.AnyAsync(u => u.Id == usuarioId && u.Ativo);
+            if (!ativo)
+            {
+                contexto.Fail("Usuário inativo ou inexistente.");
+            }
+        }
+    };
 });
 builder.Services.AddAuthorization();
 

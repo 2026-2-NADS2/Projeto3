@@ -91,7 +91,7 @@ No Swagger: execute `POST /api/auth/login`, copie o `token`, clique em **Authori
 dotnet test
 ```
 
-São 28 testes. Os unitários cobrem as regras do domínio. O de integração executa o cenário de aceite do enunciado
+São 32 testes. Os unitários cobrem as regras do domínio. O de integração executa o cenário de aceite do enunciado
 (o administrador cadastra e abre o bimestre, o professor registra e envia, o administrador revisa e publica, o responsável consulta
 e registra ciência) e também verifica autorização (401/403/404) e o formato padronizado dos erros.
 
@@ -108,7 +108,7 @@ Nenhum segredo fica no código. O `appsettings.Development.json` tem apenas uma 
 
 ## Deploy na nuvem (Render, com Docker)
 
-> **Situação atual:** a API foi validada apenas localmente (build, 28 testes automatizados e execução manual).
+> **Situação atual:** a API foi validada apenas localmente (build, 32 testes automatizados e execução manual).
 > A imagem Docker ainda não foi construída. Confirme no primeiro deploy.
 
 A API fica dentro do repositório do projeto integrado, na pasta `documentos/Entrega 2/POO/KFKA-POO`.

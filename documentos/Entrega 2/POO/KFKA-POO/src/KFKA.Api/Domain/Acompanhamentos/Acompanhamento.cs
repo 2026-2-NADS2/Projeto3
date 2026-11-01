@@ -217,6 +217,9 @@ namespace KFKA.Api.Domain.Acompanhamentos
             }
 
             Validacao.Ativo(professor.Ativo, "O professor");
+            // Se o vínculo foi desativado (ex.: troca de professor), o registro sai das mãos dele;
+            // só a administração pode cancelá-lo ou conduzi-lo daqui em diante.
+            Validacao.Ativo(this.VinculoProfessor.Ativo, "O vínculo do professor");
         }
 
         private static void GarantirAdministradorAtivo(Administrador administrador)

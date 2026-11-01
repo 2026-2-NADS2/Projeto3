@@ -144,6 +144,31 @@ public class AcompanhamentoTests
     }
 
     [Fact]
+    public void Professor_com_vinculo_desativado_nao_edita_envia_nem_cancela()
+    {
+        Acompanhamento a = NovoRascunho();
+        a.VinculoProfessor.Desativar();
+
+        Assert.Throws<RegraNegocioException>(() =>
+            a.EditarRascunho(_professor, "Novo texto", 9m, new List<Tag>(), Agora));
+        Assert.Throws<RegraNegocioException>(() => a.EnviarParaRevisao(_professor, Agora));
+        Assert.Throws<RegraNegocioException>(() => a.Cancelar(_professor, "Erro", Agora));
+        Assert.Equal(StatusAcompanhamento.Rascunho, a.Status);
+        Assert.Single(a.Historico);
+    }
+
+    [Fact]
+    public void Administrador_ainda_cancela_registro_de_vinculo_desativado()
+    {
+        Acompanhamento a = NovoRascunho();
+        a.VinculoProfessor.Desativar();
+
+        a.Cancelar(_admin, "Professor substituído", Agora);
+
+        Assert.Equal(StatusAcompanhamento.Cancelado, a.Status);
+    }
+
+    [Fact]
     public void Rejeita_tag_inativa()
     {
         Acompanhamento a = NovoRascunho();
