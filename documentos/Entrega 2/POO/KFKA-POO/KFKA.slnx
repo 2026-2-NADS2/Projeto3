@@ -1,8 +1,0 @@
-<Solution>
-  <Folder Name="/src/">
-    <Project Path="src/KFKA.Api/KFKA.Api.csproj" />
-  </Folder>
-  <Folder Name="/tests/">
-    <Project Path="tests/KFKA.Tests/KFKA.Tests.csproj" />
-  </Folder>
-</Solution>
