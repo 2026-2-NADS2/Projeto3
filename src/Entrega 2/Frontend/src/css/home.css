@@ -48,10 +48,6 @@
     gap: 35px;
   }
   
-  .publicos span {
-    font-size: 13px;
-    color: var(--azul-escuro);
-  }
   .imagem-hero {
     width: 50%;
   }
@@ -306,18 +302,6 @@
     top: -100px;
   }
   
-  .contato h2 {
-    font-size: 30px;
-    margin-bottom: 15px;
-  }
-  .contato p {
-    width: 550px;
-  
-    font-size: 14px;
-    line-height: 1.6;
-  
-    margin-bottom: 25px;
-  }
   .contato .contato-botao {
     display: inline-block;
     padding: 12px 24px;

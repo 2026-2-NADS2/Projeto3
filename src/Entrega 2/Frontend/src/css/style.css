@@ -60,6 +60,9 @@ body {
   background-color: var(--branco);
   padding-top: var(--altura-cabecalho);
 }
+body.pagina-sem-cabecalho-fixo {
+  padding-top: 0;
+}
 
 ul {
   list-style: none;
@@ -102,6 +105,12 @@ img {
 .logo-cabecalho {
   display: inline-flex;
   align-items: center;
+}
+/* Ações do cabeçalho */
+.acoes-cabecalho {
+  display: flex;
+  align-items: center;
+  gap: var(--espaco-4);
 }
 
 /* Oculto no desktop */
@@ -180,7 +189,8 @@ html {
   scroll-behavior: smooth;
   scroll-padding-top: 90px;
 }
-.navegacao .botao-login {
+/* Botão Login — Desktop e Mobile */
+.cabecalho .botao-login {
   width: 140px;
   height: 40px;
   display: flex;
@@ -192,9 +202,11 @@ html {
   font-size: 14px;
   font-weight: 600;
   cursor: pointer;
+  text-decoration: none;
+  flex-shrink: 0;
 }
 
-.navegacao .botao-login:hover {
+.cabecalho .botao-login:hover {
   background-color: var(--laranja);
   color: var(--branco);
 }
@@ -265,16 +277,31 @@ html {
     }
   
     /* Cabeçalho compacto */
-    .cabecalho {
-      height: 64px;
-      padding: 0 var(--margem-horizontal-mobile);
-  
-      display: flex;
-      flex-wrap: nowrap;
+  .cabecalho {
+    height: 64px;
+    padding: 0 var(--margem-horizontal-mobile);
+
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+  }
+  /* Botão Login no mobile */
+    .cabecalho .botao-login {
+      width: 90px;
+      height: 36px;
+      padding: 0 16px;
+
+      display: inline-flex;
       align-items: center;
-      justify-content: space-between;
+      justify-content: center;
+
+      font-size: 12px;
+      white-space: nowrap;
+      flex-shrink: 0;
+      box-sizing: border-box;
     }
-  
+    
     /* Logo */
     .cabecalho img {
       width: 100px;
@@ -284,7 +311,26 @@ html {
     .botao-menu {
       display: flex;
     }
-  
+
+    /* Hambúrguer e Login */
+    .acoes-cabecalho {
+      display: flex;
+      align-items: center;
+      gap: var(--espaco-3);
+      margin-left: auto;
+    }
+
+    /* Login permanece visível */
+    .acoes-cabecalho .botao-login {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+
+      width: auto;
+      height: 40px;
+      flex-shrink: 0;
+    }
+      
     /* Menu fechado por padrão */
     .navegacao {
       display: none;
@@ -321,12 +367,6 @@ html {
     .navegacao ul a {
       display: block;
       padding: var(--espaco-2) 0;
-    }
-  
-    /* Botão Login ocupa toda a largura */
-    .navegacao .botao-login {
-      width: 100%;
-      height: 40px;
     }
   
     /* Espaçamento do rodapé */

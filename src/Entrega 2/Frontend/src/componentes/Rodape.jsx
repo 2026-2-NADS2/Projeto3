@@ -11,7 +11,7 @@ function Rodape() {
 
         <ul>
           <li>
-            <Link to="/politica-de-privacidade">
+            <Link to="/privacidade">
               Política de Privacidade
             </Link>
           </li>

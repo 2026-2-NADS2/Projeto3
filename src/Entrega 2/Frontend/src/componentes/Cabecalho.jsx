@@ -74,12 +74,65 @@ function Cabecalho({ ocultarContato = false }) {
   }
 
   return (
-    <header className="cabecalho">
-      {/* Identidade visual */}
-      <Link to="/" className="logo-cabecalho" onClick={fecharMenu}>
-        <img src={logo} alt="Logo Collision" />
-      </Link>
+  <header className="cabecalho">
+    {/* Identidade visual */}
+    <Link to="/" className="logo-cabecalho" onClick={fecharMenu}>
+      <img src={logo} alt="Logo Collision" />
+    </Link>
 
+    {/* Navegação principal */}
+    <nav
+      id="menu-principal"
+      className={`navegacao ${menuAberto ? "menu-aberto" : ""}`}
+      aria-label="Navegação principal"
+    >
+      <ul>
+        <li>
+          <a
+            href="/#inicio"
+            className={linkAtivo("inicio")}
+            onClick={fecharMenu}
+          >
+            Início
+          </a>
+        </li>
+
+        <li>
+          <a
+            href="/#recursos"
+            className={linkAtivo("recursos")}
+            onClick={fecharMenu}
+          >
+            Recursos
+          </a>
+        </li>
+
+        <li>
+          <a
+            href="/#noticias"
+            className={linkAtivo("noticias")}
+            onClick={fecharMenu}
+          >
+            Notícias
+          </a>
+        </li>
+
+        {!ocultarContato && (
+          <li>
+            <Link
+              to="/fale-conosco"
+              className={pathname === "/fale-conosco" ? "ativo" : ""}
+              onClick={fecharMenu}
+            >
+              Fale conosco
+            </Link>
+          </li>
+        )}
+      </ul>
+    </nav>
+
+    {/* Ações do cabeçalho */}
+    <div className="acoes-cabecalho">
       {/* Botão hambúrguer — visível apenas no mobile */}
       <button
         type="button"
@@ -94,67 +147,17 @@ function Cabecalho({ ocultarContato = false }) {
         <span></span>
       </button>
 
-      {/* Navegação principal */}
-      <nav
-        id="menu-principal"
-        className={`navegacao ${menuAberto ? "menu-aberto" : ""}`}
-        aria-label="Navegação principal"
+      {/* Login sempre visível */}
+      <Link
+        to="/login.html"
+        className="botao-login"
+        onClick={fecharMenu}
       >
-        <ul>
-          <li>
-            <a
-              href="/#inicio"
-              className={linkAtivo("inicio")}
-              onClick={fecharMenu}
-            >
-              Início
-            </a>
-          </li>
-
-          <li>
-            <a
-              href="/#recursos"
-              className={linkAtivo("recursos")}
-              onClick={fecharMenu}
-            >
-              Recursos
-            </a>
-          </li>
-
-          <li>
-            <a
-              href="/#noticias"
-              className={linkAtivo("noticias")}
-              onClick={fecharMenu}
-            >
-              Notícias
-            </a>
-          </li>
-
-          {!ocultarContato && (
-            <li>
-              <Link
-                to="/fale-conosco"
-                className={pathname === "/fale-conosco" ? "ativo" : ""}
-                onClick={fecharMenu}
-              >
-                Fale conosco
-              </Link>
-            </li>
-          )}
-        </ul>
-
-        {/* Acesso à autenticação */}
-        <Link
-          to="/login.html"
-          className="botao-login"
-          onClick={fecharMenu}
-        >
-          Login
-        </Link>
-      </nav>
-    </header>
-  );
+        Login
+      </Link>
+    </div>
+  </header>
+);
 }
 
 export default Cabecalho;

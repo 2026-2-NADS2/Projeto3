@@ -4,6 +4,7 @@ import Login from "./paginas/login.jsx";
 import Dashboard from "./paginas/Dashboard.jsx";
 import NaoEncontrada from "./paginas/NaoEncontrada.jsx";
 import FaleConosco  from "./paginas/FaleConosco.jsx";
+import Privacidade from "./paginas/Privacidade.jsx";
 
 function Rotas() {
   return (
@@ -14,6 +15,7 @@ function Rotas() {
       <Route path="/dashboard.html" element={<Dashboard />} />
       <Route path="/fale-conosco" element={<FaleConosco />} />
       <Route path="*" element={<NaoEncontrada />} />
+      <Route path="/privacidade" element={<Privacidade />} />
     </Routes>
   );
 }

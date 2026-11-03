@@ -1,4 +1,10 @@
 /* Estilos específicos: erro404. Variáveis compartilhadas em style.css. */
+.pagina-nao-encontrada {
+  max-width: 680px;
+  margin: 80px auto;
+  padding: 24px;
+}
+
 .cabecalho-erro {
   min-height: var(--altura-cabecalho);
   padding: 12px 7%;

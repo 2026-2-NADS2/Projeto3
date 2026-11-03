@@ -1,0 +1,192 @@
+/* =========================================
+   PÁGINA DE PRIVACIDADE — COLLISION
+========================================= */
+
+.pagina-privacidade {
+  min-height: 100vh;
+  background-color: var(--fundo-claro);
+}
+
+/* Cabeçalho simplificado */
+.privacidade-cabecalho {
+  height: var(--altura-cabecalho);
+  padding: 0 var(--margem-horizontal);
+
+  display: flex;
+  align-items: center;
+
+  background-color: var(--branco);
+  border-bottom: 1px solid var(--lilas-claro);
+}
+
+.privacidade-cabecalho img {
+  width: 110px;
+}
+
+/* Conteúdo principal */
+.privacidade-conteudo {
+  max-width: 1400px;
+  margin: 0 auto;
+
+  padding: var(--espaco-6) var(--margem-horizontal);
+}
+
+/* Botão voltar */
+.privacidade-voltar {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--espaco-2);
+
+  padding: var(--espaco-3) var(--espaco-5);
+
+  background-color: var(--branco);
+  color: var(--azul-logo);
+
+  border: 1px solid var(--lilas-claro);
+  border-radius: var(--raio-medio);
+
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.privacidade-voltar:hover {
+  background-color: var(--lilas-claro);
+}
+
+/* Introdução */
+.privacidade-introducao {
+  margin: var(--espaco-6) 0 var(--espaco-5);
+}
+
+.privacidade-introducao h1 {
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--azul-escuro);
+
+  margin-bottom: var(--espaco-4);
+}
+
+.privacidade-introducao p {
+  font-size: 14px;
+  color: var(--texto-secundario);
+  line-height: 1.6;
+}
+
+/* Lista de cartões */
+.privacidade-lista {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espaco-4);
+}
+
+/* Cartão */
+.privacidade-cartao {
+  padding: var(--espaco-5);
+
+  background-color: var(--branco);
+  border: 1px solid var(--lilas-claro);
+  border-radius: var(--raio-grande);
+}
+
+.privacidade-cartao h2 {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--azul-escuro);
+
+  margin-bottom: var(--espaco-3);
+}
+
+.privacidade-cartao p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--texto-principal);
+}
+
+/* Botão inferior */
+.privacidade-voltar-inferior {
+  margin-top: var(--espaco-5);
+
+  padding: var(--espaco-3) var(--espaco-5);
+
+  background-color: var(--azul-logo);
+  color: var(--branco);
+
+  border: none;
+  border-radius: var(--raio-medio);
+
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.privacidade-voltar-inferior:hover {
+  background-color: var(--laranja);
+}
+
+/* =========================================
+   RESPONSIVIDADE — TABLET
+========================================= */
+
+@media (max-width: 900px) {
+  .privacidade-cabecalho {
+    height: 64px;
+    padding: 0 var(--margem-horizontal-mobile);
+  }
+
+  .privacidade-cabecalho img {
+    width: 100px;
+  }
+
+  .privacidade-conteudo {
+    padding: var(--espaco-6) var(--margem-horizontal-mobile);
+  }
+
+  .privacidade-introducao h1 {
+    font-size: 28px;
+  }
+}
+
+/* =========================================
+   RESPONSIVIDADE — MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+  .privacidade-conteudo {
+    padding: var(--espaco-5) var(--margem-horizontal-mobile);
+  }
+
+  .privacidade-introducao {
+    margin: var(--espaco-5) 0;
+  }
+
+  .privacidade-introducao h1 {
+    font-size: 26px;
+  }
+
+  .privacidade-introducao p {
+    font-size: 14px;
+  }
+
+  .privacidade-cartao {
+    padding: var(--espaco-5);
+  }
+
+  .privacidade-cartao h2 {
+    font-size: 18px;
+  }
+
+  .privacidade-cartao p {
+    font-size: 14px;
+  }
+
+  .privacidade-voltar-inferior {
+    width: 100%;
+    min-height: 44px;
+  }
+}
