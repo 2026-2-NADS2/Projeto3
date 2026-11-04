@@ -1,3 +1,19 @@
+# Documentos do Projeto Collision
+
+Nesta pasta estão os documentos oficiais das entregas do Projeto Integrador.
+
+---
+
+## 🤖 Declaração de Uso de Inteligência Artificial
+
+Este projeto utilizou ferramentas de Inteligência Artificial Generativa (ChatGPT, Claude e Gemini) como apoio ao desenvolvimento.
+
+O detalhamento completo do uso — incluindo ferramentas, versões, finalidades, prompts principais e trechos afetados — está no arquivo:
+
+📄 **[Declaracao_de_Uso_de_IA.pdf](./Declaracao_de_Uso_de_IA.pdf)**
+
+**Conformidade:** O uso está em conformidade com o [Guia para o Uso Responsável de IA na FECAP](https://www.fecap.br/wp-content/uploads/2026/08/Guia-para-o-Uso-Responsavel-de-IA-na-FECAP.pdf).
+
 # Entregas do PI
 
 ## Entrega 1
