@@ -1,18 +1,83 @@
-# Documentos do Projeto Collision
+# Entregas do PI
+### **DECLARAÇÃO DE USO DE INTELIGÊNCIA ARTIFICIAL**
 
-Nesta pasta estão os documentos oficiais das entregas do Projeto Integrador.
+## Entrega 1
+<br><br>
 
----
+### Disciplina 1
 
-## 🤖 Declaração de Uso de Inteligência Artificial
+| **Aluno(s) Responsável(veis)** |[preencher] |
+| :--- | :--- |
+| **Ferramenta utilizada** | [preencher] |
+| **Versão/modelo** | [preencher] |
+| **Disciplina / Trabalho** | [preencher] |
+| **Finalidade de uso** | [preencher] |
+| ***Prompts* principais utilizados** | [preencher] |
+| **Trechos ou entregas afetadas** | [preencher] |
 
-Este projeto utilizou ferramentas de Inteligência Artificial Generativa (ChatGPT, Claude e Gemini) como apoio ao desenvolvimento.
 
-O detalhamento completo do uso — incluindo ferramentas, versões, finalidades, prompts principais e trechos afetados — está no arquivo:
+### Disciplina 2
 
-📄 **[Declaracao_de_Uso_de_IA.pdf](./Declaracao_de_Uso_de_IA.pdf)**
+| **Aluno(s) Responsável(veis)** |[preencher] |
+| :--- | :--- |
+| **Ferramenta utilizada** | [preencher] |
+| **Versão/modelo** | [preencher] |
+| **Disciplina / Trabalho** | [preencher] |
+| **Finalidade de uso** | [preencher] |
+| ***Prompts* principais utilizados** | [preencher] |
+| **Trechos ou entregas afetadas** | [preencher] |
 
-**Conformidade:** O uso está em conformidade com o [Guia para o Uso Responsável de IA na FECAP](https://www.fecap.br/wp-content/uploads/2026/08/Guia-para-o-Uso-Responsavel-de-IA-na-FECAP.pdf).
+### Disciplina 3
+
+| **Aluno(s) Responsável(veis)** |[preencher] |
+| :--- | :--- |
+| **Ferramenta utilizada** | [preencher] |
+| **Versão/modelo** | [preencher] |
+| **Disciplina / Trabalho** | [preencher] |
+| **Finalidade de uso** | [preencher] |
+| ***Prompts* principais utilizados** | [preencher] |
+| **Trechos ou entregas afetadas** | [preencher] |
+
+## Entrega 2
+<br><br>
+
+### Disciplina 1
+
+| **Aluno(s) Responsável(veis)** |[preencher] |
+| :--- | :--- |
+| **Ferramenta utilizada** | [preencher] |
+| **Versão/modelo** | [preencher] |
+| **Disciplina / Trabalho** | [preencher] |
+| **Finalidade de uso** | [preencher] |
+| ***Prompts* principais utilizados** | [preencher] |
+| **Trechos ou entregas afetadas** | [preencher] |
+
+
+### Disciplina 2
+
+| **Aluno(s) Responsável(veis)** |[preencher] |
+| :--- | :--- |
+| **Ferramenta utilizada** | [preencher] |
+| **Versão/modelo** | [preencher] |
+| **Disciplina / Trabalho** | [preencher] |
+| **Finalidade de uso** | [preencher] |
+| ***Prompts* principais utilizados** | [preencher] |
+| **Trechos ou entregas afetadas** | [preencher] |
+
+### Disciplina 3
+
+| **Aluno(s) Responsável(veis)** |[preencher] |
+| :--- | :--- |
+| **Ferramenta utilizada** | [preencher] |
+| **Versão/modelo** | [preencher] |
+| **Disciplina / Trabalho** | [preencher] |
+| **Finalidade de uso** | [preencher] |
+| ***Prompts* principais utilizados** | [preencher] |
+| **Trechos ou entregas afetadas** | [preencher] |
+
+***Declaro que o uso acima descrito está em conformidade com o GUIA PARA O USO RESPONSÁVEL DE
+INTELIGÊNCIA ARTIFICIAL NA FECAP e que o conteúdo final é de minha plena responsabilidade
+autoral.***
 
 # Entregas do PI
 
