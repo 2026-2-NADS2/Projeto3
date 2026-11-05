@@ -1,23 +1,80 @@
-# Código-Fonte do Projeto Collision
+# Entregas do PI
+### **DECLARAÇÃO DE USO DE INTELIGÊNCIA ARTIFICIAL**
 
-Nesta pasta está o código-fonte das entregas do Projeto Integrador.
+## Entrega 1
+<br><br>
 
----
+### Módulo do sistema 1
 
-## 🤖 Uso de Inteligência Artificial no Código-Fonte
+| **Aluno(s) Responsável(veis)** |[preencher] |
+| :--- | :--- |
+| **Ferramenta utilizada** | [preencher] |
+| **Versão/modelo** | [preencher] |
+| **Disciplina / Trabalho** | [preencher] |
+| **Finalidade de uso** | [preencher] |
+| ***Prompts* principais utilizados** | [preencher] |
+| **Trechos ou entregas afetadas** | [preencher] |
 
-O código-fonte deste projeto foi desenvolvido com o auxílio de ferramentas de Inteligência Artificial Generativa (ChatGPT, Claude e Gemini).
 
-O detalhamento completo está no arquivo:
-📄 **[Declaracao_de_Uso_de_IA.pdf](../DOCUMENTOS/Declaracao_de_Uso_de_IA.pdf)**
+### Módulo do sistema 2
 
-**Resumo por disciplina:**
-- **Banco de Dados:** Scripts SQL, índices e views.
-- **POO:** Estruturação de classes em C#.
-- **Estrutura de Dados:** Lógica de paginação e análise de complexidade.
-- **Desenvolvimento Web:** Estrutura da API e controllers.
-- **Design:** Prompts para imagens e textos do Guia de Estilo.
+| **Aluno(s) Responsável(veis)** |[preencher] |
+| :--- | :--- |
+| **Ferramenta utilizada** | [preencher] |
+| **Versão/modelo** | [preencher] |
+| **Disciplina / Trabalho** | [preencher] |
+| **Finalidade de uso** | [preencher] |
+| ***Prompts* principais utilizados** | [preencher] |
+| **Trechos ou entregas afetadas** | [preencher] |
 
-Todo o código foi revisado, testado e é de responsabilidade autoral dos integrantes do grupo.
+### Módulo do sistema 3
 
-**Conformidade:** O uso está em conformidade com o [Guia para o Uso Responsável de IA na FECAP](https://www.fecap.br/wp-content/uploads/2026/08/Guia-para-o-Uso-Responsavel-de-IA-na-FECAP.pdf).
+| **Aluno(s) Responsável(veis)** |[preencher] |
+| :--- | :--- |
+| **Ferramenta utilizada** | [preencher] |
+| **Versão/modelo** | [preencher] |
+| **Disciplina / Trabalho** | [preencher] |
+| **Finalidade de uso** | [preencher] |
+| ***Prompts* principais utilizados** | [preencher] |
+| **Trechos ou entregas afetadas** | [preencher] |
+
+## Entrega 2
+<br><br>
+
+### Módulo do sistema 1
+
+| **Aluno(s) Responsável(veis)** |[preencher] |
+| :--- | :--- |
+| **Ferramenta utilizada** | [preencher] |
+| **Versão/modelo** | [preencher] |
+| **Disciplina / Trabalho** | [preencher] |
+| **Finalidade de uso** | [preencher] |
+| ***Prompts* principais utilizados** | [preencher] |
+| **Trechos ou entregas afetadas** | [preencher] |
+
+
+### Módulo do sistema 2
+
+| **Aluno(s) Responsável(veis)** |[preencher] |
+| :--- | :--- |
+| **Ferramenta utilizada** | [preencher] |
+| **Versão/modelo** | [preencher] |
+| **Disciplina / Trabalho** | [preencher] |
+| **Finalidade de uso** | [preencher] |
+| ***Prompts* principais utilizados** | [preencher] |
+| **Trechos ou entregas afetadas** | [preencher] |
+
+### Módulo do sistema 3
+
+| **Aluno(s) Responsável(veis)** |[preencher] |
+| :--- | :--- |
+| **Ferramenta utilizada** | [preencher] |
+| **Versão/modelo** | [preencher] |
+| **Disciplina / Trabalho** | [preencher] |
+| **Finalidade de uso** | [preencher] |
+| ***Prompts* principais utilizados** | [preencher] |
+| **Trechos ou entregas afetadas** | [preencher] |
+
+***Declaro que o uso acima descrito está em conformidade com o GUIA PARA O USO RESPONSÁVEL DE
+INTELIGÊNCIA ARTIFICIAL NA FECAP e que o conteúdo final é de minha plena responsabilidade
+autoral.***
