@@ -1,51 +1,47 @@
-function Noticias() {
+const orientacoes = [
+  [
+    "familias.svg",
+    "Para famílias",
+    "Como ler o acompanhamento bimestral",
+    "Entenda as informações do relatório e transforme a leitura em uma conversa sobre aprendizagem.",
+  ],
+  [
+    "professores.svg",
+    "Para professores",
+    "Registros claros e úteis",
+    "Conheça uma estrutura simples para descrever avanços, dificuldades e estratégias de apoio.",
+  ],
+  [
+    "escolas.svg",
+    "Para escolas",
+    "Uma comunicação mais organizada",
+    "Veja como revisão e publicação ajudam a compartilhar informações com segurança.",
+  ],
+];
+
+export default function Noticias() {
   return (
     <section className="noticias" id="noticias">
-      <h2>Notícias</h2>
-
-      <p>Acompanhe as principais novidades da plataforma e da comunidade escolar.</p>
-
+      <h2>Para a comunidade escolar</h2>
+      <p>
+        Orientações para tornar o acompanhamento mais próximo e participativo.
+      </p>
       <div className="grade-noticias">
-        <article className="cartao-noticia">
-          <div className="cabecalho-noticia">
-            <time dateTime="2026-09-20">20 de Setembro de 2026</time>
-
-            <h3>Novas funcionalidades na plataforma</h3>
-          </div>
-
-          <div className="conteudo-noticia">
-            <p>Confira as principais novidades que chegam para facilitar o dia a dia da escola.</p>
-            <button type="button">Saiba mais</button>
-          </div>
-        </article>
-
-        <article className="cartao-noticia">
-          <div className="cabecalho-noticia">
-            <time dateTime="2026-09-20">20 de Setembro de 2026</time>
-
-            <h3>Dicas para um acompanhamento mais próximo</h3>
-          </div>
-
-          <div className="conteudo-noticia">
-            <p>Veja como usar a plataforma para fortalecer a parceria entre escola e família.</p>
-            <button type="button">Saiba mais</button>
-          </div>
-        </article>
-
-        <article className="cartao-noticia">
-          <div className="cabecalho-noticia">
-            <time dateTime="2026-09-20">20 de Setembro de 2026</time>
-
-            <h3>Juntos por uma educação mais conectada</h3>
-          </div>
-
-          <div className="conteudo-noticia">
-            <p>Conheça iniciativas que estão fazendo a diferença na nossa comunidade escolar.</p>
-            <button type="button">Saiba mais</button>
-          </div>
-        </article>
+        {orientacoes.map(([icone, publico, titulo, descricao]) => (
+          <article className="cartao-noticia" key={titulo}>
+            <div className="cabecalho-noticia">
+              <img src={"/img/acesso/" + icone} alt="" />
+            </div>
+            <div className="conteudo-noticia">
+              <small>{publico}</small>
+              <h3>{titulo}</h3>
+              <p>{descricao}</p>
+              {/* O Figma define o rótulo. A orientação precisa de um destino para virar link. */}
+              <span className="orientacao-rotulo">Ler orientação →</span>
+            </div>
+          </article>
+        ))}
       </div>
     </section>
   );
 }
-export default Noticias;

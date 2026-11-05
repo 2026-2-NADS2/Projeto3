@@ -4,13 +4,13 @@
 
 .pagina-privacidade {
   min-height: 100vh;
-  background-color: var(--fundo-claro);
+  background-color: #f4f8fc;
 }
 
 /* Cabeçalho simplificado */
 .privacidade-cabecalho {
   height: var(--altura-cabecalho);
-  padding: 0 var(--margem-horizontal);
+  padding: 0 5%;
 
   display: flex;
   align-items: center;
@@ -25,10 +25,9 @@
 
 /* Conteúdo principal */
 .privacidade-conteudo {
-  max-width: 1400px;
+  width: min(90%, 1512px);
   margin: 0 auto;
-
-  padding: var(--espaco-6) var(--margem-horizontal);
+  padding: 44px 0 var(--espaco-6);
 }
 
 /* Botão voltar */
@@ -51,10 +50,6 @@
 
   cursor: pointer;
   transition: background-color 0.2s;
-}
-
-.privacidade-voltar:hover {
-  background-color: var(--lilas-claro);
 }
 
 /* Introdução */
@@ -125,10 +120,6 @@
   transition: background-color 0.2s;
 }
 
-.privacidade-voltar-inferior:hover {
-  background-color: var(--laranja);
-}
-
 /* =========================================
    RESPONSIVIDADE — TABLET
 ========================================= */
@@ -158,7 +149,7 @@
 
 @media (max-width: 600px) {
   .privacidade-conteudo {
-    padding: var(--espaco-5) var(--margem-horizontal-mobile);
+    padding: var(--espaco-5) 0;
   }
 
   .privacidade-introducao {

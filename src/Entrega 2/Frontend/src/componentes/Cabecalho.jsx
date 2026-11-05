@@ -2,8 +2,9 @@ import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import logo from "../assets/img/collision.png";
 
-function Cabecalho({ ocultarContato = false }) {
+function Cabecalho({ ocultarContato = false, ocultarLogin = false }) {
   const { pathname } = useLocation();
+  const estaNaHome = pathname === "/" || pathname === "/index.html";
 
   // Controla a seção destacada na navegação.
   const [secaoAtiva, setSecaoAtiva] = useState("inicio");
@@ -18,7 +19,7 @@ function Cabecalho({ ocultarContato = false }) {
 
   // Identifica a seção ativa durante a rolagem da Home.
   useEffect(() => {
-    if (pathname !== "/") return;
+    if (!estaNaHome) return;
 
     const secoes = ["inicio", "recursos", "noticias"];
 
@@ -46,7 +47,7 @@ function Cabecalho({ ocultarContato = false }) {
       window.removeEventListener("scroll", atualizarSecao);
       window.removeEventListener("resize", atualizarSecao);
     };
-  }, [pathname]);
+  }, [estaNaHome]);
 
   // Fecha o menu ao pressionar Escape.
   useEffect(() => {
@@ -66,98 +67,95 @@ function Cabecalho({ ocultarContato = false }) {
   }, [menuAberto]);
 
   // Retorna a classe ativa conforme a seção selecionada.
-  const linkAtivo = (id) =>
-    pathname === "/" && secaoAtiva === id ? "ativo" : "";
+  const linkAtivo = (id) => (estaNaHome && secaoAtiva === id ? "ativo" : "");
 
   function fecharMenu() {
     setMenuAberto(false);
   }
 
   return (
-  <header className="cabecalho">
-    {/* Identidade visual */}
-    <Link to="/" className="logo-cabecalho" onClick={fecharMenu}>
-      <img src={logo} alt="Logo Collision" />
-    </Link>
+    <header className="cabecalho">
+      {/* Identidade visual */}
+      <Link to="/" className="logo-cabecalho" onClick={fecharMenu}>
+        <img src={logo} alt="Logo Collision" />
+      </Link>
 
-    {/* Navegação principal */}
-    <nav
-      id="menu-principal"
-      className={`navegacao ${menuAberto ? "menu-aberto" : ""}`}
-      aria-label="Navegação principal"
-    >
-      <ul>
-        <li>
-          <a
-            href="/#inicio"
-            className={linkAtivo("inicio")}
-            onClick={fecharMenu}
-          >
-            Início
-          </a>
-        </li>
-
-        <li>
-          <a
-            href="/#recursos"
-            className={linkAtivo("recursos")}
-            onClick={fecharMenu}
-          >
-            Recursos
-          </a>
-        </li>
-
-        <li>
-          <a
-            href="/#noticias"
-            className={linkAtivo("noticias")}
-            onClick={fecharMenu}
-          >
-            Notícias
-          </a>
-        </li>
-
-        {!ocultarContato && (
+      {/* Navegação principal */}
+      <nav
+        id="menu-principal"
+        className={`navegacao ${menuAberto ? "menu-aberto" : ""}`}
+        aria-label="Navegação principal"
+      >
+        <ul>
           <li>
-            <Link
-              to="/fale-conosco"
-              className={pathname === "/fale-conosco" ? "ativo" : ""}
+            <a
+              href="/#inicio"
+              className={linkAtivo("inicio")}
               onClick={fecharMenu}
             >
-              Fale conosco
-            </Link>
+              Início
+            </a>
           </li>
+
+          <li>
+            <a
+              href="/#recursos"
+              className={linkAtivo("recursos")}
+              onClick={fecharMenu}
+            >
+              Recursos
+            </a>
+          </li>
+
+          <li>
+            <a
+              href="/#noticias"
+              className={linkAtivo("noticias")}
+              onClick={fecharMenu}
+            >
+              Notícias
+            </a>
+          </li>
+
+          {!ocultarContato && (
+            <li>
+              <Link
+                to="/fale-conosco"
+                className={pathname === "/fale-conosco" ? "ativo" : ""}
+                onClick={fecharMenu}
+              >
+                Fale conosco
+              </Link>
+            </li>
+          )}
+        </ul>
+      </nav>
+
+      {/* Ações do cabeçalho */}
+      <div className="acoes-cabecalho">
+        {/* Botão hambúrguer — visível apenas no mobile */}
+        <button
+          type="button"
+          className={`botao-menu ${menuAberto ? "aberto" : ""}`}
+          onClick={() => setMenuAberto((anterior) => !anterior)}
+          aria-label={menuAberto ? "Fechar menu" : "Abrir menu"}
+          aria-expanded={menuAberto}
+          aria-controls="menu-principal"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        {/* O cabeçalho do login usa o mesmo menu e oculta a própria ação de entrada. */}
+        {!ocultarLogin && (
+          <Link to="/login.html" className="botao-login" onClick={fecharMenu}>
+            Login
+          </Link>
         )}
-      </ul>
-    </nav>
-
-    {/* Ações do cabeçalho */}
-    <div className="acoes-cabecalho">
-      {/* Botão hambúrguer — visível apenas no mobile */}
-      <button
-        type="button"
-        className={`botao-menu ${menuAberto ? "aberto" : ""}`}
-        onClick={() => setMenuAberto((anterior) => !anterior)}
-        aria-label={menuAberto ? "Fechar menu" : "Abrir menu"}
-        aria-expanded={menuAberto}
-        aria-controls="menu-principal"
-      >
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-
-      {/* Login sempre visível */}
-      <Link
-        to="/login.html"
-        className="botao-login"
-        onClick={fecharMenu}
-      >
-        Login
-      </Link>
-    </div>
-  </header>
-);
+      </div>
+    </header>
+  );
 }
 
 export default Cabecalho;

@@ -1,27 +1,39 @@
-function Recursos() {
+const recursos = [
+  [
+    "desenvolvimento.svg",
+    "Desenvolvimento visível",
+    "Descrição, média e tags que ajudam a entender os avanços de cada aluno.",
+  ],
+  [
+    "revisao.svg",
+    "Revisão pela escola",
+    "O acompanhamento passa pela administração antes de chegar à família.",
+  ],
+  [
+    "familia.svg",
+    "Família bem informada",
+    "Relatórios por bimestre, confirmação de leitura e documento em PDF.",
+  ],
+];
+
+export default function Recursos() {
   return (
     <section className="recursos" id="recursos">
-      <h2>Tudo o que você precisa em um só lugar</h2>
-
-      <p>Uma plataforma completa para fortalecer a conexão entre escola, professores e famílias.</p>
-
+      <h2>Clareza em cada etapa do acompanhamento</h2>
+      <p>
+        Uma experiência organizada para professores, gestores e responsáveis.
+      </p>
       <div className="grade-recursos">
-        <article className="cartao-recurso">
-          <h3>Desempenho</h3>
-          <p>Acompanhe notas e a evolução do seu aluno de forma simples e visual.</p>
-        </article>
-
-        <article className="cartao-recurso">
-          <h3>Frequência</h3>
-          <p>Veja a presença e as faltas em tempo real, mantendo o acompanhamento em dia.</p>
-        </article>
-
-        <article className="cartao-recurso">
-          <h3>Comunicação</h3>
-          <p>Escolas e responsáveis sempre conectados, com comunicados e avisos.</p>
-        </article>
+        {recursos.map(([icone, titulo, descricao]) => (
+          <article className="cartao-recurso" key={titulo}>
+            <span className="arte-recurso">
+              <img src={"/img/acesso/" + icone} alt="" />
+            </span>
+            <h3>{titulo}</h3>
+            <p>{descricao}</p>
+          </article>
+        ))}
       </div>
     </section>
   );
 }
-export default Recursos;

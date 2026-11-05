@@ -1,7 +1,4 @@
 /* Estilos específicos: faleconosco. Variáveis compartilhadas em style.css. */
-.cabecalho--contato .navegacao .botao-login {
-  background-color: #ff790d;
-}
 
 .pagina-contato {
   min-height: calc(100vh - var(--altura-cabecalho));
@@ -40,7 +37,7 @@
   position: relative;
   z-index: 1;
   width: min(100%, 518px);
-  padding: 18px 35px 22px;
+  padding: 0 35px 22px;
   border-radius: 18px;
   background: white;
   box-shadow: 0 12px 34px rgba(78, 107, 134, 0.1);
@@ -49,8 +46,8 @@
 
 .logo-contato {
   display: block;
-  width: 125px;
-  height: 72px;
+  width: 184px;
+  height: 106px;
   object-fit: contain;
   margin: 0 auto;
 }
@@ -113,10 +110,6 @@
   font: inherit;
   font-weight: 600;
   cursor: pointer;
-}
-
-.botao-enviar-contato:hover {
-  background: #dd6200;
 }
 
 .aviso-contato {

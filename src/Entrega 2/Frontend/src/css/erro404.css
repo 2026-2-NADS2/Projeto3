@@ -5,53 +5,6 @@
   padding: 24px;
 }
 
-.cabecalho-erro {
-  min-height: var(--altura-cabecalho);
-  padding: 12px 7%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 24px;
-  background: var(--branco);
-}
-
-.cabecalho-erro img {
-  display: block;
-  width: 110px;
-}
-
-.navegacao-erro,
-.navegacao-erro ul {
-  display: flex;
-  align-items: center;
-}
-
-.navegacao-erro {
-  gap: 32px;
-}
-.navegacao-erro ul {
-  gap: 24px;
-}
-.navegacao-erro a {
-  color: var(--azul-escuro);
-}
-.navegacao-erro a:hover {
-  color: var(--laranja);
-}
-
-.navegacao-erro .botao-login-erro {
-  padding: 12px 30px;
-  border-radius: 8px;
-  background: var(--azul-logo);
-  color: var(--branco);
-  font-weight: 600;
-}
-
-.navegacao-erro .botao-login-erro:hover {
-  background: var(--laranja);
-  color: var(--branco);
-}
-
 .pagina-erro {
   min-height: calc(100vh - var(--altura-cabecalho));
   padding: 48px 16px;
@@ -131,7 +84,7 @@
   cursor: pointer;
 }
 
-.botao-inicio-erro:hover {
+.pagina-erro--dashboard .botao-inicio-erro:hover {
   background: var(--laranja);
   color: var(--branco);
 }
@@ -140,29 +93,6 @@
   min-height: 500px;
   padding: 12px 0 24px;
   background: transparent;
-}
-
-@media (max-width: 760px) {
-  .cabecalho-erro {
-    flex-direction: column;
-    gap: 12px;
-  }
-  .navegacao-erro {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 12px;
-  }
-  .navegacao-erro ul {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 8px 18px;
-  }
-  .pagina-erro {
-    min-height: calc(100vh - 130px);
-  }
-  .pagina-erro--dashboard {
-    min-height: 500px;
-  }
 }
 
 @media (max-width: 480px) {
@@ -175,4 +105,30 @@
   .descricao-erro br {
     display: none;
   }
+}
+
+/* O 404 público tem as dimensões do Figma. O cartão interno usa o layout do painel. */
+.pagina-erro:not(.pagina-erro--dashboard) .cartao-erro {
+  width: min(100%, 540px);
+}
+
+.pagina-erro:not(.pagina-erro--dashboard) .logo-erro {
+  width: 184px;
+  margin-bottom: 0;
+}
+
+.pagina-erro:not(.pagina-erro--dashboard) .ilustracao-erro {
+  width: min(100%, 238px);
+  margin-top: -24px;
+  margin-bottom: -20px;
+}
+
+.pagina-erro:not(.pagina-erro--dashboard) .descricao-erro {
+  font-size: 15px;
+}
+
+.pagina-erro:not(.pagina-erro--dashboard) .botao-inicio-erro {
+  width: 100%;
+  min-height: 54px;
+  background: #ff790d;
 }

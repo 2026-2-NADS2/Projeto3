@@ -11,21 +11,15 @@ function Rodape() {
 
         <ul>
           <li>
-            <Link to="/privacidade">
-              Política de Privacidade
-            </Link>
+            <Link to="/privacidade">Política de Privacidade</Link>
           </li>
 
           <li>
-            <Link to="/politica-de-cookies">
-              Política de Cookies
-            </Link>
+            <Link to="/politica-de-cookies">Política de Cookies</Link>
           </li>
 
           <li>
-            <Link to="/perguntas-frequentes">
-              Perguntas Frequentes
-            </Link>
+            <Link to="/perguntas-frequentes">Perguntas Frequentes</Link>
           </li>
         </ul>
       </div>
@@ -41,6 +35,7 @@ function Rodape() {
           <li>
             <Link to="/linkedin">LinkedIn</Link>
           </li>
+          <li>FAQ</li>
         </ul>
       </div>
     </footer>

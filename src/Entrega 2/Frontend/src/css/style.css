@@ -87,16 +87,16 @@ img {
   justify-content: space-between;
   background-color: var(--branco);
 
-   /* Cabeçalho fixo */
-   position: fixed;
-   top: 0;
-   left: 0;
-   width: 100%;
-   /* Mantém o cabeçalho acima do conteúdo principal. */
-   z-index: 1000;
- 
-   box-sizing: border-box;
-   box-shadow: var(--sombra-suave);
+  /* Cabeçalho fixo */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  /* Mantém o cabeçalho acima do conteúdo principal. */
+  z-index: 1000;
+
+  box-sizing: border-box;
+  box-shadow: var(--sombra-suave);
 }
 .cabecalho img {
   width: 110px;
@@ -143,7 +143,9 @@ img {
   background-color: var(--azul-escuro);
   border-radius: 2px;
 
-  transition: transform 0.2s, opacity 0.2s;
+  transition:
+    transform 0.2s,
+    opacity 0.2s;
 }
 
 /* Transforma o hambúrguer em X */
@@ -160,10 +162,6 @@ img {
 }
 
 /* Acessibilidade */
-.botao-menu:focus-visible {
-  outline: 2px solid var(--azul-claro);
-  outline-offset: 3px;
-}
 .navegacao {
   display: flex;
   align-items: center;
@@ -178,11 +176,7 @@ img {
   font-size: 14px;
   color: var(--texto-principal);
 }
-.navegacao a:hover {
-  color: var(--laranja);
-}
 .navegacao a.ativo {
-  color: var(--laranja);
   font-weight: 600;
 }
 html {
@@ -196,7 +190,7 @@ html {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: var(--azul-logo);
+  background-color: var(--acesso-login-fundo, #b84a06);
   color: var(--branco);
   border-radius: var(--raio-medio);
   font-size: 14px;
@@ -204,11 +198,6 @@ html {
   cursor: pointer;
   text-decoration: none;
   flex-shrink: 0;
-}
-
-.cabecalho .botao-login:hover {
-  background-color: var(--laranja);
-  color: var(--branco);
 }
 
 /* RODAPÉ */
@@ -240,9 +229,6 @@ html {
   font-size: 12px;
   color: var(--texto-secundario);
 }
-.rodape a:hover {
-  color: var(--laranja);
-}
 
 .pagina-nao-encontrada {
   max-width: 680px;
@@ -264,19 +250,18 @@ html {
 /* RESPONSIVIDADE — TABLET E MOBILE
    Cabeçalho com menu hambúrguer.*/
 
-   @media (max-width: 900px) {
+@media (max-width: 900px) {
+  /* Compensa a altura do cabeçalho fixo */
+  body {
+    padding-top: 64px;
+  }
 
-    /* Compensa a altura do cabeçalho fixo */
-    body {
-      padding-top: 64px;
-    }
-  
-    /* Evita que o cabeçalho cubra as seções */
-    html {
-      scroll-padding-top: 76px;
-    }
-  
-    /* Cabeçalho compacto */
+  /* Evita que o cabeçalho cubra as seções */
+  html {
+    scroll-padding-top: 76px;
+  }
+
+  /* Cabeçalho compacto */
   .cabecalho {
     height: 64px;
     padding: 0 var(--margem-horizontal-mobile);
@@ -287,108 +272,171 @@ html {
     justify-content: space-between;
   }
   /* Botão Login no mobile */
-    .cabecalho .botao-login {
-      width: 90px;
-      height: 36px;
-      padding: 0 16px;
+  .cabecalho .botao-login {
+    width: 90px;
+    height: 36px;
+    padding: 0 16px;
 
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 
-      font-size: 12px;
-      white-space: nowrap;
-      flex-shrink: 0;
-      box-sizing: border-box;
-    }
-    
-    /* Logo */
-    .cabecalho img {
-      width: 100px;
-    }
-  
-    /* Exibe o botão hambúrguer */
-    .botao-menu {
-      display: flex;
-    }
-
-    /* Hambúrguer e Login */
-    .acoes-cabecalho {
-      display: flex;
-      align-items: center;
-      gap: var(--espaco-3);
-      margin-left: auto;
-    }
-
-    /* Login permanece visível */
-    .acoes-cabecalho .botao-login {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-
-      width: auto;
-      height: 40px;
-      flex-shrink: 0;
-    }
-      
-    /* Menu fechado por padrão */
-    .navegacao {
-      display: none;
-  
-      position: absolute;
-      top: 100%;
-      left: 0;
-  
-      width: 100%;
-      padding: var(--espaco-5);
-  
-      background-color: var(--branco);
-      box-shadow: var(--sombra-suave);
-  
-      flex-direction: column;
-      align-items: stretch;
-      gap: var(--espaco-5);
-    }
-  
-    /* Menu aberto */
-    .navegacao.menu-aberto {
-      display: flex;
-    }
-  
-    /* Links organizados verticalmente */
-    .navegacao ul {
-      display: flex;
-      flex-direction: column;
-      align-items: stretch;
-      gap: var(--espaco-4);
-    }
-  
-    /* Área clicável dos links */
-    .navegacao ul a {
-      display: block;
-      padding: var(--espaco-2) 0;
-    }
-  
-    /* Espaçamento do rodapé */
-    .rodape {
-      gap: var(--espaco-6);
-    }
+    font-size: 12px;
+    white-space: nowrap;
+    flex-shrink: 0;
+    box-sizing: border-box;
   }
-  
-  
-  /* RESPONSIVIDADE — CELULAR*/
-  
-  @media (max-width: 600px) {
-  
-    /* Rodapé em uma coluna */
-    .rodape {
-      padding: 40px var(--margem-horizontal-mobile);
-      grid-template-columns: 1fr;
-      gap: var(--espaco-6);
-    }
-  
-    /* Logo ocupa sua própria linha */
-    .rodape > img {
-      grid-column: auto;
-    }
+
+  /* Logo */
+  .cabecalho img {
+    width: 100px;
   }
+
+  /* Exibe o botão hambúrguer */
+  .botao-menu {
+    display: flex;
+  }
+
+  /* Hambúrguer e Login */
+  .acoes-cabecalho {
+    display: flex;
+    align-items: center;
+    gap: var(--espaco-3);
+    margin-left: auto;
+  }
+
+  /* Login permanece visível */
+  .acoes-cabecalho .botao-login {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: auto;
+    height: 40px;
+    flex-shrink: 0;
+  }
+
+  /* Menu fechado por padrão */
+  .navegacao {
+    display: none;
+
+    position: absolute;
+    top: 100%;
+    left: 0;
+
+    width: 100%;
+    padding: var(--espaco-5);
+
+    background-color: var(--branco);
+    box-shadow: var(--sombra-suave);
+
+    flex-direction: column;
+    align-items: stretch;
+    gap: var(--espaco-5);
+  }
+
+  /* Menu aberto */
+  .navegacao.menu-aberto {
+    display: flex;
+  }
+
+  /* Links organizados verticalmente */
+  .navegacao ul {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: var(--espaco-4);
+  }
+
+  /* Área clicável dos links */
+  .navegacao ul a {
+    display: block;
+    padding: var(--espaco-2) 0;
+  }
+
+  /* Espaçamento do rodapé */
+  .rodape {
+    gap: var(--espaco-6);
+  }
+}
+
+/* RESPONSIVIDADE — CELULAR*/
+
+@media (max-width: 600px) {
+  /* Rodapé em uma coluna */
+  .rodape {
+    padding: 40px var(--margem-horizontal-mobile);
+    grid-template-columns: 1fr;
+    gap: var(--espaco-6);
+  }
+
+  /* Logo ocupa sua própria linha */
+  .rodape > img {
+    grid-column: auto;
+  }
+}
+/* As páginas públicas usam o mesmo azul para mouse, toque e teclado. */
+#root {
+  --acesso-azul: #235f9e;
+  --acesso-azul-claro: #e9f2ff;
+}
+
+#root
+  :where(
+    .cabecalho,
+    .rodape,
+    .home-acesso,
+    .pagina-login,
+    .pagina-contato,
+    .pagina-privacidade,
+    .pagina-erro:not(.pagina-erro--dashboard)
+  )
+  :is(a[href], button:enabled):is(
+    :hover,
+    :active,
+    .ativo,
+    [aria-expanded="true"]
+  ) {
+  background-color: var(--acesso-fundo-hover, var(--acesso-azul-claro));
+  color: var(--acesso-texto-hover, var(--acesso-azul));
+}
+
+#root:has(.pagina-contato, .pagina-erro:not(.pagina-erro--dashboard)) {
+  --acesso-login-fundo: #ff780a;
+}
+
+/* Ações preenchidas mantêm texto branco durante a interação. */
+:is(
+  .cabecalho .botao-login,
+  .home-acesso .hero-botao-principal,
+  .home-acesso .contato-botao,
+  .pagina-login .botao-entrar,
+  .pagina-contato .botao-enviar-contato,
+  .pagina-privacidade .privacidade-voltar-inferior,
+  .pagina-erro:not(.pagina-erro--dashboard) .botao-inicio-erro
+) {
+  --acesso-fundo-hover: var(--acesso-azul);
+  --acesso-texto-hover: #fff;
+}
+
+/* A indicação de erro do formulário tem prioridade sobre a borda de interação. */
+#root
+  :where(.pagina-login, .pagina-contato)
+  :is(input, textarea):enabled:not([aria-invalid="true"]):is(:hover, :focus) {
+  border-color: var(--acesso-azul);
+}
+
+#root
+  :where(
+    .cabecalho,
+    .rodape,
+    .home-acesso,
+    .pagina-login,
+    .pagina-contato,
+    .pagina-privacidade,
+    .pagina-erro:not(.pagina-erro--dashboard)
+  )
+  :is(a[href], button:enabled, input:enabled, textarea:enabled):focus-visible {
+  outline: 2px solid var(--acesso-azul);
+  outline-offset: 2px;
+}

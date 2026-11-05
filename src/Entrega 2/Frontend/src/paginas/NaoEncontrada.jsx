@@ -1,3 +1,4 @@
+import Cabecalho from "../componentes/Cabecalho.jsx";
 import { Link } from "react-router-dom";
 import logo from "../assets/img/collision.png";
 import ilustracaoErro from "../assets/img/erro404.svg";
@@ -12,7 +13,7 @@ function NaoEncontrada({ emDashboard = false, onVoltar }) {
     <section className="cartao-erro" aria-labelledby={tituloId}>
       <img src={logo} alt="Collision" className="logo-erro" />
       <img
-        src={ilustracaoErro}
+        src={emDashboard ? ilustracaoErro : "/img/acesso/erro404.png"}
         alt="Ilustração de uma página não encontrada"
         className="ilustracao-erro"
       />
@@ -29,7 +30,7 @@ function NaoEncontrada({ emDashboard = false, onVoltar }) {
         </button>
       ) : (
         <Link to="/" className="botao-inicio-erro">
-          ← Voltar ao início
+          Voltar ao início
         </Link>
       )}
     </section>
@@ -45,34 +46,12 @@ function NaoEncontrada({ emDashboard = false, onVoltar }) {
     </div>
   );
 
+  // No dashboard, o cartão é renderizado dentro do layout já aberto.
   if (emDashboard) return conteudo;
 
   return (
     <>
-      <header className="cabecalho-erro">
-        <Link to="/" aria-label="Ir para a página inicial">
-          <img src={logo} alt="Collision" />
-        </Link>
-        <nav className="navegacao-erro" aria-label="Navegação principal">
-          <ul>
-            <li>
-              <a href="/#inicio">Início</a>
-            </li>
-            <li>
-              <a href="/#recursos">Recursos</a>
-            </li>
-            <li>
-              <a href="/#noticias">Notícias</a>
-            </li>
-            <li>
-              <a href="/#contato">Fale conosco</a>
-            </li>
-          </ul>
-          <Link to="/login.html" className="botao-login-erro">
-            Login
-          </Link>
-        </nav>
-      </header>
+      <Cabecalho />
       <main>{conteudo}</main>
     </>
   );
