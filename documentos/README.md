@@ -12,12 +12,12 @@ Este documento detalha o uso de Inteligência Artificial Generativa no desenvolv
 
 | **Aluno(s) Responsável(veis)** | Felipe Rodrigues |
 | :--- | :--- |
-| **Ferramenta utilizada** | [A preencher pelo responsável] |
-| **Versão/modelo** | [A preencher pelo responsável] |
-| **Disciplina / Trabalho** | Banco de Dados - Entrega 1 (Tabelas e Índices) |
-| **Finalidade de uso** | Estruturação do modelo relacional, geração de scripts SQL e criação de índices com justificativas. |
-| ***Prompts* principais utilizados** | [A preencher pelo responsável] |
-| **Trechos ou entregas afetadas** | Script `schema.sql`, documento de justificativa de índices e estrutura das tabelas no banco de dados. |
+| **Ferramenta utilizada** | DeepSeek |
+| **Versão/modelo** | DeepSeek Coder / DeepSeek Chat (V2/V3) |
+| **Disciplina / Trabalho** | Banco de Dados - Entrega 1 (Modelagem, Tabelas e Índices) |
+| **Finalidade de uso** | Estruturação do modelo relacional (14 tabelas), geração de scripts SQL base (Oracle e MySQL) e criação de índices com justificativas. |
+| ***Prompts* principais utilizados** | 1. "Crie um modelo relacional completo para um sistema de acompanhamento escolar com 14 tabelas... Inclua chaves primárias, estrangeiras e cardinalidades."<br>2. "Converta este script SQL de Oracle para MySQL, mantendo todas as constraints, índices e comentários..."<br>3. "Crie 17 índices para otimizar as consultas do sistema, justificando cada um com base nos padrões de uso...""<br>4. "Gere um documento de justificativa de índices explicando cada índice criado e o ganho de performance esperado." |
+| **Trechos ou entregas afetadas** | Scripts SQL (`schema.sql` e `indices.sql`), documento de justificativa de índices e estrutura das tabelas no banco de dados. |
 
 ### Desenvolvimento Web Full Stack
 
@@ -43,7 +43,7 @@ Este documento detalha o uso de Inteligência Artificial Generativa no desenvolv
 
 ### Estrutura de Dados
 
-| **Aluno(s) Responsável(veis)** | Henrique Nunes |
+| **Aluno(s) Responsável(veis)** | [A preencher] |
 | :--- | :--- |
 | **Ferramenta utilizada** | [A preencher pelo responsável] |
 | **Versão/modelo** | [A preencher pelo responsável] |
@@ -71,16 +71,16 @@ Este documento detalha o uso de Inteligência Artificial Generativa no desenvolv
 
 | **Aluno(s) Responsável(veis)** | Felipe Rodrigues |
 | :--- | :--- |
-| **Ferramenta utilizada** | [A preencher pelo responsável] |
-| **Versão/modelo** | [A preencher pelo responsável] |
-| **Disciplina / Trabalho** | Banco de Dados - Entrega 2 (Views) |
-| **Finalidade de uso** | Criação de Views SQL para relatórios e aplicação de regras de negócio. |
-| ***Prompts* principais utilizados** | [A preencher pelo responsável] |
+| **Ferramenta utilizada** | DeepSeek |
+| **Versão/modelo** | DeepSeek Coder / DeepSeek Chat (V2/V3) |
+| **Disciplina / Trabalho** | Banco de Dados - Entrega 2 (Views e Consultas) |
+| **Finalidade de uso** | Criação de 5 Views SQL para relatórios, aplicação de regras de negócio (apenas registros publicados) e conversão de scripts Oracle para MySQL. |
+| ***Prompts* principais utilizados** | 1. "Crie 5 Views SQL para relatórios: 1) relatório completo de acompanhamento, 2) apenas registros publicados, 3) relatório do responsável com status de ciência, 4) indicadores gerenciais por turma, 5) distribuição de tags..."<br>2. "Como aplicar a regra de negócio do responsável apenas ver registros publicados na View? Crie a View usando NVL/IFNULL para tratar o status de ciência."<br>3. "Escreva o script SQL completo com a criação das 5 Views para o banco de dados Collision, incluindo os comentários explicativos."<br>4. "Crie consultas de teste para validar as Views (relatório do pai, fila de revisão, indicadores do 1º bimestre) e mostre os resultados esperados."<br>5. "Converta o script das Views de Oracle para MySQL, ajustando as funções (LISTAGG para GROUP_CONCAT, NVL para IFNULL)." |
 | **Trechos ou entregas afetadas** | Script `views.sql`, documento de justificativa das Views e queries de teste. |
 
 ### Desenvolvimento Web Full Stack
 
-| **Aluno(s) Responsável(veis)** | Lucas Kazuo, Henrique Nunes, Guilherme Ryuki |
+| **Aluno(s) Responsável(veis)** | Lucas Kazuo |
 | :--- | :--- |
 | **Ferramenta utilizada** | [A preencher pelo responsável] |
 | **Versão/modelo** | [A preencher pelo responsável] |
@@ -113,7 +113,7 @@ Este documento detalha o uso de Inteligência Artificial Generativa no desenvolv
 
 ### Estrutura de Dados
 
-| **Aluno(s) Responsável(veis)** | Felipe Rodrigues |
+| **Aluno(s) Responsável(veis)** | [A preencher] |
 | :--- | :--- |
 | **Ferramenta utilizada** | [A preencher pelo responsável] |
 | **Versão/modelo** | [A preencher pelo responsável] |
