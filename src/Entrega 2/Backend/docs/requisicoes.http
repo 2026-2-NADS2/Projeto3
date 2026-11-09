@@ -1,0 +1,106 @@
+@base = http://127.0.0.1:3334/api
+@senha = substitua_pela_senha_local
+@acompanhamentoId = 1
+@versao = 1
+
+### Saude e conexao MySQL
+GET {{base}}/saude
+
+### Contrato completo (importavel em clientes REST)
+GET {{base}}/openapi.json
+
+### Login administrativo. Consulte .local/acessos-fullstack.json no modo dev:local.
+# @name loginAdmin
+POST {{base}}/auth/login
+Content-Type: application/json
+
+{"email":"admin@example.com","senha":"{{senha}}"}
+
+### Consultar cadastros
+GET {{base}}/alunos?pagina=1&limite=20
+Authorization: Bearer {{loginAdmin.response.body.token}}
+
+### Consultar prazos; use o ID de um bimestre aberto ao criar um registro.
+GET {{base}}/bimestres
+Authorization: Bearer {{loginAdmin.response.body.token}}
+
+### Login docente
+# @name loginProf
+POST {{base}}/auth/login
+Content-Type: application/json
+
+{"email":"ana.paula@example.com","senha":"{{senha}}"}
+
+### Consultar a atribuicao autorizada
+GET {{base}}/vinculos/professores
+Authorization: Bearer {{loginProf.response.body.token}}
+
+### Criar rascunho. IDs abaixo correspondem a carga local inicial; confira as consultas.
+# @name rascunho
+POST {{base}}/acompanhamentos
+Authorization: Bearer {{loginProf.response.body.token}}
+Content-Type: application/json
+
+{"alunoId":1,"vinculoId":1,"bimestreId":4,"descricao":"Apresentou avanços na resolução de problemas.","estrategias":"Revisão semanal orientada.","media":8.7,"tagIds":[1]}
+
+### Enviar registro criado (na primeira vez, usa versao retornada no rascunho)
+# @name enviado
+POST {{base}}/acompanhamentos/{{rascunho.response.body.id}}/enviar
+Authorization: Bearer {{loginProf.response.body.token}}
+Content-Type: application/json
+
+{"versao":{{rascunho.response.body.versao}}}
+
+### Iniciar revisao
+# @name revisao
+POST {{base}}/acompanhamentos/{{rascunho.response.body.id}}/iniciar-revisao
+Authorization: Bearer {{loginAdmin.response.body.token}}
+Content-Type: application/json
+
+{"versao":{{enviado.response.body.versao}}}
+
+### Publicar
+# @name publicado
+POST {{base}}/acompanhamentos/{{rascunho.response.body.id}}/publicar
+Authorization: Bearer {{loginAdmin.response.body.token}}
+Content-Type: application/json
+
+{"versao":{{revisao.response.body.versao}}}
+
+### Login da familia
+# @name loginFamilia
+POST {{base}}/auth/login
+Content-Type: application/json
+
+{"email":"carlos.almeida@example.com","senha":"{{senha}}"}
+
+### Somente publicacoes de alunos vinculados
+GET {{base}}/acompanhamentos?pendente=true
+Authorization: Bearer {{loginFamilia.response.body.token}}
+
+### Confirmar leitura; repeticoes mantem a mesma ciencia
+PUT {{base}}/acompanhamentos/{{rascunho.response.body.id}}/ciencia
+Authorization: Bearer {{loginFamilia.response.body.token}}
+
+### Enviar observacao
+POST {{base}}/acompanhamentos/{{rascunho.response.body.id}}/observacoes
+Authorization: Bearer {{loginFamilia.response.body.token}}
+Content-Type: application/json
+
+{"texto":"Vamos revisar as atividades em casa."}
+
+### PDF autenticado
+GET {{base}}/acompanhamentos/{{rascunho.response.body.id}}/pdf
+Authorization: Bearer {{loginFamilia.response.body.token}}
+
+### Exportacao de todos os resultados filtrados
+GET {{base}}/relatorios/exportacao?formato=xlsx&anoLetivo=2026
+Authorization: Bearer {{loginAdmin.response.body.token}}
+
+### Retornos da familia
+GET {{base}}/retornos
+Authorization: Bearer {{loginAdmin.response.body.token}}
+
+### Encerrar uma sessao (o mesmo token passa a retornar 401)
+POST {{base}}/auth/logout
+Authorization: Bearer {{loginFamilia.response.body.token}}

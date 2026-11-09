@@ -1,0 +1,619 @@
+/* SEÇÃO 02: o corpo reserva somente a altura do cabeçalho destas novas rotas. */
+body:has(.pagina-recuperacao) {
+  padding-top: 72px;
+}
+
+/* A fonte acompanha o restante do projeto e os títulos azuis do Figma. */
+.pagina-recuperacao {
+  color: #163454;
+  font-family: Inter, "Segoe UI", Arial, sans-serif;
+}
+
+/* Centraliza logo e navegação em uma faixa de 1050 px no desktop. */
+.cabecalho.cabecalho-recuperacao {
+  height: 72px;
+  padding: 0 max(5%, calc((100% - 1050px) / 2));
+  box-shadow: none;
+}
+
+/* O SVG já contém as dimensões corretas; a regra evita herdar os 110 px globais. */
+.cabecalho-recuperacao .logo-cabecalho img {
+  width: auto;
+  height: auto;
+}
+
+/* Empurra os links para a direita quando a ação Login está oculta. */
+.cabecalho-recuperacao .navegacao {
+  margin-left: auto;
+}
+.cabecalho-recuperacao .navegacao ul {
+  gap: 40px;
+}
+.cabecalho-recuperacao .navegacao a {
+  color: #526d91;
+}
+
+/* O fundo recorta as formas decorativas sem criar rolagem horizontal. */
+.recuperacao-fundo {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  min-height: calc(100vh - 72px);
+  padding: 100px 16px 70px;
+  background: #f2faff;
+}
+
+/* As imagens ficam atrás do cartão e conservam o tamanho original do SVG. */
+.recuperacao-forma {
+  position: absolute;
+  z-index: -1;
+  max-width: none;
+  pointer-events: none;
+}
+.recuperacao-forma-superior {
+  top: -260px;
+  left: -190px;
+}
+.recuperacao--solicitar .recuperacao-forma-superior {
+  top: -258px;
+}
+.recuperacao-forma-inferior {
+  right: -230px;
+  bottom: -115px;
+}
+
+/* A coluna central encolhe no celular, mantendo os 500 px da referência no desktop. */
+.recuperacao-conteudo {
+  width: min(100%, 500px);
+  margin: 0 auto;
+}
+.recuperacao-cartao {
+  display: flex;
+  flex-direction: column;
+  min-height: 600px;
+  padding: 42px 48px 32px;
+  border-radius: 20px;
+  background: white;
+  box-shadow: 0 20px 44px rgb(23 59 92 / 8%);
+  text-align: center;
+}
+
+/* A etapa com dois campos precisa do cartão mais alto desenhado no Figma. */
+.recuperacao--nova .recuperacao-cartao {
+  min-height: 676px;
+}
+.recuperacao-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 88px;
+}
+.recuperacao-logo img {
+  display: block;
+}
+
+/* Define a hierarquia e os intervalos entre logo, título e explicação. */
+.recuperacao-cartao h1 {
+  margin-top: 28px;
+  color: #102f55;
+  font-size: 30px;
+  line-height: 36px;
+}
+.recuperacao-descricao {
+  min-height: 46px;
+  margin-top: 12px;
+  color: #657d9d;
+  font-size: 13px;
+  line-height: 23.1px;
+}
+
+/* O formulário ocupa o espaço restante para alinhar as ações perto da base. */
+.recuperacao-formulario {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  margin-top: 32px;
+  text-align: left;
+}
+.recuperacao-campos {
+  display: grid;
+  gap: 20px;
+}
+
+/* Cada entrada mantém o rótulo acima e reserva espaço para ajuda e erro abaixo. */
+.recuperacao-campo label {
+  display: block;
+  margin-bottom: 10px;
+  color: #102f55;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 19px;
+}
+.recuperacao-entrada {
+  position: relative;
+}
+.recuperacao-entrada input {
+  width: 100%;
+  height: 52px;
+  padding: 0 16px;
+  border: 1px solid #cadbf0;
+  border-radius: 10px;
+  background: #fbfcff;
+  color: #163454;
+  font: inherit;
+  font-size: 15px;
+}
+.recuperacao-entrada input::placeholder {
+  color: #7085a0;
+}
+
+/* Os pontos reproduzem o exemplo mascarado do Figma, sem preencher uma senha real. */
+.recuperacao-entrada:has(.recuperacao-mostrar) input::placeholder {
+  color: #163454;
+}
+
+/* A senha recebe espaço à direita para não passar por baixo do botão Mostrar. */
+.recuperacao-entrada:has(.recuperacao-mostrar) input {
+  padding-right: 88px;
+}
+.recuperacao-mostrar {
+  position: absolute;
+  top: 0;
+  right: 12px;
+  height: 52px;
+  padding: 0 4px;
+  border: 0;
+  border-radius: 6px;
+  background: transparent;
+  color: #235f9e;
+  font: inherit;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.recuperacao-ajuda-campo {
+  display: block;
+  margin-top: 9px;
+  color: #7287a0;
+  font-size: 12px;
+  line-height: 19.2px;
+}
+
+/* O espaço automático reproduz o respiro antes dos botões sem fixar sua posição. */
+.recuperacao-acoes {
+  display: grid;
+  gap: 20px;
+  margin-top: auto;
+  padding-top: 30px;
+  text-align: center;
+}
+
+/* Base de botão compartilhada pelas seções 02 e 03. */
+.acesso-botao {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 10px;
+  border: 0;
+  border-radius: 9px;
+  font: inherit;
+  font-weight: 600;
+  text-align: center;
+  cursor: pointer;
+}
+.pagina-recuperacao .acesso-botao {
+  width: 100%;
+  min-height: 54px;
+  border-radius: 10px;
+  font-size: 16px;
+}
+.pagina-recuperacao .acesso-botao-principal {
+  background: #ff7a00;
+  color: white;
+}
+
+/* Os links de retorno e suporte seguem a posição e o tom secundário da referência. */
+.recuperacao-voltar {
+  color: #657d9d;
+  font-size: 13px;
+  line-height: 17px;
+}
+.recuperacao-suporte {
+  margin-top: 25px;
+  color: #7d90a7;
+  font-size: 12px;
+  line-height: 20px;
+  text-align: center;
+}
+.recuperacao-suporte a {
+  color: #526e91;
+}
+
+/* A tela concluída acrescenta o selo e a caixa de confirmação em verde. */
+.recuperacao-status {
+  align-self: center;
+  margin-top: 23px;
+  padding: 7px 10px;
+  border-radius: 15px;
+  background: #e6f5ed;
+  color: #087c4b;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 16px;
+}
+.recuperacao--concluida h1 {
+  margin-top: 17px;
+}
+.recuperacao--concluida .recuperacao-descricao {
+  min-height: 23px;
+  /* O texto da confirmação ocupa 420 px sobre a coluna interna de 404 px. */
+  width: calc(100% + 16px);
+  align-self: center;
+}
+.recuperacao-mensagem-sucesso {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 57.44px;
+  margin-top: 28px;
+  padding: 16px 18px;
+  border: 1px solid #d8ece1;
+  border-radius: 10px;
+  background: #eff8f3;
+  color: #267452;
+  font-size: 13px;
+  line-height: 21.45px;
+}
+
+/* SEÇÃO 03: o cabeçalho do painel já ocupa espaço no fluxo normal da página. */
+body:has(.pagina-estado-acesso) {
+  padding-top: 0;
+}
+.pagina-estado-acesso {
+  --cor-fundo: #f4f8fc;
+  --cor-linha: #e0e9f2;
+  --cor-principal: #087c4b;
+  --cor-suave: #e5f6ed;
+  color: #163454;
+}
+
+/* Ajusta o cabeçalho reutilizado à altura, à logo e aos intervalos da seção 03. */
+.pagina-estado-acesso .dash-cabecalho {
+  height: 82px;
+  padding: 0 36px 0 57px;
+}
+.pagina-estado-acesso .dash-logo img {
+  width: auto;
+  height: auto;
+  max-width: none;
+}
+.pagina-estado-acesso .dash-cabecalho-direita {
+  gap: 20px;
+}
+.pagina-estado-acesso .dash-notificacoes > button {
+  display: grid;
+  place-items: center;
+  width: 24px;
+  height: 24px;
+}
+.pagina-estado-acesso .dash-notificacoes img {
+  width: auto;
+  height: auto;
+}
+
+/* O perfil mostra nome e papel ao lado do avatar de 42 px. */
+.pagina-estado-acesso .dash-perfil {
+  padding-left: 20px;
+}
+.pagina-estado-acesso .dash-perfil-botao {
+  gap: 20px;
+}
+.pagina-estado-acesso .dash-avatar {
+  width: 42px;
+  height: 42px;
+  font-size: 16px;
+}
+.pagina-estado-acesso .dash-perfil-nome {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 23.2px;
+}
+.pagina-estado-acesso .dash-perfil-nome small {
+  font-size: 14px;
+  line-height: 20.3px;
+}
+
+/* A lateral reserva 238 px; o topo contém a ação de recolher e o nome da área. */
+.pagina-estado-acesso .dash-lateral {
+  top: 82px;
+  width: 238px;
+  min-height: calc(100vh - 82px);
+  padding: 16px 16px 22px;
+}
+.estado-menu-topo {
+  display: grid;
+  gap: 15px;
+  margin-bottom: 9px;
+}
+.estado-recolher-menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 33px;
+  padding: 7px 12px;
+  border: 1px solid #dce6f1;
+  border-radius: 8px;
+  background: #f6f9fd;
+  color: #315b85;
+  font-size: 13px;
+  font-weight: 600;
+}
+.estado-menu-titulo {
+  padding-left: 14px;
+  color: #8a99ab;
+  font-size: 11px;
+  line-height: 16px;
+  letter-spacing: 1.4px;
+}
+
+/* O contêiner de 24 px posiciona cada SVG sem deformar sua geometria interna. */
+.pagina-estado-acesso .dash-item-menu {
+  min-height: 50px;
+  gap: 14px;
+  padding: 0 14px;
+  color: #60738b;
+  font-size: 16px;
+}
+.estado-icone {
+  display: inline-grid;
+  flex: 0 0 24px;
+  place-items: center;
+  width: 24px;
+  height: 24px;
+}
+.pagina-estado-acesso .estado-icone img {
+  width: auto;
+  height: auto;
+}
+
+/* O espaço automático mantém ajuda e ano letivo próximos à base da lateral. */
+.estado-menu-rodape {
+  min-height: 94.3px;
+  margin-top: auto;
+  padding-top: 18px;
+  border-top: 1px solid #e5ebf2;
+}
+.estado-menu-rodape small {
+  display: block;
+  padding-left: 14px;
+  margin-top: 4px;
+  color: #6b7e94;
+  font-size: 14px;
+  line-height: 20.3px;
+}
+
+/* A coluna principal preserva os 36 px de margem e os 24 px entre os blocos. */
+.estado-acesso-conteudo {
+  display: grid;
+  gap: 24px;
+  margin-left: 238px;
+  padding: 36px;
+}
+.estado-acesso-categoria {
+  color: #60738b;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 17px;
+}
+.estado-acesso-conteudo h1 {
+  font-size: 32px;
+  line-height: 50px;
+}
+.estado-acesso-descricao {
+  color: #60738b;
+  font-size: 14px;
+  line-height: 22px;
+}
+
+/* O mesmo cartão apresenta a mensagem de sessão ou de permissão. */
+.estado-acesso-cartao {
+  display: grid;
+  gap: 18px;
+  padding: 24px;
+  border: 1px solid #e0e8f0;
+  border-radius: 13px;
+  background: white;
+}
+.estado-acesso-cartao h2 {
+  font-size: 20px;
+  line-height: 31px;
+}
+.estado-acesso-cartao p {
+  font-size: 14px;
+  line-height: 22px;
+}
+.estado-acesso-acoes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+/* As ações da família são verdes em repouso, com variante secundária contornada. */
+.pagina-estado-acesso .acesso-botao {
+  min-width: 110px;
+  font-size: 13px;
+  line-height: 20px;
+}
+.pagina-estado-acesso .acesso-botao-principal {
+  background: #087c4b;
+  color: white;
+}
+.pagina-estado-acesso .acesso-botao-secundario {
+  min-width: 113.2px;
+  border: 1px solid #d0ddeb;
+  background: white;
+  color: #087c4b;
+}
+
+/* O retorno ao login tem a largura de 149,2 px definida para esta ação no Figma. */
+.pagina-estado-acesso .estado-acesso-entrar {
+  min-width: 149.2px;
+}
+.pagina-estado-acesso .dash-menu-perfis a {
+  display: block;
+  padding: 8px;
+  border-radius: 6px;
+}
+
+/* INTERAÇÃO: todas as ações destas telas ficam azuis com mouse ou clique. */
+#root
+  :where(.pagina-recuperacao, .pagina-estado-acesso)
+  :is(a[href], button:enabled):is(:hover, :active, [aria-expanded="true"]) {
+  background-color: var(--fluxo-fundo-hover, #e9f2ff);
+  color: var(--fluxo-texto-hover, #235f9e);
+}
+
+/* Variáveis evitam conflito de especificidade entre links, botões e seus estados. */
+.acesso-botao-principal {
+  --fluxo-fundo-hover: #235f9e;
+  --fluxo-texto-hover: white;
+}
+
+/* O contorno azul permite acompanhar a navegação por teclado. */
+#root
+  :where(.pagina-recuperacao, .pagina-estado-acesso)
+  :is(a[href], button:enabled, input):focus-visible {
+  outline: 2px solid #235f9e;
+  outline-offset: 2px;
+}
+.recuperacao-entrada input:not([aria-invalid="true"]):is(:hover, :focus) {
+  border-color: #235f9e;
+}
+
+/* O erro vermelho permanece visível mesmo enquanto o campo recebe foco. */
+.recuperacao-entrada input[aria-invalid="true"] {
+  border-color: #b42318;
+}
+
+/* DESKTOP: usa a variante recolhida do Figma sem esconder os itens no celular. */
+@media (min-width: 761px) {
+  .estado-menu-recolhido .dash-lateral {
+    width: 66px;
+    padding-right: 9px;
+    padding-left: 9px;
+  }
+  .estado-menu-recolhido .estado-recolher-menu {
+    justify-content: center;
+    min-height: 44px;
+  }
+  .estado-menu-recolhido .estado-recolher-menu > span:first-child,
+  .estado-menu-recolhido .estado-menu-titulo,
+  .estado-menu-recolhido .dash-lateral > .dash-item-menu,
+  .estado-menu-recolhido .estado-menu-rodape {
+    display: none;
+  }
+  .estado-menu-recolhido .estado-acesso-conteudo {
+    margin-left: 66px;
+  }
+}
+
+/* O cabeçalho público usa somente os links quando o menu desktop está visível. */
+@media (min-width: 901px) {
+  .cabecalho-recuperacao .acoes-cabecalho {
+    display: none;
+  }
+}
+
+/* A nova senha tem sua coluna interna 2 px à direita nas medidas do Figma. */
+@media (min-width: 601px) {
+  .recuperacao--nova .recuperacao-cartao {
+    padding-right: 46px;
+    padding-left: 50px;
+  }
+}
+
+/* TABLET: acompanha a altura de 64 px e o menu móvel do cabeçalho existente. */
+@media (max-width: 900px) {
+  body:has(.pagina-recuperacao) {
+    padding-top: 64px;
+  }
+  .cabecalho.cabecalho-recuperacao {
+    height: 64px;
+  }
+  .recuperacao-fundo {
+    min-height: calc(100vh - 64px);
+    padding-top: 40px;
+  }
+  .cabecalho-recuperacao .navegacao {
+    margin-left: 0;
+  }
+}
+
+/* CELULAR DO PAINEL: abre a lateral sobre o conteúdo e compacta a identificação. */
+@media (max-width: 760px) {
+  .pagina-estado-acesso .dash-cabecalho {
+    height: 66px;
+    padding: 0 16px;
+  }
+  .pagina-estado-acesso .dash-logo {
+    width: 94px;
+    height: 54px;
+    flex-shrink: 0;
+  }
+  .pagina-estado-acesso .dash-logo img {
+    transform: scale(0.6);
+    transform-origin: top left;
+  }
+  .pagina-estado-acesso .dash-cabecalho-direita {
+    gap: 8px;
+  }
+  .pagina-estado-acesso .dash-perfil {
+    padding-left: 8px;
+  }
+  .pagina-estado-acesso .dash-perfil-botao {
+    gap: 8px;
+  }
+  .pagina-estado-acesso .dash-avatar {
+    width: 36px;
+    height: 36px;
+    font-size: 12px;
+  }
+  .pagina-estado-acesso .dash-lateral {
+    top: 66px;
+    width: min(280px, 85vw);
+    min-height: calc(100vh - 66px);
+  }
+  .estado-acesso-conteudo {
+    margin-left: 0;
+    padding: 24px 16px;
+  }
+  .estado-acesso-conteudo h1 {
+    font-size: 27px;
+    line-height: 1.3;
+  }
+  /* No celular, a abertura é controlada pelo botão do cabeçalho. */
+  .estado-recolher-menu {
+    display: none;
+  }
+}
+
+/* CELULAR DOS FORMULÁRIOS: reduz as margens e evita zoom ao tocar nas entradas. */
+@media (max-width: 600px) {
+  .recuperacao-fundo {
+    padding: 24px 16px 40px;
+  }
+  .recuperacao-cartao {
+    padding: 28px 20px;
+  }
+  .recuperacao-cartao h1 {
+    font-size: 26px;
+    line-height: 1.25;
+  }
+  .recuperacao-entrada input {
+    font-size: 16px;
+  }
+  .estado-acesso-cartao {
+    padding: 20px;
+  }
+}

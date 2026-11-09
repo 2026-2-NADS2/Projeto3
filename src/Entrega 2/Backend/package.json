@@ -1,0 +1,35 @@
+{
+  "name": "collision-backend",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "dev": "node --watch src/servidor.js",
+    "start": "node src/servidor.js",
+    "db:migrar": "node scripts/migrar.js",
+    "db:admin": "node scripts/criar-admin.js",
+    "db:demo": "node scripts/seed-demo.js",
+    "test": "node --test --test-concurrency=1 testes/*.test.js",
+    "test:mysql": "node scripts/testar-mysql.js",
+    "check": "node scripts/check.js",
+    "dev:local": "node scripts/dev-local.js"
+  },
+  "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
+    "express": "^5.1.0",
+    "express-rate-limit": "^8.2.1",
+    "helmet": "^8.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "mysql2": "^3.15.3",
+    "nodemailer": "^10.3.1",
+    "pdfkit": "^0.17.2"
+  },
+  "devDependencies": {
+    "supertest": "^7.1.4"
+  }
+}

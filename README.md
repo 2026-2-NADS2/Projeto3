@@ -6,6 +6,9 @@
 
 # Projeto Interdisciplinar: Website Responsivo
 
+Para executar a entrega Fullstack no Windows, consulte o
+[passo a passo para iniciar o sistema](<src/Entrega 2/README.md>).
+
 ## Nome do Grupo: Collision
 
 ## Integrantes: <a href="https://github.com/DMayumi">Débora Mayumi</a>, <a href="https://github.com/felipenono">Felipe Rodrigues</a>, <a href="www.linkedin.com/in/guiryuki">Guilherme Ryuki</a>, <a href="https://github.com/HenriqueNunes-2008">Henrique Nunes</a>, <a href="https://github.com/LucasKazuo-lol">Lucas Kazuo</a>

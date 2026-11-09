@@ -1,0 +1,277 @@
+/* A seção 10 reutiliza os estilos administrativos; estas regras atendem aos períodos. */
+.bimestres {
+  min-width: 0;
+}
+.bimestre-linha {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+.bimestre-selo {
+  display: inline-flex;
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 17.4px;
+  white-space: nowrap;
+  background: #edf1f6;
+  color: #657991;
+}
+.bimestre-selo--aberto {
+  background: #e5f5ed;
+  color: #087c4b;
+}
+.bimestre-selo--agendado {
+  background: #eaf3ff;
+  color: #235f9e;
+}
+
+/* Ano e referência temporal do protótipo ficam visíveis acima dos quatro cartões. */
+.bimestre-ano {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 22px;
+  padding: 24px;
+  min-height: 124px;
+}
+.bimestre-ano .admin-campo {
+  width: 220px;
+  flex-shrink: 0;
+}
+.bimestre-ano strong {
+  font-size: 15px;
+}
+.bimestre-ano p {
+  margin-top: 12px;
+  color: #7b8fa5;
+  font-size: 13px;
+  line-height: 20px;
+}
+.bimestres .admin-campo > label {
+  font-size: 12px;
+  line-height: 17.4px;
+}
+.bimestre-grade {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+  margin-bottom: 22px;
+}
+.bimestre-cartao {
+  min-height: 289.56px;
+}
+.bimestre-subtitulo {
+  margin-top: 10px;
+  font-size: 13px;
+  line-height: 18.85px;
+  color: #7b8fa5;
+}
+.bimestre-datas {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 25px;
+  margin-top: 23px;
+}
+.bimestre-datas > div {
+  display: grid;
+  gap: 7px;
+  min-width: 0;
+}
+.bimestre-datas span,
+.bimestre-datas small,
+.bimestre-resumo span {
+  font-size: 12px;
+  line-height: 17.4px;
+  color: #7b8fa5;
+}
+.bimestre-datas strong {
+  font-size: 19px;
+  line-height: 27.55px;
+}
+.bimestre-acoes-cartao {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 23px;
+  padding-top: 18px;
+  border-top: 1px solid #e5ecf3;
+}
+.bimestre-acoes-cartao .admin-botao {
+  min-height: 40px;
+}
+.bimestre-nota {
+  padding: 18px 20px;
+  border: 1px solid #dce7f5;
+  border-radius: 8px;
+  background: #f5f9ff;
+  color: #315c89;
+  font-size: 13px;
+  line-height: 23.4px;
+}
+.bimestre-nota strong {
+  font-weight: 500;
+}
+.bimestre-nota p {
+  margin-top: 6px;
+  color: #5d7fa5;
+}
+
+/* Os formulários seguem a proporção de duas colunas do Figma. */
+.bimestres--formulario > .admin-titulo > div:first-child {
+  width: 476.55px;
+  max-width: 100%;
+}
+.bimestres--formulario > .admin-titulo {
+  min-height: 159px;
+  align-items: start;
+}
+.bimestre-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 908.47fr) minmax(0, 431.52fr);
+  align-items: start;
+  gap: 22px;
+}
+.bimestre-titulo-form {
+  margin-bottom: 24px;
+}
+.bimestre-titulo-form small {
+  font-size: 12px;
+  color: #7b8fa5;
+  text-align: right;
+}
+.bimestre-ano-form {
+  max-width: 240px;
+  margin-bottom: 24px;
+}
+.bimestre-grupo {
+  border-top: 1px solid #e5ecf3;
+  padding-top: 24px;
+  margin-bottom: 24px;
+}
+.bimestre-grupo h3 {
+  font-size: 18px;
+  line-height: 24.3px;
+}
+.bimestre-campos {
+  display: grid;
+  grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
+  gap: 15px;
+}
+.bimestre-campos--conjunto {
+  grid-template-columns:
+    minmax(0, 1.4fr) minmax(0, 1fr) minmax(0, 1.4fr)
+    minmax(0, 1fr);
+  margin-top: 22px;
+}
+.bimestre-resumo {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  padding: 18px;
+  border: 1px solid #e0e9f2;
+  border-radius: 8px;
+  background: #f8fbff;
+  margin-bottom: 27px;
+}
+.bimestre-resumo > div {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 9px;
+}
+.bimestre-resumo strong {
+  font-size: 15px;
+  line-height: 21.75px;
+}
+.bimestre-edicao {
+  margin-bottom: 22px;
+}
+.bimestre-acoes-form {
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 28px;
+  padding-top: 22px;
+  border-top: 1px solid #e5ecf3;
+}
+.bimestre-layout .admin-informacoes h2 {
+  font-size: 20px;
+  line-height: 26px;
+}
+.bimestre-layout .admin-informacoes {
+  font-size: 13px;
+}
+
+/* Detalhes e revisão usam o dialog acessível existente, com rolagem em telas pequenas. */
+.pagina-admin .admin-dialogo:has(.bimestre-datas) {
+  max-height: 90vh;
+  overflow-y: auto;
+}
+.admin-dialogo .bimestre-datas {
+  margin: 18px 0 24px;
+}
+.bimestre-historico {
+  margin: 24px 0;
+}
+.bimestre-historico > div {
+  padding: 14px 0;
+  border-bottom: 1px solid #e5ecf3;
+}
+.bimestre-historico p {
+  font-size: 13px;
+  line-height: 22px;
+}
+
+/* Os mesmos campos se reorganizam sem criar rolagem horizontal no celular. */
+@media (max-width: 1200px) {
+  .bimestre-layout {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .bimestre-campos--conjunto {
+    grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+  }
+  .bimestre-datas {
+    gap: 16px;
+  }
+}
+@media (max-width: 760px) {
+  .bimestre-grade {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .bimestre-ano {
+    align-items: start;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .bimestre-ano .admin-campo {
+    width: 100%;
+  }
+  .bimestres--formulario > .admin-titulo {
+    min-height: 0;
+  }
+  .bimestre-titulo-form {
+    align-items: start;
+    flex-direction: column;
+  }
+  .bimestre-titulo-form small {
+    text-align: left;
+  }
+}
+@media (max-width: 420px) {
+  .bimestre-datas,
+  .bimestre-campos,
+  .bimestre-resumo {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .bimestre-linha {
+    gap: 8px;
+  }
+  .bimestre-cartao h2 {
+    font-size: 20px;
+  }
+}

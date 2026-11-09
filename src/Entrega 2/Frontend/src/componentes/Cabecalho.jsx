@@ -2,7 +2,13 @@ import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import logo from "../assets/img/collision.png";
 
-function Cabecalho({ ocultarContato = false, ocultarLogin = false }) {
+// As propriedades opcionais adaptam o mesmo cabeçalho às telas de recuperação.
+function Cabecalho({
+  ocultarContato = false,
+  ocultarLogin = false,
+  className = "",
+  logoSrc = logo,
+}) {
   const { pathname } = useLocation();
   const estaNaHome = pathname === "/" || pathname === "/index.html";
 
@@ -74,10 +80,10 @@ function Cabecalho({ ocultarContato = false, ocultarLogin = false }) {
   }
 
   return (
-    <header className="cabecalho">
+    <header className={`cabecalho ${className}`}>
       {/* Identidade visual */}
       <Link to="/" className="logo-cabecalho" onClick={fecharMenu}>
-        <img src={logo} alt="Logo Collision" />
+        <img src={logoSrc} alt="Logo Collision" />
       </Link>
 
       {/* Navegação principal */}

@@ -1,13 +1,16 @@
 import { useTituloPagina } from "../hooks/useTituloPagina.js";
 import logo from "../assets/img/collision.png";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Cabecalho from "../componentes/Cabecalho.jsx";
 import { useState } from "react";
+import { destinos, useSessao } from "../hooks/useSessao.jsx";
 import "../css/login.css";
 
 function Login() {
   useTituloPagina("Login");
   const navegar = useNavigate();
+  const { entrar } = useSessao();
+  const [enviando, setEnviando] = useState(false);
   const [campos, setCampos] = useState({ login: "", senha: "" });
   const [erros, setErros] = useState({});
 
@@ -25,7 +28,7 @@ function Login() {
     }));
   }
 
-  function enviarFormulario(event) {
+  async function enviarFormulario(event) {
     event.preventDefault();
 
     const novosErros = {};
@@ -42,12 +45,19 @@ function Login() {
 
     setErros(novosErros);
 
-    if (Object.keys(novosErros).length > 0) {
+    if (enviando || Object.keys(novosErros).length > 0) {
       return;
     }
 
-    // A demonstração valida os campos localmente antes de abrir o dashboard.
-    navegar("/dashboard.html");
+    setEnviando(true);
+    try {
+      const usuario = await entrar(campos.login.trim(), campos.senha);
+      navegar(destinos[usuario.perfil], { replace: true });
+    } catch (erro) {
+      setErros({ servidor: erro.message });
+    } finally {
+      setEnviando(false);
+    }
   }
 
   return (
@@ -65,9 +75,15 @@ function Login() {
             Acesse as informações da sua escola em um só lugar.
           </p>
 
+          {erros.servidor && (
+            <p role="alert" className="erro-campo">
+              {erros.servidor}
+            </p>
+          )}
           <form
             className="formulario-login"
             onSubmit={enviarFormulario}
+            aria-busy={enviando}
             noValidate
           >
             <div className="campo-formulario">
@@ -111,10 +127,13 @@ function Login() {
             </div>
 
             <div className="area-esqueci-senha">
-              <a href="#">Esqueci minha senha</a>
+              {/* O Router abre a recuperação sem recarregar a página. */}
+              <Link to="/recuperacao_senha/01_solicitar">
+                Esqueci minha senha
+              </Link>
             </div>
 
-            <button type="submit" className="botao-entrar">
+            <button type="submit" disabled={enviando} className="botao-entrar">
               Entrar
             </button>
           </form>

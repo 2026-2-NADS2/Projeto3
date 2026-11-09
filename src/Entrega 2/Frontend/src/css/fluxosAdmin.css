@@ -1,0 +1,215 @@
+/* Seções 11 a 14: painéis e tabelas usam os componentes e tokens existentes. */
+.fluxo-painel {
+  margin-bottom: 24px;
+  min-width: 0;
+}
+.fluxo-painel > h2 {
+  margin-bottom: 20px;
+}
+.fluxo-painel h3 {
+  font-size: 16px;
+  margin: 22px 0 10px;
+}
+.fluxo-painel p {
+  color: #60738b;
+  font-size: 13px;
+  line-height: 23.4px;
+  margin: 12px 0;
+}
+.fluxo-painel footer {
+  border-top: 1px solid #e5ecf3;
+  padding-top: 18px;
+  margin-top: 24px;
+  color: #7b8fa5;
+  font-size: 12px;
+}
+.fluxo-colunas {
+  display: grid;
+  grid-template-columns: minmax(0, 2.1fr) minmax(0, 1fr);
+  gap: 24px;
+  align-items: start;
+}
+.fluxo-colunas > div {
+  min-width: 0;
+}
+.fluxo-duas {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+.fluxo-filtros {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 22px;
+}
+.fluxo-acoes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 12px;
+  border-top: 1px solid #e5ecf3;
+  margin-top: 24px;
+  padding-top: 20px;
+}
+.fluxo-acoes > span:first-child {
+  margin-right: auto;
+  font-size: 12px;
+  color: #7b8fa5;
+}
+.fluxo-painel > .admin-campo {
+  margin: 22px 0;
+}
+.fluxo-painel > .admin-campo textarea {
+  min-height: 130px;
+}
+.fluxo-metricas {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 20px;
+}
+.fluxo-numero {
+  display: block;
+  font-size: 36px;
+  color: #163454;
+}
+.fluxo-progresso {
+  margin: 20px 0;
+}
+.fluxo-progresso p {
+  display: flex;
+  justify-content: space-between;
+}
+.fluxo-progresso progress {
+  width: 100%;
+  height: 8px;
+  accent-color: #2f73c5;
+}
+.fluxo-tags {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin: 16px 0;
+}
+.fluxo-selo {
+  display: inline-block;
+  padding: 5px 9px;
+  border-radius: 5px;
+  background: #eaf3ff;
+  color: #235f9e;
+  font-size: 12px;
+  line-height: 18px;
+}
+.fluxo-selo--verde {
+  background: #e5f5ed;
+  color: #087c4b;
+}
+.fluxo-selo--laranja {
+  background: #fff0e3;
+  color: #a64b09;
+}
+.fluxo-aviso {
+  padding: 20px;
+  margin: 20px 0;
+  border: 1px solid #dce7f5;
+  border-radius: 8px;
+  background: #f0f6ff;
+  color: #315c89;
+  font-size: 13px;
+  line-height: 23px;
+  overflow-wrap: anywhere;
+}
+.fluxo-identidade {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+  border-bottom: 1px solid #e5ecf3;
+  padding-bottom: 20px;
+  margin-bottom: 24px;
+}
+.fluxo-identidade .fluxo-numero {
+  margin-left: auto;
+}
+.fluxo-identidade h3 {
+  margin: 0;
+}
+.fluxo-check {
+  display: inline-flex;
+  gap: 8px;
+  align-items: center;
+  font-size: 13px;
+  margin: 12px;
+}
+.fluxo-pilha {
+  display: grid;
+  gap: 12px;
+}
+.fluxo-timeline {
+  border-left: 2px solid #e0e9f2;
+  padding-left: 26px;
+}
+.fluxo-timeline article {
+  padding: 10px 0 28px;
+  position: relative;
+}
+.fluxo-timeline article:before {
+  content: "";
+  position: absolute;
+  left: -31px;
+  top: 28px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #7b9dc4;
+}
+.fluxo-timeline small {
+  font-size: 12px;
+  color: #7b8fa5;
+}
+.fluxo-painel fieldset {
+  border: 1px solid #e0e9f2;
+  border-radius: 8px;
+  padding: 12px;
+}
+.pagina-admin .admin-dialogo {
+  max-height: 90vh;
+  overflow: auto;
+}
+.fluxo-painel [role="alert"] {
+  color: #b42318;
+}
+.fluxo-painel .admin-tabela .fluxo-tags {
+  margin: 0;
+}
+.fluxo-painel details {
+  margin: 18px 0;
+  color: #315c89;
+}
+/* As colunas se empilham no celular; tabelas mantêm sua rolagem interna. */
+@media (max-width: 1100px) {
+  .fluxo-colunas {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .fluxo-filtros,
+  .fluxo-metricas {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (max-width: 600px) {
+  .fluxo-duas,
+  .fluxo-filtros {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .fluxo-identidade {
+    flex-wrap: wrap;
+  }
+  .fluxo-metricas {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .fluxo-acoes {
+    justify-content: flex-start;
+  }
+  .fluxo-numero {
+    font-size: 28px;
+  }
+}

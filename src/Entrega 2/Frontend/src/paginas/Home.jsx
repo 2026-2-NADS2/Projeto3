@@ -7,60 +7,28 @@ import { useTituloPagina } from "../hooks/useTituloPagina.js";
 import textoEducacao from "../assets/img/texto-educacao.png";
 import "../css/home.css";
 
-// Exemplo público do Figma, com dados ilustrativos para explicar o relatório.
 function PreviaAcompanhamento() {
   return (
     <article className="previa-acompanhamento">
       <header className="previa-cabecalho">
         <small>Relatório de acompanhamento</small>
-        <span className="previa-publicado">Publicado</span>
       </header>
-      <h2>Acompanhamento de Pedro</h2>
-      <p>8º A · Ano letivo 2026 · 3º bimestre</p>
-
+      <h2>Desenvolvimento escolar</h2>
       <div className="previa-grade">
         <section>
-          <h3>Matemática</h3>
-          <small>Prof. Ana Paula · 3º bimestre</small>
+          <h3>Registro do professor</h3>
           <p>
-            <strong>Como Pedro se desenvolveu</strong>
+            Acompanhe as observações da escola e as orientações para a família.
           </p>
-          <p>
-            Pedro avançou em Matemática e participa mais das atividades em
-            grupo.
-          </p>
-          <ul className="previa-tags">
-            <li>Participação</li>
-            <li>Em evolução</li>
-          </ul>
-          <small>Ciências · Prof. João Lima</small>
         </section>
         <section>
-          <h3>Informações</h3>
-          <dl className="previa-indicadores">
-            <div>
-              <dt>Média</dt>
-              <dd>8,7</dd>
-            </div>
-            <div>
-              <dt>Frequência</dt>
-              <dd>98%</dd>
-            </div>
-            <div>
-              <dt>Relatórios</dt>
-              <dd>2</dd>
-            </div>
-            <div>
-              <dt>Situação</dt>
-              <dd>Publicado</dd>
-            </div>
-          </dl>
+          <h3>Consulta da família</h3>
+          <p>
+            Entre na sua conta para ler relatórios publicados e confirmar a
+            leitura.
+          </p>
         </section>
       </div>
-
-      <small>
-        Prévia ilustrativa · Disponível à família após revisão da escola
-      </small>
     </article>
   );
 }

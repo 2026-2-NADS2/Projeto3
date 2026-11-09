@@ -12,9 +12,7 @@ function FaleConosco() {
   function enviarMensagem(event) {
     event.preventDefault();
     // A validação nativa roda antes deste evento. O envio depende da integração.
-    setAviso(
-      "Formulário validado. O envio está indisponível nesta demonstração.",
-    );
+    setAviso("Formulário validado. O envio pelo formulário está indisponível.");
   }
 
   return (

@@ -1,0 +1,1312 @@
+/* O tema administrativo limita todas as regras às novas telas 04 a 09. */
+body:has(.pagina-admin) {
+  padding-top: 0;
+}
+.pagina-admin {
+  --cor-fundo: #f4f8fc;
+  --cor-linha: #e0e9f2;
+  --cor-principal: #a64b09;
+  --cor-suave: #fff0e3;
+  color: #163454;
+}
+.pagina-admin .dash-cabecalho {
+  height: 82px;
+  padding: 0 36px 0 57px;
+}
+.pagina-admin .dash-logo {
+  align-self: flex-start;
+}
+.pagina-admin .dash-logo img {
+  width: auto;
+  height: auto;
+  max-width: none;
+}
+.pagina-admin .dash-cabecalho-direita {
+  gap: 20px;
+}
+.pagina-admin .dash-notificacoes > button {
+  width: 24px;
+  height: 24px;
+  display: grid;
+  place-items: center;
+}
+.pagina-admin .dash-notificacoes img,
+.pagina-admin .estado-icone img {
+  width: auto;
+  height: auto;
+}
+.pagina-admin .dash-perfil {
+  padding-left: 20px;
+}
+.pagina-admin .dash-perfil-botao {
+  gap: 20px;
+}
+.pagina-admin .dash-avatar {
+  width: 42px;
+  height: 42px;
+  font-size: 16px;
+  background: #fff0e3;
+  color: #a64b09;
+}
+.pagina-admin .dash-perfil-nome {
+  font-size: 16px;
+  line-height: 23.2px;
+  font-weight: 700;
+}
+.pagina-admin .dash-perfil-nome small {
+  font-size: 14px;
+  line-height: 20.3px;
+}
+.pagina-admin .dash-menu-perfis a {
+  display: block;
+  padding: 8px;
+  border-radius: 6px;
+}
+
+/* A lateral usa as dimensões e os ícones originais do Figma. */
+.pagina-admin .dash-lateral {
+  top: 82px;
+  width: 238px;
+  min-height: calc(100vh - 82px);
+  padding: 16px 16px 22px;
+}
+.pagina-admin .dash-item-menu {
+  height: 50px;
+  flex-shrink: 0;
+  padding: 0 14px;
+  gap: 14px;
+  font-size: 16px;
+  color: #5d718a;
+}
+.admin-menu-topo {
+  display: grid;
+  gap: 15px;
+  margin-bottom: 9px;
+}
+.admin-recolher {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 33px;
+  padding: 7px 12px;
+  border: 1px solid #dce6f1;
+  border-radius: 8px;
+  background: #f6f9fd;
+  color: #315b85;
+  font-size: 13px;
+  font-weight: 600;
+}
+.admin-menu-topo > p {
+  padding-left: 14px;
+  font-size: 11px;
+  line-height: 16px;
+  letter-spacing: 1.4px;
+  color: #8a99ab;
+  white-space: nowrap;
+}
+.admin-menu-rodape {
+  margin-top: auto;
+  padding-top: 18px;
+  min-height: 94.3px;
+  border-top: 1px solid #e5ebf2;
+}
+.admin-menu-rodape small {
+  display: block;
+  padding-left: 14px;
+  margin-top: 4px;
+  font-size: 14px;
+  line-height: 20.3px;
+  color: #6b7e94;
+}
+.admin-icone {
+  display: inline-grid;
+  place-items: center;
+  flex: 0 0 24px;
+  width: 24px;
+  height: 24px;
+}
+.admin-icone img {
+  width: auto;
+  height: auto;
+}
+
+/* O conteúdo conserva os alinhamentos do cabeçalho, das abas e dos cartões. */
+.admin-conteudo {
+  margin-left: 238px;
+  padding: 28px 36px 36px;
+  min-width: 0;
+}
+.admin-conteudo--visao {
+  padding: 24px 30px 36px;
+}
+.admin-caminho {
+  display: flex;
+  gap: 4px;
+  font-size: 12px;
+  line-height: 17.4px;
+  color: #7a8da3;
+}
+.admin-caminho + .admin-titulo {
+  margin-top: 14px;
+}
+.admin-titulo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 24px;
+  min-height: 94.8px;
+}
+.admin-categoria {
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 17.4px;
+  color: #72839a;
+}
+.admin-titulo h1 {
+  margin-top: 7px;
+  font-size: 32px;
+  line-height: 38.4px;
+  color: #102f55;
+}
+.admin-descricao {
+  margin-top: 8px;
+  color: #60738b;
+  font-size: 15px;
+  line-height: 24px;
+}
+.admin-titulo-acoes,
+.admin-acoes {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+}
+.admin-titulo-acoes {
+  justify-content: flex-end;
+  flex-shrink: 0;
+}
+.admin-abas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding-bottom: 12px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #dce6ef;
+  min-height: 55px;
+}
+.admin-abas a {
+  display: flex;
+  align-items: center;
+  min-height: 42px;
+  padding: 0 16px;
+  border-radius: 8px;
+  color: #60758f;
+  font-size: 15px;
+  font-weight: 600;
+}
+.admin-abas--linha a {
+  border-radius: 0;
+  padding: 0 2px;
+  margin-right: 20px;
+  border-bottom: 2px solid transparent;
+}
+.admin-abas--linha a[aria-current="page"] {
+  border-color: #235f9e;
+}
+
+/* Componentes básicos de botões, painéis e selos. */
+.admin-painel {
+  min-width: 0;
+  padding: 24px;
+  border: 1px solid #dfe8f1;
+  border-radius: 13px;
+  background: #fff;
+}
+.admin-painel h2,
+.admin-informacoes h2 {
+  font-size: 22px;
+  line-height: 28.6px;
+}
+.admin-botao {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 46px;
+  padding: 10px 16px;
+  border: 1px solid #cdddeb;
+  border-radius: 9px;
+  background: white;
+  color: #235582;
+  font: inherit;
+  font-size: 15px;
+  line-height: 21.75px;
+  font-weight: 600;
+  text-align: center;
+  cursor: pointer;
+}
+.admin-botao--primario {
+  border-color: transparent;
+  background: #b84a06;
+  color: white;
+  --admin-hover-fundo: #235f9e;
+  --admin-hover-texto: white;
+}
+.admin-botao--perigo {
+  border-color: #ffc6bd;
+  background: #fffafa;
+  color: #b42318;
+}
+.admin-botao--pequeno {
+  min-height: 38px;
+  min-width: 90px;
+  padding: 7px 12px;
+  font-size: 13px;
+  line-height: 22px;
+}
+.admin-botao:disabled {
+  opacity: 0.4;
+  cursor: default;
+}
+.admin-link {
+  border: 0;
+  background: transparent;
+  padding: 4px 0;
+  min-height: 26px;
+  color: #235f9e;
+  font: inherit;
+  font-size: 13px;
+  line-height: 18.85px;
+  cursor: pointer;
+}
+.admin-status {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  padding: 3px 8px;
+  background: #e5f5ed;
+  color: #087349;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 18px;
+  white-space: nowrap;
+}
+.admin-status--inativo {
+  background: #edf1f7;
+  color: #72839a;
+}
+.admin-status--azul {
+  background: #e9f2ff;
+  color: #235f9e;
+}
+.admin-status--laranja,
+.admin-selo {
+  background: #fff0e3;
+  color: #a34506;
+}
+.admin-selo {
+  display: inline-block;
+  margin-top: 14px;
+  padding: 5px 8px;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 600;
+}
+.admin-obrigatorio {
+  color: #b84a06;
+}
+.admin-erro {
+  color: #b42318;
+  font-size: 13px;
+  line-height: 20px;
+}
+.admin-texto-suave,
+.admin-texto-rodape {
+  color: #8092a7;
+}
+.admin-texto-rodape {
+  margin-top: 20px;
+  line-height: 22px;
+  font-size: 14px;
+}
+
+/* Campos de 46 px, com ícones em contêineres próprios para preservar os SVGs. */
+.admin-campo {
+  min-width: 0;
+}
+.admin-campo > label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20.3px;
+  color: #294b6c;
+}
+.admin-campo > label small {
+  font-size: 12px;
+  font-weight: 400;
+  color: #8092a7;
+}
+.admin-campo > small {
+  display: block;
+  margin-top: 8px;
+  font-size: 12px;
+  line-height: 17.4px;
+}
+.admin-entrada {
+  position: relative;
+}
+.admin-entrada :is(input, select, textarea) {
+  width: 100%;
+  min-width: 0;
+  border: 1px solid #cdddeb;
+  border-radius: 8px;
+  background: white;
+  color: #163454;
+  font: inherit;
+  font-size: 14px;
+  line-height: 22px;
+}
+.admin-entrada :is(input, select) {
+  height: 46px;
+  padding: 10px 12px;
+}
+.admin-entrada select {
+  appearance: none;
+  padding-right: 38px;
+}
+.admin-entrada textarea {
+  min-height: 116px;
+  padding: 12px;
+  resize: vertical;
+}
+.admin-entrada input::placeholder,
+.admin-entrada textarea::placeholder {
+  color: #8a9bb0;
+  opacity: 1;
+}
+.admin-seta,
+.admin-busca-icone {
+  position: absolute;
+  display: grid;
+  place-items: center;
+  pointer-events: none;
+}
+.admin-seta {
+  right: 12px;
+  top: 14px;
+  width: 18px;
+  height: 18px;
+}
+.admin-busca-icone {
+  left: 13px;
+  top: 13px;
+  width: 20px;
+  height: 20px;
+  z-index: 1;
+}
+.admin-entrada--busca input {
+  padding-left: 43px;
+}
+.admin-filtros {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+.admin-filtros > .admin-botao {
+  align-self: end;
+}
+.admin-filtros--duas {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+.admin-lista--responsaveis .admin-filtros {
+  grid-template-columns: minmax(0, 2.3fr) minmax(0, 1fr);
+}
+.admin-lista--professores .admin-filtros {
+  grid-template-columns: minmax(0, 2.3fr) repeat(2, minmax(0, 1fr));
+}
+.admin-lista--alunos .admin-filtros {
+  grid-template-columns: minmax(0, 2.3fr) repeat(3, minmax(0, 1fr));
+}
+.admin-lista--areas_disciplinas .admin-filtros {
+  grid-template-columns: minmax(0, 4fr) minmax(150px, 1fr) auto;
+}
+.admin-resumo-lista {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 19px;
+  margin: 24px 0 14px;
+  font-size: 13px;
+  line-height: 18.85px;
+  color: #72869e;
+}
+
+/* A rolagem fica dentro da tabela quando as colunas não cabem no celular. */
+.admin-tabela-rolagem {
+  width: 100%;
+  overflow-x: auto;
+}
+.admin-tabela {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: auto;
+  text-align: left;
+}
+.admin-tabela th {
+  height: 45.89px;
+  padding: 12px;
+  background: #f5f8fc;
+  border-bottom: 1px solid #dfe7ef;
+  color: #7890aa;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 17.4px;
+}
+.admin-tabela td {
+  height: 60px;
+  padding: 10px 12px;
+  border-bottom: 1px solid #e7edf4;
+  font-size: 14px;
+  line-height: 22.4px;
+  vertical-align: middle;
+}
+.admin-tabela tbody tr:nth-child(even) {
+  background: #fbfcff;
+}
+.admin-tabela strong {
+  font-weight: 700;
+}
+.admin-tabela small {
+  display: block;
+  margin-top: 6px;
+  font-size: 12px;
+  line-height: 17.4px;
+  color: #8092a7;
+}
+.admin-tabela--cadastros td {
+  height: 82.58px;
+}
+.admin-tabela--cadastros .admin-botao--pequeno {
+  min-width: 100px;
+}
+.admin-lista--areas_disciplinas .admin-tabela td {
+  height: 91px;
+}
+.admin-paginacao {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: 24px;
+  padding-top: 18px;
+  border-top: 1px solid #e6edf4;
+  font-size: 13px;
+  color: #8092a7;
+}
+.admin-paginacao > div {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+.admin-paginacao strong {
+  font-size: 13px;
+  color: #315b85;
+  white-space: nowrap;
+}
+.admin-paginacao .admin-botao {
+  min-height: 38px;
+  padding: 7px 12px;
+  font-size: 13px;
+}
+
+/* Formulários e coluna de orientações conservam a proporção do Figma. */
+.admin-colunas {
+  display: grid;
+  grid-template-columns: minmax(0, 2.115fr) minmax(0, 1fr);
+  gap: 24px;
+  align-items: start;
+}
+.admin-colunas--area {
+  grid-template-columns: minmax(0, 1.85fr) minmax(0, 1fr);
+}
+.admin-bloco-titulo {
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+  align-items: center;
+}
+.admin-bloco-titulo > small {
+  color: #8092a7;
+  font-size: 12px;
+  line-height: 17.4px;
+}
+.admin-bloco-titulo h3 {
+  font-size: 19px;
+  line-height: 24.7px;
+}
+.admin-bloco-titulo p {
+  margin-top: 6px;
+  font-size: 13px;
+  line-height: 20.8px;
+  color: #60738b;
+}
+.admin-grade-campos {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px 24px;
+  margin-top: 26px;
+}
+.admin-campo--largo {
+  grid-column: 1/-1;
+}
+.admin-colunas--area .admin-campo {
+  grid-column: 1/-1;
+}
+.admin-colunas--area .admin-campo:has(select) {
+  max-width: 260px;
+}
+.admin-colunas--area textarea {
+  min-height: 146px;
+}
+.admin-ajuda {
+  margin-top: 12px;
+  color: #7b8da3;
+  font-size: 12px;
+  line-height: 17.4px;
+}
+.admin-formulario-acoes {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 28px;
+  padding-top: 22px;
+  border-top: 1px solid #e6edf4;
+}
+.admin-informacoes {
+  padding: 24px;
+  background: white;
+  border: 1px solid #dfe8f1;
+  border-radius: 13px;
+}
+.admin-informacoes section + section {
+  margin-top: 22px;
+  padding-top: 22px;
+  border-top: 1px solid #e6edf4;
+}
+.admin-informacoes h2 {
+  font-size: 20px;
+  line-height: 28.6px;
+}
+.admin-informacoes h3 {
+  font-size: 15px;
+  line-height: 22px;
+}
+.admin-informacoes p {
+  margin-top: 14px;
+  color: #60738b;
+  font-size: 13px;
+  line-height: 23px;
+}
+.admin-exemplo-area {
+  margin-top: 24px;
+  padding: 20px;
+  border: 1px solid #e0e8f0;
+  border-radius: 10px;
+  background: #f6f9fd;
+}
+.admin-exemplo-area > small {
+  display: block;
+  margin-bottom: 12px;
+  color: #8092a7;
+  font-size: 11px;
+}
+.admin-exemplo-area > strong {
+  display: block;
+  font-size: 16px;
+}
+.admin-exemplo-area p {
+  margin-top: 8px;
+  font-size: 13px;
+  line-height: 23px;
+  color: #60738b;
+}
+.admin-exemplo-area .admin-status {
+  margin-left: 8px;
+}
+.admin-disciplinas-area {
+  margin-top: 14px;
+}
+.admin-disciplinas-area > div {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 20px 0;
+  border-bottom: 1px solid #e6edf4;
+  font-size: 14px;
+}
+
+/* Identificação e dados de leitura reutilizam a mesma estrutura dos cadastros. */
+.admin-identidade {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-bottom: 24px;
+}
+.admin-avatar {
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  background: #fff0e3;
+  color: #a64b09;
+  font-size: 22px;
+  font-weight: 600;
+}
+.admin-identidade > div {
+  flex: 1;
+}
+.admin-identidade h2 {
+  font-size: 22px;
+}
+.admin-identidade p {
+  margin-top: 6px;
+  font-size: 13px;
+  color: #60738b;
+}
+.admin-identidade > small {
+  border-left: 1px solid #e0e8f0;
+  padding-left: 18px;
+  color: #8092a7;
+  font-size: 12px;
+}
+.admin-dados {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 28px 24px;
+  margin-top: 24px;
+}
+.admin-dados dt {
+  color: #8092a7;
+  font-size: 12px;
+  line-height: 18px;
+}
+.admin-dados dd {
+  margin-top: 8px;
+  font-size: 14px;
+  line-height: 22.4px;
+  font-weight: 600;
+  overflow-wrap: anywhere;
+}
+.admin-dados--coluna {
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+.admin-vinculos-cadastro {
+  margin-top: 28px;
+  padding-top: 24px;
+  border-top: 1px solid #e6edf4;
+}
+.admin-vinculos-lista {
+  margin-top: 20px;
+}
+.admin-vinculos-lista > div {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  min-height: 82px;
+  padding: 16px 0;
+  border-bottom: 1px solid #e6edf4;
+}
+.admin-vinculos-lista > div > div {
+  flex: 1;
+  min-width: 0;
+}
+.admin-vinculos-lista strong {
+  font-size: 14px;
+  line-height: 22px;
+}
+.admin-vinculos-lista small {
+  display: block;
+  margin-top: 4px;
+  color: #8092a7;
+  font-size: 12px;
+  line-height: 20px;
+}
+.admin-rodape-detalhes {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  margin-top: 28px;
+  padding-top: 24px;
+  border-top: 1px solid #e6edf4;
+}
+.admin-rodape-detalhes > small {
+  font-size: 12px;
+  line-height: 20px;
+  color: #7b8da3;
+}
+.admin-vazio {
+  padding: 28px;
+  text-align: center;
+  color: #60738b;
+  line-height: 22px;
+}
+.admin-vazio--caixa {
+  min-height: 110px;
+  margin-top: 20px;
+  border: 1px solid #cdddeb;
+  border-radius: 9px;
+  background: #f8fbff;
+}
+.admin-vazio strong {
+  font-size: 14px;
+}
+.admin-vazio p {
+  margin-top: 8px;
+  font-size: 13px;
+}
+
+/* Confirmações e alertas apresentam o efeito da ação antes de alterá-la. */
+.admin-conteudo:has(.admin-confirmacao) {
+  padding-top: 36px;
+}
+.admin-confirmacao > .admin-titulo {
+  margin-top: 24px;
+  align-items: start;
+}
+.admin-confirmacao > .admin-titulo h1 {
+  margin-top: 24px;
+  line-height: 50px;
+}
+.admin-confirmacao > .admin-titulo .admin-descricao {
+  margin-top: 24px;
+}
+.admin-confirmacao > .admin-painel > p {
+  margin-top: 18px;
+  font-size: 14px;
+  line-height: 22px;
+}
+.admin-confirmacao .admin-acoes {
+  margin-top: 18px;
+}
+.admin-alerta {
+  margin-top: 24px;
+  padding: 18px;
+  border: 1px solid #ffdfbf;
+  border-radius: 9px;
+  background: #fff6ec;
+  color: #a34506;
+  font-size: 13px;
+  line-height: 23px;
+}
+.admin-alerta p {
+  margin-top: 6px;
+  color: #163454;
+}
+.admin-alerta--erro {
+  background: #fff1ef;
+  border-color: transparent;
+  color: #b42318;
+}
+.admin-confirmacao > .admin-alerta {
+  margin-bottom: 24px;
+}
+.admin-aviso-sucesso {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;
+  margin-bottom: 20px;
+  border: 1px solid #c8e8d5;
+  border-radius: 9px;
+  background: #eff8f3;
+  color: #087349;
+  gap: 12px;
+}
+.admin-aviso-sucesso button {
+  border: 0;
+  background: transparent;
+  color: inherit;
+  font-size: 20px;
+  padding: 4px;
+}
+
+/* Resumo da turma e comparação entre responsável e aluno. */
+.admin-turma-resumo {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  margin-bottom: 24px;
+}
+.admin-turma-resumo > div:first-child {
+  flex: 1;
+}
+.admin-turma-resumo .admin-selo {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+.admin-turma-resumo p {
+  margin-top: 12px;
+  color: #60738b;
+  font-size: 16px;
+  line-height: 24px;
+}
+.admin-turma-resumo strong {
+  display: block;
+  font-size: 28px;
+}
+.admin-turma-resumo small {
+  display: block;
+  margin-top: 8px;
+  font-size: 13px;
+  color: #8092a7;
+}
+.admin-painel > .admin-bloco-titulo + .admin-tabela-rolagem {
+  margin-top: 20px;
+}
+.admin-vinculo-preview {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: 24px;
+  padding: 24px;
+  border: 1px solid #dfe8f1;
+  border-radius: 9px;
+  flex-wrap: wrap;
+}
+.admin-vinculo-preview .admin-avatar {
+  width: 42px;
+  height: 42px;
+  font-size: 16px;
+}
+.admin-vinculo-preview strong {
+  font-size: 14px;
+}
+.admin-vinculo-preview small {
+  display: block;
+  margin-top: 6px;
+  color: #8092a7;
+  font-size: 12px;
+}
+.admin-vinculo-preview > span:not(.admin-avatar) {
+  font-size: 26px;
+  color: #8a9bb0;
+}
+
+/* A janela de adicionar alunos mantém dimensões, seleção e aviso da referência. */
+.admin-dialogo {
+  width: min(620px, calc(100% - 32px));
+  max-height: calc(100dvh - 32px);
+  margin: auto;
+  padding: 32px;
+  border: 0;
+  border-radius: 18px;
+  color: #163454;
+  overflow: auto;
+  box-shadow: 0 20px 60px #102f5533;
+}
+.admin-dialogo::backdrop {
+  background: #16345466;
+}
+.admin-dialogo > h2 {
+  margin-top: 16px;
+  font-size: 28px;
+  line-height: 34px;
+}
+.admin-dialogo > .admin-campo {
+  margin-top: 16px;
+}
+.admin-dialogo > .admin-texto-suave {
+  margin-top: 18px;
+  font-size: 16px;
+  line-height: 23px;
+}
+.admin-opcoes-checkbox {
+  margin-top: 20px;
+  border: 1px solid #cdddeb;
+  border-radius: 9px;
+  overflow: hidden;
+}
+.admin-opcoes-checkbox > label {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  min-height: 82px;
+  padding: 20px;
+  border-bottom: 1px solid #e0e8f0;
+  cursor: pointer;
+}
+.admin-opcoes-checkbox > label:last-child {
+  border-bottom: 0;
+}
+.admin-opcoes-checkbox input {
+  width: 18px;
+  height: 18px;
+  accent-color: #235f9e;
+  flex: 0 0 auto;
+}
+.admin-opcoes-checkbox strong {
+  display: block;
+  font-size: 14px;
+  line-height: 22px;
+}
+.admin-opcoes-checkbox small {
+  display: block;
+  margin-top: 4px;
+  color: #8092a7;
+  font-size: 12px;
+  line-height: 20px;
+}
+.admin-selecao-total {
+  display: block;
+  margin-top: 18px;
+  color: #a34506;
+  font-size: 16px;
+  line-height: 22px;
+}
+.admin-dialogo > .admin-alerta {
+  margin-top: 24px;
+}
+.admin-dialogo > .admin-formulario-acoes {
+  margin-top: 24px;
+  padding-top: 0;
+  border: 0;
+}
+.admin-campos-coluna {
+  display: grid;
+  gap: 20px;
+  margin-top: 24px;
+}
+
+/* A visão geral preserva os quatro indicadores e a tabela de vinte registros. */
+.admin-visao .admin-titulo {
+  margin-bottom: 18px;
+}
+.admin-contexto {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1.15fr);
+  gap: 18px;
+  align-items: end;
+  padding: 16px;
+}
+.admin-contexto > p {
+  text-align: right;
+  font-size: 12px;
+  line-height: 24px;
+  color: #788ba0;
+}
+.admin-metricas {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+  margin: 16px 0;
+}
+.admin-metrica {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 119px;
+  padding: 16px;
+}
+.admin-metrica-icone {
+  display: grid;
+  place-items: center;
+  flex: 0 0 46px;
+  width: 46px;
+  height: 46px;
+  border-radius: 12px;
+  background: #fff0e3;
+}
+.admin-metrica-icone--azul {
+  background: #eaf2ff;
+}
+.admin-metrica-icone--verde {
+  background: #e7f7ee;
+}
+.admin-metrica h2 {
+  font-size: 14px;
+  line-height: 20.3px;
+  font-weight: 400;
+  color: #536e88;
+}
+.admin-metrica strong {
+  display: block;
+  margin-top: 5px;
+  font-size: 30px;
+  line-height: 33px;
+  color: #133351;
+}
+.admin-metrica p {
+  margin-top: 5px;
+  font-size: 12px;
+  line-height: 17.4px;
+  color: #788ba0;
+}
+.admin-fila-revisao {
+  padding: 18px;
+}
+.admin-fila-revisao .admin-bloco-titulo h2 {
+  font-size: 20px;
+  line-height: 27.3px;
+}
+.admin-fila-revisao .admin-filtros {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 12px;
+}
+.admin-fila-revisao .admin-entrada select {
+  height: 40px;
+}
+.admin-fila-revisao .admin-seta {
+  top: 11px;
+}
+.admin-total-acompanhamentos {
+  margin: 10px 0 12px;
+  font-size: 14px;
+  line-height: 22px;
+  color: #72869e;
+}
+.admin-tabela--revisoes th {
+  height: 44px;
+  padding: 10px;
+  font-size: 13px;
+}
+.admin-tabela--revisoes td {
+  height: 68px;
+  padding: 10px;
+  font-size: 14px;
+}
+.admin-tabela--revisoes :is(th, td):first-child {
+  padding-left: 0;
+}
+.admin-tabela--revisoes td:nth-child(5) .admin-status {
+  min-width: 180px;
+  font-size: 11px;
+}
+.admin-tabela--revisoes .admin-botao--pequeno {
+  min-width: 90px;
+}
+.admin-tabela--revisoes td small {
+  margin-top: 3px;
+}
+
+/* Estados azuis respeitam o pedido de interação e conservam erros vermelhos. */
+#root
+  .pagina-admin
+  :is(a[href], button:enabled):is(:hover, :active, [aria-current="page"]) {
+  background: var(--admin-hover-fundo, #e9f2ff);
+  color: var(--admin-hover-texto, #235f9e);
+  filter: none;
+}
+#root .pagina-admin .dash-item-ativo {
+  background: #e9f2ff;
+  color: #235f9e;
+}
+#root
+  .pagina-admin
+  :is(a[href], button:enabled, input, select, textarea):focus-visible {
+  outline: 2px solid #235f9e;
+  outline-offset: 2px;
+}
+.pagina-admin
+  :is(input, select, textarea):not([aria-invalid="true"]):is(:hover, :focus) {
+  border-color: #235f9e;
+}
+.pagina-admin [aria-invalid="true"] {
+  border-color: #b42318;
+}
+
+/* Recolhimento e adaptação reduzem colunas, sem ocultar dados essenciais. */
+@media (min-width: 761px) {
+  .admin-menu-recolhido .dash-lateral {
+    width: 66px;
+    padding-left: 9px;
+    padding-right: 9px;
+  }
+  .admin-menu-recolhido .admin-menu-topo > p,
+  .admin-menu-recolhido .admin-recolher span:first-child,
+  .admin-menu-recolhido .dash-item-menu > span:last-child,
+  .admin-menu-recolhido .admin-menu-rodape small {
+    display: none;
+  }
+  .admin-menu-recolhido .admin-recolher {
+    justify-content: center;
+    height: 44px;
+  }
+  .admin-menu-recolhido .dash-item-menu {
+    padding: 0;
+    justify-content: center;
+  }
+  .admin-menu-recolhido .admin-conteudo {
+    margin-left: 66px;
+  }
+}
+@media (max-width: 1200px) {
+  .admin-titulo {
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+  .admin-metricas {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .admin-colunas,
+  .admin-colunas--area {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .admin-contexto {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .admin-contexto > p {
+    grid-column: 1/-1;
+    text-align: left;
+  }
+  .admin-lista--alunos .admin-filtros {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .admin-tabela {
+    min-width: 800px;
+  }
+}
+@media (max-width: 760px) {
+  .pagina-admin .dash-cabecalho {
+    height: 66px;
+    padding: 0 16px;
+  }
+  .pagina-admin .dash-logo {
+    align-self: center;
+    width: 94px;
+    height: 54px;
+    flex-shrink: 0;
+  }
+  .pagina-admin .dash-logo img {
+    transform: scale(0.6);
+    transform-origin: top left;
+  }
+  .pagina-admin .dash-cabecalho-direita {
+    gap: 8px;
+  }
+  .pagina-admin .dash-perfil {
+    padding-left: 8px;
+  }
+  .pagina-admin .dash-perfil-botao {
+    gap: 8px;
+  }
+  .pagina-admin .dash-avatar {
+    width: 36px;
+    height: 36px;
+    font-size: 12px;
+  }
+  .pagina-admin .dash-lateral {
+    top: 66px;
+    width: min(280px, 85vw);
+    height: calc(100dvh - 66px);
+    min-height: 0;
+    max-height: calc(100dvh - 66px);
+    overflow-y: auto;
+  }
+  .admin-recolher {
+    display: none;
+  }
+  .admin-conteudo,
+  .admin-conteudo--visao {
+    margin-left: 0;
+    padding: 24px 16px;
+  }
+  .admin-caminho {
+    flex-wrap: wrap;
+  }
+  .admin-titulo h1 {
+    font-size: 27px;
+    line-height: 35px;
+  }
+  .admin-titulo-acoes {
+    justify-content: flex-start;
+    flex-shrink: 1;
+  }
+  .admin-filtros,
+  .admin-lista--responsaveis .admin-filtros,
+  .admin-lista--professores .admin-filtros,
+  .admin-lista--alunos .admin-filtros,
+  .admin-lista--areas_disciplinas .admin-filtros,
+  .admin-fila-revisao .admin-filtros {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .admin-metricas,
+  .admin-contexto,
+  .admin-grade-campos,
+  .admin-dados {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .admin-painel,
+  .admin-informacoes {
+    padding: 20px;
+  }
+  .admin-entrada :is(input, select, textarea) {
+    font-size: 16px;
+  }
+  .admin-bloco-titulo {
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+  .admin-identidade {
+    flex-wrap: wrap;
+  }
+  .admin-identidade > div {
+    min-width: 160px;
+  }
+  .admin-identidade > small {
+    overflow-wrap: anywhere;
+    max-width: 100%;
+  }
+  .admin-rodape-detalhes,
+  .admin-turma-resumo,
+  .admin-paginacao {
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+  .admin-turma-resumo {
+    gap: 20px;
+  }
+  .admin-turma-resumo > div:first-child {
+    flex-basis: 100%;
+  }
+  .admin-paginacao > div {
+    flex-wrap: wrap;
+  }
+  .admin-paginacao .admin-botao {
+    padding: 7px 10px;
+  }
+  .admin-vinculos-lista > div {
+    flex-wrap: wrap;
+  }
+  .admin-vinculos-lista > div > .admin-link {
+    margin-left: 38px;
+  }
+  .admin-resumo-lista {
+    height: auto;
+    gap: 12px;
+  }
+  .admin-dialogo {
+    padding: 24px 20px;
+  }
+  .admin-dialogo > h2 {
+    font-size: 25px;
+  }
+  .admin-formulario-acoes {
+    flex-wrap: wrap;
+  }
+  .admin-colunas--area .admin-campo:has(select) {
+    max-width: none;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  html:has(.pagina-admin) {
+    scroll-behavior: auto;
+  }
+}
