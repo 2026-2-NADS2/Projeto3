@@ -110,7 +110,36 @@ O projeto está dividido em duas pastas dentro de `src/Entrega 2/`. Para que o s
 
 ---
 
-### 1. Executando o Backend
+## 🛠 Instalação e Configuração (Windows)
+
+Siga os passos abaixo para baixar o projeto e preparar o ambiente no Windows.
+
+### 1. Instalar pré-requisitos
+Abra o **PowerShell** e instale o Node.js (versão LTS) e o Git:
+```powershell
+winget install OpenJS.NodeJS.LTS
+winget install Git.Git
+````
+Feche e abra o terminal novamente após a instalação.
+
+Verifique se as ferramentas foram instaladas corretamente:
+
+````
+node -v
+npm -v
+git --version
+````
+###  Clonar o repositório
+
+````
+git clone https://github.com/2026-2-NADS2/Projeto3.git
+````
+Entre na pasta que foi criada:
+```
+cd Projeto3
+````
+
+###  Executando o Backend
 
 Abra o terminal e navegue até a pasta do Backend:
 
@@ -118,11 +147,9 @@ Abra o terminal e navegue até a pasta do Backend:
 cd "src/Entrega 2/Backend"
 npm install
 npm run dev
-
 ```
-### 2. Executando o Frontend
+###  Executando o Frontend
 Abra outro terminal (deixe o do Backend rodando) e navegue até a pasta do Frontend:
-
 ````sh
 cd "src/Entrega 2/Frontend"
 npm install
