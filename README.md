@@ -59,48 +59,79 @@ kfka-projeto
         └── Frontend
 ```
 
-## 🛠 Instalação
+---
 
-<b>Android:</b>
+## 🧰 Principais ferramentas
 
-Faça o Download do JOGO.apk no seu celular.
-Execute o APK e siga as instruções de seu telefone.
+### Interface
+
+| Logo | Ferramenta | Uso no projeto |
+| :---: | :--- | :--- |
+| <img src="https://cdn.simpleicons.org/react/61DAFB" width="40" height="40" alt="React"> | **React 19** | Telas e componentes escritos em JSX |
+| <img src="https://cdn.simpleicons.org/reactrouter/CA4245" width="40" height="40" alt="React Router"> | **React Router 7** | Rotas e navegação entre as telas |
+| <img src="https://cdn.simpleicons.org/javascript/F7DF1E" width="40" height="40" alt="JavaScript"> | **JavaScript** | Linguagem de toda a lógica (hooks, serviços, dados) |
+| <img src="https://cdn.simpleicons.org/html5/E34F26" width="40" height="40" alt="HTML5"> | **HTML5** | Arquivos de entrada `index.html`, `login.html` e `dashboard.html` |
+| <img width="40" height="40" alt="image" src="https://github.com/user-attachments/assets/742f1588-3dcf-4bc6-9953-9c64cc8b8362" /> | **CSS** | Estilos de cada tela, com variáveis de cor e container queries |
+
+### Build, qualidade e testes
+
+| Logo | Ferramenta | Uso no projeto |
+| :---: | :--- | :--- |
+| <img src="https://cdn.simpleicons.org/vite/646CFF" width="40" height="40" alt="Vite"> | **Vite 8** | Servidor local com recarga automática e build de produção |
+| <img src="https://cdn.simpleicons.org/oxc/4A4A55" width="40" height="40" alt="Oxc"> | **Oxlint** | Lint do código em `src` (`npm run lint`) |
+| <img src="https://cdn.simpleicons.org/prettier/F7B93E" width="40" height="40" alt="Prettier"> | **Prettier** | Padronização da formatação (`npm run format`) |
+| <img src="https://cdn.simpleicons.org/nodedotjs/5FA04E" width="40" height="40" alt="Node.js"> | **Node.js** | Executa o Vite e a suíte de testes nativa (`npm test`) |
+| <img src="https://cdn.simpleicons.org/npm/CB3837" width="40" height="40" alt="npm"> | **npm** | Instala as dependências e roda os scripts do `package.json` |
+
+### Design e versionamento
+
+| Logo | Ferramenta | Uso no projeto |
+| :---: | :--- | :--- |
+| <img src="https://cdn.simpleicons.org/figma/F24E1E" width="40" height="40" alt="Figma"> | **Figma** | Protótipo e referência visual das telas (projeto Collision-PI) |
+| <img src="https://cdn.simpleicons.org/git/F05032" width="40" height="40" alt="Git"> | **Git** | Controle de versão do código |
+| <img width="40" height="40" alt="image" src="https://github.com/user-attachments/assets/5bf23f4a-11a3-4bac-ad84-da8416440339" /> | **VS Code** | Editor de código utilizado para o desenvolvimento |
+
+> *Os logos pertencem aos respectivos proprietários. Os desenhos usados aqui vêm do [Simple Icons](https://simpleicons.org/) (domínio público, CC0) e são carregados via CDN para garantir a visualização em qualquer tema.*
+
+---
+
+## 🚀 Como executar o projeto
+
+O projeto está dividido em duas pastas dentro de `src/Entrega 2/`. Para que o sistema funcione completamente, **você precisa rodar o Backend e o Frontend em terminais separados**.
+
+### Pré-requisitos
+
+| Ferramenta | Versão | Para quê |
+| :--- | :--- | :--- |
+| **Node.js** | `^20.19.0` ou `>=22.12.0` (LTS atual) | Exigência do Vite 8 e do oxlint |
+| **npm** | Vem junto com o Node.js | Instalar dependências e rodar os scripts |
+| **Git** | Qualquer versão recente | Clonar o repositório (opcional se recebeu `.zip`) |
+| **Navegador** | Chrome/Edge 105+, Firefox 110+ ou Safari 16+ | O CSS usa container queries (`@container`) |
+
+---
+
+### 1. Executando o Backend
+
+Abra o terminal e navegue até a pasta do Backend:
 
 ```sh
-Coloque código do prompt de comnando se for necessário
+cd "src/Entrega 2/Backend"
+npm install
+npm run dev
+
 ```
+### 2. Executando o Frontend
+Abra outro terminal (deixe o do Backend rodando) e navegue até a pasta do Frontend:
 
-<b>Windows:</b>
-
-Não há instalação! Apenas executável!
-Encontre o JOGO.exe na pasta executáveis e execute-o como qualquer outro programa.
-
-```sh
-Coloque código do prompt de comnando se for necessário
-```
-
-<b>HTML:</b>
-
-Não há instalação!
-Encontre o index.html na pasta executáveis e execute-o como uma página WEB (através de algum browser).
-
-## 💻 Configuração para Desenvolvimento
-
-Descreva como instalar todas as dependências para desenvolvimento e como rodar um test-suite automatizado de algum tipo. Se necessário, faça isso para múltiplas plataformas.
-
-Para abrir este projeto você necessita das seguintes ferramentas:
-
--<a href="https://godotengine.org/download">GODOT</a>
-
-```sh
-make install
-npm test
-Coloque código do prompt de comnando se for necessário
-```
+````sh
+cd "src/Entrega 2/Frontend"
+npm install
+npm run dev
+O Vite iniciará o servidor local do Frontend (geralmente na porta 5173). Abra o link exibido no terminal no seu navegador.
+`````
 
 ## 📋 Licença/License
 <a href="https://github.com/2026-2-NADS2/Projeto3"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Colisão</font></font></a><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;"> © 2026 por </font></font><a href="https://github.com/2026-2-NADS2/Projeto3"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Débora, Felipe, Guilherme, Henrique, Lucas</font></font></a><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;"> está licenciado sob </font></font><a href="https://creativecommons.org/licenses/by/4.0/"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">CC BY 4.0</font></font></a><img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;">
-
 ## 🎓 Referências
 
 Aqui estão as referências usadas no projeto.
