@@ -11,7 +11,7 @@ Para executar a entrega Fullstack no Windows, consulte o
 
 ## Nome do Grupo: Collision
 
-## Integrantes: <a href="https://github.com/DMayumi">Débora Mayumi</a>, <a href="https://github.com/felipenono">Felipe Rodrigues</a>, <a href="www.linkedin.com/in/guiryuki">Guilherme Ryuki</a>, <a href="https://github.com/HenriqueNunes-2008">Henrique Nunes</a>, <a href="https://github.com/LucasKazuo-lol">Lucas Kazuo</a>
+## Integrantes: <a href="https://github.com/DMayumi">Débora Mayumi</a>, <a href="https://github.com/felipenono">Felipe Rodrigues</a>, <a href="https://www.linkedin.com/in/guiryuki">Guilherme Ryuki</a>, <a href="https://github.com/HenriqueNunes-2008">Henrique Nunes</a>, <a href="https://github.com/LucasKazuo-lol">Lucas Kazuo</a>
 
 ## Professores Orientadores: <a href="https://www.linkedin.com/in/adriano-valente/">Adriano Valente</a>, <a href="https://www.linkedin.com/in/eduardo-savino/">Eduardo Savino</a>, <a href="https://www.linkedin.com/in/francisco-escobar/">Francisco (Chico) Escobar</a>, <a href="https://www.linkedin.com/in/jbuesso/">José Buesso</a>, <a href="https://www.linkedin.com/in/ronaldo-araujo-pinto-3542811a/">Ronaldo Araújo</a>
 
