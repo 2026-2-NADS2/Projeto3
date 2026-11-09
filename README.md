@@ -132,13 +132,29 @@ O Vite iniciará o servidor local do Frontend (geralmente na porta 5173). Abra o
 
 ## 📋 Licença/License
 <a href="https://github.com/2026-2-NADS2/Projeto3"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Colisão</font></font></a><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;"> © 2026 por </font></font><a href="https://github.com/2026-2-NADS2/Projeto3"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Débora, Felipe, Guilherme, Henrique, Lucas</font></font></a><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;"> está licenciado sob </font></font><a href="https://creativecommons.org/licenses/by/4.0/"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">CC BY 4.0</font></font></a><img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;">
-## 🎓 Referências
 
-Aqui estão as referências usadas no projeto.
+---
 
-1. <https://github.com/iuricode/readme-template>
-2. <https://github.com/gabrieldejesus/readme-model>
-3. <https://chooser-beta.creativecommons.org/>
-4. <https://freesound.org/>
-5. <https://www.toptal.com/developers/gitignore>
-6. Músicas por: <a href="https://freesound.org/people/DaveJf/sounds/616544/"> DaveJf </a> e <a href="https://freesound.org/people/DRFX/sounds/338986/"> DRFX </a> ambas com Licença CC 0.
+## 📚 Referências e Documentação de Apoio
+
+Abaixo estão listadas as principais fontes de consulta, documentações oficiais e normativas utilizadas para o desenvolvimento e fundamentação deste projeto.
+
+### 📜 Documentos Institucionais e Normativos
+*   **FECAP.** *Guia para o Uso Responsável de Inteligência Artificial na FECAP*. Versão 2.0, 2026. [Acessar PDF](https://www.fecap.br/wp-content/uploads/2026/08/Guia-para-o-Uso-Responsavel-de-IA-na-FECAP.pdf)
+*   **BRASIL.** *Lei Geral de Proteção de Dados Pessoais (LGPD)*. Lei nº 13.709, de 14 de agosto de 2018. [Acessar Lei](https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm)
+*   **ORGANIZAÇÃO DAS NAÇÕES UNIDAS (ONU).** *Objetivos de Desenvolvimento Sustentável (ODS)*. [Acessar ODS 4](https://brasil.un.org/pt-br/sdgs/4)
+
+### 💻 Documentações Oficiais das Tecnologias
+*   **React:** [Documentação Oficial](https://react.dev/)
+*   **Vite:** [Documentação Oficial](https://vitejs.dev/)
+*   **React Router:** [Documentação Oficial](https://reactrouter.com/)
+*   **Node.js:** [Documentação Oficial](https://nodejs.org/en/docs)
+*   **Express:** [Documentação Oficial](https://expressjs.com/)
+*   **Oracle Database:** [Documentação Oficial](https://docs.oracle.com/en/database/)
+*   **MySQL:** [Documentação Oficial](https://dev.mysql.com/doc/)
+
+### 🎨 Ferramentas de Design e Apoio
+*   **Figma:** [Central de Ajuda](https://help.figma.com/)
+*   **Simple Icons:** [Biblioteca de ícones utilizada neste README](https://simpleicons.org/)
+*   **Prettier:** [Documentação Oficial](https://prettier.io/docs/en/)
+*   **Oxlint:** [Documentação Oficial](https://oxc-project.github.io/)
