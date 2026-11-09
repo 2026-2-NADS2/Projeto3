@@ -34,12 +34,12 @@ Este documento detalha o uso de Inteligência Artificial Generativa no desenvolv
 
 | **Aluno(s) Responsável(veis)** | Guilherme Ryuki |
 | :--- | :--- |
-| **Ferramenta utilizada** | [A preencher pelo responsável] |
-| **Versão/modelo** | [A preencher pelo responsável] |
+| **Ferramenta utilizada** | Codex - OpenAI |
+| **Versão/modelo** | GPT 6.1 SOL  |
 | **Disciplina / Trabalho** | POO - Entrega 1 (Classes em C#) |
-| **Finalidade de uso** | Estruturação de classes em C# e implementação do fluxo de estados. |
-| ***Prompts* principais utilizados** | [A preencher pelo responsável] |
-| **Trechos ou entregas afetadas** | Código-fonte C# da pasta `poo`, documentação das classes e README do projeto. |
+| **Finalidade de uso** | Apoio na compreensão e aplicação de conceitos de POO, estruturação das classes conforme o modelo relacional do projeto, sugestão e revisão de trechos de código, implementação de validações e organização do fluxo de acompanhamento escolar. |
+| ***Prompts* principais utilizados** | **Resumos dos principais pedidos, sem transcrição literal:**<br>1. Auxiliar na reconstrução das classes do sistema conforme o modelo relacional e os requisitos do PI.<br>2. Explicar e orientar a aplicação de herança entre `Usuario`, `Administrador`, `Professor` e `Responsavel`.<br>3. Explicar o encapsulamento e o uso de propriedades com `private set` para controlar alterações nos objetos.<br>4. Orientar a implementação dos cadastros e vínculos escolares, incluindo validações para evitar duplicidades e relações incompatíveis.<br>5. Auxiliar na implementação dos estados do acompanhamento: rascunho, enviado, em revisão e publicado.<br>6. Orientar a organização da classe `SistemaKFKA` para integrar cadastros, vínculos, registros, revisão, publicação e consulta.<br>7. Auxiliar na restrição da consulta dos responsáveis aos acompanhamentos publicados dos alunos vinculados.<br> |
+| **Trechos ou entregas afetadas** | Classes de usuários e entidades escolares; classes AlunoResponsavel, VinculoProfessor e Acompanhamento; classe principal SistemaKFKA; validações de cadastros, vínculos e transições de estado. Código localizado em documentos/Entrega 1/POO/KFKASolution. |
 
 ### Estrutura de Dados
 
