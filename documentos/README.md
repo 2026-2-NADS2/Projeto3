@@ -60,9 +60,7 @@ Este documento detalha o uso de Inteligência Artificial Generativa no desenvolv
 | **Versão/modelo** | GPT-6.1 Sol Médio |
 | **Disciplina / Trabalho** | Design de Interface Digital - Entrega 1 (Layout e Guia de Estilo) |
 | **Finalidade de uso** | Foi utilizado para analisar os requisitos da PI e os esboços das telas, gerar propostas visuais em imagem e padronizar a identidade visual do sistema. A ferramenta também foi usada para criar, ajustar telas iniciais no Figma e no Guia de Estilo. |
-| ***Prompts* principais utilizados** | - Analise o pdf e as fotos enviadas de esboço para o meu projeto e faça 3 exemplos em imagens de como você faria as telas de ˜home, login, erro 404, fale conosco, página inicial de administrador, página inicial de responsável e página inicial de professor”
-- ⁠padronize todo o design do projeto e crie uma identidade visual para ser usada em cada perfil 
-- ⁠faça em cores claras e fáceis de visualizar |
+| ***Prompts* principais utilizados** | - Analise o pdf e as fotos enviadas de esboço para o meu projeto e faça 3 exemplos em imagens de como você faria as telas de ˜home, login, erro 404, fale conosco, página inicial de administrador, página inicial de responsável e página inicial de professor”, "⁠padronize todo o design do projeto e crie uma identidade visual para ser usada em cada perfil","⁠faça em cores claras e fáceis de visualizar" |
 | **Trechos ou entregas afetadas** | Propostas para as telas de início, login, erro 404 e Fale Conosco, além das telas básicas de fluxos dos perfis de administrador, professor e responsável. Também afetou elementos da interface, como cores, ícones, botões, formulários e menus, Guia de Estilo e documentação de design. |
 
 ---
