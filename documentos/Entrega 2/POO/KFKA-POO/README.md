@@ -122,8 +122,3 @@ A API fica dentro do repositório do projeto integrado, na pasta `documentos/Ent
 
 O `Dockerfile` não depende do Render e lê a porta da variável `$PORT`. Em princípio também deve servir para Railway,
 Fly.io e Azure Container Apps, mas isso não foi testado.
-
-## Uso de IA
-
-Este projeto foi desenvolvido com auxílio do Claude (Anthropic), usado como apoio para tirar dúvidas, revisar
-código e estruturar a API. Todo o código foi revisado, simplificado e compreendido por mim.
