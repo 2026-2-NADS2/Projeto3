@@ -93,12 +93,12 @@ Este documento detalha o uso de Inteligência Artificial Generativa no desenvolv
 
 | **Aluno(s) Responsável(veis)** | Guilherme Ryuki |
 | :--- | :--- |
-| **Ferramenta utilizada** | [A preencher pelo responsável] |
-| **Versão/modelo** | [A preencher pelo responsável] |
-| **Disciplina / Trabalho** | POO - Entrega 2 (Deploy e Documentação) |
-| **Finalidade de uso** | Apoio na documentação dos princípios de POO e instruções para o deploy. |
-| ***Prompts* principais utilizados** | [A preencher pelo responsável] |
-| **Trechos ou entregas afetadas** | Documento de documentação de POO e README com instruções de deploy. |
+| **Ferramenta utilizada** | Claude Code(Anthropic) |
+| **Versão/modelo** | Claude Opus 5.5 |
+| **Disciplina / Trabalho** | POO - Entrega 2 (API em C# com banco de dados, Deploy e Documentação) |
+| **Finalidade de uso** | Apoio na evolução das classes da Entrega 1 para uma API em C# com banco de dados, simplificação e revisão do código, correção de bugs e documentação das instruções de execução e deploy. |
+| ***Prompts* principais utilizados** | **Resumos dos principais pedidos, sem transcrição literal:**<br>1. Analisar o enunciado da Entrega 2 e recomendar como fazê-la em C#, reaproveitando as classes da Entrega 1.<br>2. Simplificar o código para o meu nível de C#.<br>3. Analisar o projeto e corrigir os bugs encontrados.<br>4. Ajustar o README com as instruções de execução e deploy. |
+| **Trechos ou entregas afetadas** | Projeto `KFKA-POO`: classes de domínio adaptadas da Entrega 1, serviços, controllers, banco de dados (`KfkaDbContext` e `DbSeeder`), autenticação JWT, `Dockerfile`, testes automatizados e `README.md` com instruções de execução e deploy. Código localizado em documentos/Entrega 2/POO/KFKA-POO. |
 
 ### Design de Interface Digital
 
