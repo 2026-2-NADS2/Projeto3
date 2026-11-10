@@ -113,16 +113,14 @@ Este documento detalha o uso de Inteligência Artificial Generativa no desenvolv
 
 ### Estrutura de Dados
 
-| **Aluno(s) Responsável(veis)** | [A preencher] |
+| **Aluno(s) Responsável(veis)** | Henrique Nunes |
 | :--- | :--- |
-| **Ferramenta utilizada** | [A preencher pelo responsável] |
-| **Versão/modelo** | [A preencher pelo responsável] |
+| **Ferramenta utilizada** | Claude |
+| **Versão/modelo** | Claude 3.5 Sonnet |
 | **Disciplina / Trabalho** | Estrutura de Dados - Entrega 2 (Mini-relatório) |
-| **Finalidade de uso** | Auxílio na análise de complexidade e documentação. |
-| ***Prompts* principais utilizados** | [A preencher pelo responsável] |
-| **Trechos ou entregas afetadas** | Mini-relatório de complexidade. |
-
----
+| **Finalidade de uso** | Auxílio na análise de complexidade, mapeamento de estruturas de dados (vetores, listas, tabelas hash), documentação de boas práticas e geração do mini-relatório técnico. |
+| ***Prompts* principais utilizados** | 1. "Percorra todo o código e identifique os arquivos e pastas que contêm: vetores, listas, percorrimento de listas, Notação Big-O (O(1), O(log n), O(n), O(n log n), O(n²)), Pilhas e Tabela Hash."<br>2. "Explique detalhadamente o que tem em cada pasta e mostre os trechos dos códigos encontrados."<br>3. "Antes de fazer o documento, faça a estruturação da árvore de pastas de onde cada código foi tirado, mostre o trecho do código, explique o que ele faz no sistema, a Big-O utilizada, e deixe o código comentado com boas práticas."<br>4. "Agora faça o documento detalhando as explicações com base em boas práticas de estrutura de dados."
+| **Trechos ou entregas afetadas** | Mini-relatório de complexidade (arquivo PDF) e documentação técnica das estruturas de dados do Backend e Frontend. |
 
 ***Declaro que o uso acima descrito está em conformidade com o GUIA PARA O USO RESPONSÁVEL DE INTELIGÊNCIA ARTIFICIAL NA FECAP e que o conteúdo final é de minha plena responsabilidade autoral.***
 
