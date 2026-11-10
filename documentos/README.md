@@ -43,14 +43,14 @@ Este documento detalha o uso de Inteligência Artificial Generativa no desenvolv
 
 ### Estrutura de Dados
 
-| **Aluno(s) Responsável(veis)** | [A preencher] |
+| **Aluno(s) Responsável(veis)** | Henrique Nunes |
 | :--- | :--- |
-| **Ferramenta utilizada** | [A preencher pelo responsável] |
-| **Versão/modelo** | [A preencher pelo responsável] |
+| **Ferramenta utilizada** | Claude |
+| **Versão/modelo** | Sonnet 5.5 |
 | **Disciplina / Trabalho** | Estrutura de Dados - Entrega 1 (Paginação em C#) |
 | **Finalidade de uso** | Auxílio na lógica de paginação e análise de complexidade. |
-| ***Prompts* principais utilizados** | [A preencher pelo responsável] |
-| **Trechos ou entregas afetadas** | Código C# do app console e README com análise de complexidade. |
+| ***Prompts* principais utilizados** | 1. Enviei um código C# próprio (classe `Aluno`, `List<Aluno>` e busca sequencial) e perguntei se ele já atendia à Entrega 1, mesmo com os dados inseridos direto no código, sem SQLite. <br> 3. Enviei as mensagens de erro de compilação (CS0234 e CS0246) e o erro de `project.assets.json` não encontrado, pedindo a causa e como corrigir. |
+| **Trechos ou entregas afetadas** | `Aluno.cs`, `AlunoDB.cs`, `Program.cs` (paginação manual, menu e carga de dados fictícios). |
 
 ### Design de Interface Digital
 
