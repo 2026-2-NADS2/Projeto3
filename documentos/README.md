@@ -56,12 +56,14 @@ Este documento detalha o uso de Inteligência Artificial Generativa no desenvolv
 
 | **Aluno(s) Responsável(veis)** | Débora Mayumi |
 | :--- | :--- |
-| **Ferramenta utilizada** | [A preencher pelo responsável] |
-| **Versão/modelo** | [A preencher pelo responsável] |
+| **Ferramenta utilizada** | ChatGPT |
+| **Versão/modelo** | GPT-6.1 Sol Médio |
 | **Disciplina / Trabalho** | Design de Interface Digital - Entrega 1 (Layout e Guia de Estilo) |
-| **Finalidade de uso** | Geração de prompts para imagens do Moodboard e estruturação de textos para o Guia de Estilo. |
-| ***Prompts* principais utilizados** | [A preencher pelo responsável] |
-| **Trechos ou entregas afetadas** | Imagens do Moodboard, Guia de Estilo e documentação de design. |
+| **Finalidade de uso** | Foi utilizado para analisar os requisitos da PI e os esboços das telas, gerar propostas visuais em imagem e padronizar a identidade visual do sistema. A ferramenta também foi usada para criar, ajustar telas iniciais no Figma e no Guia de Estilo. |
+| ***Prompts* principais utilizados** | - Analise o pdf e as fotos enviadas de esboço para o meu projeto e faça 3 exemplos em imagens de como você faria as telas de ˜home, login, erro 404, fale conosco, página inicial de administrador, página inicial de responsável e página inicial de professor”
+- ⁠padronize todo o design do projeto e crie uma identidade visual para ser usada em cada perfil 
+- ⁠faça em cores claras e fáceis de visualizar |
+| **Trechos ou entregas afetadas** | Propostas para as telas de início, login, erro 404 e Fale Conosco, além das telas básicas de fluxos dos perfis de administrador, professor e responsável. Também afetou elementos da interface, como cores, ícones, botões, formulários e menus, Guia de Estilo e documentação de design. |
 
 ---
 
@@ -104,12 +106,12 @@ Este documento detalha o uso de Inteligência Artificial Generativa no desenvolv
 
 | **Aluno(s) Responsável(veis)** | Débora Mayumi |
 | :--- | :--- |
-| **Ferramenta utilizada** | [A preencher pelo responsável] |
-| **Versão/modelo** | [A preencher pelo responsável] |
+| **Ferramenta utilizada** | ChatGPT |
+| **Versão/modelo** | GPT-6.1 Sol Médio |
 | **Disciplina / Trabalho** | Design de Interface Digital - Entrega 2 (Protótipo Navegável) |
-| **Finalidade de uso** | Estruturação do protótipo navegável e Design System. |
-| ***Prompts* principais utilizados** | [A preencher pelo responsável] |
-| **Trechos ou entregas afetadas** | Protótipo no Figma e documentação do Design System. |
+| **Finalidade de uso** | Estruturação do protótipo navegável e Design System. Também foi usada para criar e ajustar telas no Figma e conectar e revisar os fluxos de navegação do protótipo. |
+| ***Prompts* principais utilizados** | “agora confira novamente o pdf e veja se não ficou faltando nenhuma tela ou caminho de navegação”, “corrija as pendências e conecte os fluxos no figma, mantendo o visual e os ícones aprovados, e se necessario faça alterações”, “agora preciso que vc verifique se o prototipo da home esta certinho, faça alterações se necessario mas não crie nenhuma tela adicional sem aprovação” |
+| **Trechos ou entregas afetadas** | A criação e a correção de acompanhamentos pelo professor, a revisão e a publicação pela administração e a consulta de relatórios e pendências pelo responsável e as conexões entre essas telas. |
 
 ### Estrutura de Dados
 
