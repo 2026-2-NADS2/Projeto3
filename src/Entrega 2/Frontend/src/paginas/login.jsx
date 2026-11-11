@@ -4,7 +4,21 @@ import { Link, useNavigate } from "react-router-dom";
 import Cabecalho from "../componentes/Cabecalho.jsx";
 import { useState } from "react";
 import { destinos, useSessao } from "../hooks/useSessao.jsx";
+import { ErroHttp } from "../servicos/api.js";
 import "../css/login.css";
+
+function mensagemLogin(erro) {
+  if (erro instanceof ErroHttp) {
+    if (erro.status === 0) return erro.message;
+    if (erro.status === 400)
+      return "Confira o e-mail e a senha e tente novamente.";
+    if (erro.status === 401)
+      return "E-mail ou senha incorretos. Confira os dados ou use “Esqueci minha senha”.";
+    if (erro.status === 429)
+      return "Você fez muitas tentativas. Aguarde alguns minutos e tente novamente.";
+  }
+  return "O login está indisponível no momento. Tente novamente em instantes.";
+}
 
 function Login() {
   useTituloPagina("Login");
@@ -25,6 +39,7 @@ function Login() {
     setErros((errosAtuais) => ({
       ...errosAtuais,
       [name]: "",
+      servidor: "",
     }));
   }
 
@@ -32,15 +47,16 @@ function Login() {
     event.preventDefault();
 
     const novosErros = {};
+    const email = campos.login.trim();
 
-    if (!campos.login.trim()) {
-      novosErros.login = "Digite seu login.";
+    if (!email) {
+      novosErros.login = "Digite seu e-mail.";
+    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      novosErros.login = "Digite um e-mail válido.";
     }
 
-    if (!campos.senha.trim()) {
+    if (!campos.senha) {
       novosErros.senha = "Digite sua senha.";
-    } else if (campos.senha.trim().length < 6) {
-      novosErros.senha = "A senha deve ter pelo menos 6 caracteres.";
     }
 
     setErros(novosErros);
@@ -51,10 +67,10 @@ function Login() {
 
     setEnviando(true);
     try {
-      const usuario = await entrar(campos.login.trim(), campos.senha);
+      const usuario = await entrar(email, campos.senha);
       navegar(destinos[usuario.perfil], { replace: true });
     } catch (erro) {
-      setErros({ servidor: erro.message });
+      setErros({ servidor: mensagemLogin(erro) });
     } finally {
       setEnviando(false);
     }
@@ -87,13 +103,15 @@ function Login() {
             noValidate
           >
             <div className="campo-formulario">
-              <label htmlFor="login">Login</label>
+              <label htmlFor="login">E-mail</label>
 
               <input
                 type="text"
+                inputMode="email"
                 id="login"
                 name="login"
-                placeholder="Digite seu login"
+                autoComplete="username"
+                placeholder="Digite seu e-mail"
                 value={campos.login}
                 onChange={atualizarCampo}
                 aria-invalid={Boolean(erros.login)}
@@ -113,6 +131,7 @@ function Login() {
                 type="password"
                 id="senha"
                 name="senha"
+                autoComplete="current-password"
                 placeholder="Digite sua senha"
                 value={campos.senha}
                 onChange={atualizarCampo}

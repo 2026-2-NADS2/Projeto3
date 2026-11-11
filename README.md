@@ -6,7 +6,7 @@
 
 # Projeto Interdisciplinar: Website Responsivo
 
-Para executar a entrega Fullstack no Windows, consulte o
+Para executar a entrega Fullstack no macOS ou no Windows, consulte o
 [passo a passo para iniciar o sistema](<src/Entrega 2/README.md>).
 
 ## Nome do Grupo: Collision
@@ -80,7 +80,7 @@ kfka-projeto
 | <img src="https://cdn.simpleicons.org/vite/646CFF" width="40" height="40" alt="Vite"> | **Vite 8** | Servidor local com recarga automática e build de produção |
 | <img src="https://cdn.simpleicons.org/oxc/4A4A55" width="40" height="40" alt="Oxc"> | **Oxlint** | Lint do código em `src` (`npm run lint`) |
 | <img src="https://cdn.simpleicons.org/prettier/F7B93E" width="40" height="40" alt="Prettier"> | **Prettier** | Padronização da formatação (`npm run format`) |
-| <img src="https://cdn.simpleicons.org/nodedotjs/5FA04E" width="40" height="40" alt="Node.js"> | **Node.js** | Executa o Vite e a suíte de testes nativa (`npm test`) |
+| <img src="https://cdn.simpleicons.org/nodedotjs/5FA04E" width="40" height="40" alt="Node.js"> | **Node.js** | Executa a API, o Vite e os testes do backend |
 | <img src="https://cdn.simpleicons.org/npm/CB3837" width="40" height="40" alt="npm"> | **npm** | Instala as dependências e roda os scripts do `package.json` |
 
 ### Design e versionamento
@@ -97,65 +97,21 @@ kfka-projeto
 
 ## 🚀 Como executar o projeto
 
-O projeto está dividido em duas pastas dentro de `src/Entrega 2/`. Para que o sistema funcione completamente, **você precisa rodar o Backend e o Frontend em terminais separados**.
+O Fullstack usa Node.js, MySQL Server e dois terminais, um para a API e outro para o front-end.
+O [guia de instalação para macOS e Windows](<src/Entrega 2/README.md>) explica como preparar o banco,
+configurar a aplicação e entrar com as contas de teste.
 
 ### Pré-requisitos
 
 | Ferramenta | Versão | Para quê |
 | :--- | :--- | :--- |
-| **Node.js** | `^20.19.0` ou `>=22.12.0` (LTS atual) | Exigência do Vite 8 e do oxlint |
+| **Node.js** | 22.12 ou superior | Executar o backend e o Vite |
+| **MySQL Server** | 8.0.16 ou superior | Armazenar os dados da aplicação |
 | **npm** | Vem junto com o Node.js | Instalar dependências e rodar os scripts |
 | **Git** | Qualquer versão recente | Clonar o repositório (opcional se recebeu `.zip`) |
 | **Navegador** | Chrome/Edge 105+, Firefox 110+ ou Safari 16+ | O CSS usa container queries (`@container`) |
 
 ---
-
-## 🛠 Instalação e Configuração (Windows)
-
-Siga os passos abaixo para baixar o projeto e preparar o ambiente no Windows.
-
-### 1. Instalar pré-requisitos
-Abra o **PowerShell** e instale o Node.js (versão LTS) e o Git:
-```powershell
-winget install OpenJS.NodeJS.LTS
-winget install Git.Git
-````
-Feche e abra o terminal novamente após a instalação.
-
-Verifique se as ferramentas foram instaladas corretamente:
-
-````
-node -v
-npm -v
-git --version
-````
-###  Clonar o repositório
-
-````
-git clone https://github.com/2026-2-NADS2/Projeto3.git
-````
-Entre na pasta que foi criada:
-```
-cd Projeto3
-````
-
-###  Executando o Backend
-
-Abra o terminal e navegue até a pasta do Backend:
-
-```sh
-cd "src/Entrega 2/Backend"
-npm install
-npm run dev
-```
-###  Executando o Frontend
-Abra outro terminal (deixe o do Backend rodando) e navegue até a pasta do Frontend:
-````sh
-cd "src/Entrega 2/Frontend"
-npm install
-npm run dev
-O Vite iniciará o servidor local do Frontend (geralmente na porta 5173). Abra o link exibido no terminal no seu navegador.
-`````
 
 ## 📋 Licença/License
 <a href="https://github.com/2026-2-NADS2/Projeto3">Collision</a> © 2026 by <a href="https://github.com/2026-2-NADS2/Projeto3"> Débora, Felipe, Guilherme, Henrique, Lucas</a> is licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a><img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;">

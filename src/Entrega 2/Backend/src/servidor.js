@@ -3,9 +3,20 @@ import { criarPool } from "./banco/pool.js";
 import { criarApp } from "./app.js";
 import { transporteEmail } from "./servicos/email.js";
 
-const config = lerAmbiente(),
-  pool = criarPool(config.db);
+const orientacoes = {
+  ECONNREFUSED: "Inicie o MySQL e confira DB_HOST e DB_PORT no .env do backend.",
+  ER_ACCESS_DENIED_ERROR:
+    "O MySQL recusou as credenciais. Confira DB_USER e DB_PASSWORD no .env do backend.",
+  ER_DBACCESS_DENIED_ERROR:
+    "O usuário do MySQL não tem acesso ao banco informado em DB_NAME.",
+  ER_BAD_DB_ERROR: "Crie o banco informado em DB_NAME antes de iniciar a API.",
+  ER_NO_SUCH_TABLE: "Prepare o banco com npm run db:migrar antes de iniciar a API.",
+};
+
+let pool;
 try {
+  const config = lerAmbiente();
+  pool = criarPool(config.db);
   await pool.execute("SELECT 1");
   // Nao instala schema nem dados implicitamente ao iniciar a API.
   await pool.execute("SELECT nome FROM SCHEMA_MIGRATION LIMIT 1");
@@ -36,9 +47,9 @@ try {
   process.on("SIGTERM", encerrar);
 } catch (erro) {
   console.error(
-    "API não iniciada. Confira o ambiente e execute db:migrar.",
-    erro.code || erro.message,
+    "Não foi possível iniciar a API do Collision.",
+    orientacoes[erro.code] || erro.code || erro.message,
   );
-  await pool.end();
+  await pool?.end();
   process.exitCode = 1;
 }

@@ -5,13 +5,20 @@ export class ErroHttp extends Error {
   }
 }
 
+const apiLocal = "http://127.0.0.1:3334/api";
+
 export async function api(
   caminho,
   { token, method = "GET", body, signal, arquivo } = {},
 ) {
-  const base = import.meta.env.VITE_API_URL?.replace(/\/+$/, "");
+  const base =
+    import.meta.env.VITE_API_URL?.trim().replace(/\/+$/, "") ||
+    (import.meta.env.DEV ? apiLocal : "");
   if (!base)
-    throw new Error("Configure VITE_API_URL no arquivo .env do frontend.");
+    throw new ErroHttp(
+      0,
+      "O acesso ainda não está configurado. Peça ajuda a quem instalou o Collision.",
+    );
   let resposta;
   try {
     resposta = await fetch(base + caminho, {
@@ -25,8 +32,11 @@ export async function api(
     });
   } catch (erro) {
     if (erro.name === "AbortError") throw erro;
-    throw new Error(
-      "Não foi possível conectar à API. Confira se o backend está rodando.",
+    throw new ErroHttp(
+      0,
+      import.meta.env.DEV
+        ? "Não foi possível conectar ao Collision. Confira se o servidor está iniciado e tente novamente."
+        : "Não foi possível conectar ao Collision. Confira sua conexão e tente novamente.",
     );
   }
   if (!resposta.ok) {
